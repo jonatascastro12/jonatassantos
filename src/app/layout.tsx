@@ -19,7 +19,7 @@ export default function RootLayout({
     return (
         <html>
         <body>
-        <Theme appearance="light" accentColor="cyan" radius="full" scaling="105%" style={{height: "100%"}}>
+        <Theme appearance="light" accentColor="bronze" radius="full" scaling="105%" style={{height: "100%"}}>
             {children}
         </Theme>
         </body>

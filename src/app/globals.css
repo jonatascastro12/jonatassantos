@@ -2,20 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+:root.dark{
+    --color-page-background: #222532;
+}
+
 body{
     height: 100vh;
     margin: 0;
+    filter: brightness(1.2);
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
 }
 
 .main-video {
     object-fit: cover;
-    border-radius: 50%;
-    width: 300px;
     height: 300px;
+    position: absolute;
+    top: 0;
+    left: 430px;
+    width: 540px;
+    z-index: -1;
 }
 
 .main-video-mask {
-    border-radius: 100%;
-    width: 300px;
+    width: 350px;
     height: 300px;
+}
+
+.dark .main-video {
+    filter: invert(1);
 }

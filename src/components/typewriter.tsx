@@ -3,13 +3,14 @@
 import { Typewriter } from 'react-simple-typewriter';
 
 
+const xpYears = new Date().getFullYear() - 2010;
 
 const MyTypewriter = () => <Typewriter
-    words={['More than 14 years writing software', 'Generalist', 'Problem Solver', 'Architecting solutions', '❤️ startups!']}
+    words={[`coding for ${xpYears} yrs`, 'a generalist', 'working remotely', 'solving problems', 'unblocking other devs', 'helping CEOs', 'architecting solutions', 'loving ❤️ startups', 'unleashing SaaS 🚀', 'playing keyboards 🎹']}
     loop={true}
     cursor
     cursorStyle='_'
-    typeSpeed={70}
+    typeSpeed={60}
     deleteSpeed={50}
     delaySpeed={1000}
 />
