@@ -1,5 +1,6 @@
-import { Theme } from '@radix-ui/themes';
+import { Theme, themePropDefs } from '@radix-ui/themes';
 import type { Metadata } from 'next'
+import { ThemeProvider } from 'next-themes';
 import { Inter } from 'next/font/google'
 import '@radix-ui/themes/styles.css';
 import './globals.css'
@@ -16,13 +17,13 @@ export default function RootLayout({
                                    }: {
     children: React.ReactNode
 }) {
-    return (
-        <html>
-        <body>
-        <Theme appearance="light" accentColor="bronze" radius="full" scaling="105%" style={{height: "100%"}}>
+    return <html>
+    <body>
+    <ThemeProvider attribute="class">
+        <Theme accentColor={'gold'} scaling="105%" style={{height: "100%"}}>
             {children}
         </Theme>
-        </body>
-        </html>
-    )
+    </ThemeProvider>
+    </body>
+    </html>
 }

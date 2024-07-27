@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 :root.dark{
-    --color-page-background: #222532;
+    --color-page-background: var(--color-background);
+}
+
+.radix-themes{
+    --cursor-button: pointer;
 }
 
 body{
@@ -19,20 +23,59 @@ body{
 }
 
 .main-video {
+    margin: 0 auto;
+    height: 348px;
     object-fit: cover;
-    height: 300px;
-    position: absolute;
-    top: 0;
-    left: 430px;
-    width: 540px;
-    z-index: -1;
+    width: 100%;
 }
 
 .main-video-mask {
-    width: 350px;
-    height: 300px;
+
+}
+
+@screen md {
+    .main-video {
+        object-fit: cover;
+        height: 300px;
+        position: absolute;
+        top: 0;
+        left: 430px;
+        width: 540px;
+        z-index: -1;
+    }
+
+    .main-video-mask {
+        width: 350px;
+        height: 300px;
+    }
 }
 
 .dark .main-video {
     filter: invert(1);
+}
+
+.jonatas.ol {
+    list-style: decimal;
+}
+
+.jonatas.ul {
+    list-style: disc;
+}
+
+.jonatas.li {
+    margin-left: 14px;
+}
+
+.career{
+    
+}
+
+.social {
+    display: flex;
+}
+
+.social svg{
+    width: 21px;
+    height: 21px;
+    color: var(--accent-9)
 }
