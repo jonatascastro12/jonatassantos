@@ -20,8 +20,8 @@ const asJonatasComponent = (name: string) => {
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
     return {
-        h1: (props) => <Heading size="9" mb="5" {...{children: props.children}} />,
-        h2: (props) => <Heading as="h2" mb="5" size="7" {...{children: props.children}} />,
+        h1: (props) => <Heading size="9" mb="7" {...{children: props.children}} />,
+        h2: (props) => <Heading as="h2" mb="6" size="7" {...{children: props.children}} />,
         h3: (props) => <Heading as="h3" mb="2" size="5" {...{children: props.children}} />,
         h4: (props) => <Heading as="h4" size="4" {...{children: props.children}} />,
         h5: (props) => <Heading as="h5" size="3" {...{children: props.children}} />,

@@ -21,6 +21,7 @@ import {
 } from "@radix-ui/themes";
 import { useTheme } from "next-themes";
 import { NoSSR } from "next/dist/shared/lib/lazy-dynamic/dynamic-no-ssr";
+import { Suspense } from 'react';
 
 export default function Home() {
     const {theme, setTheme} = useTheme();
@@ -36,9 +37,11 @@ export default function Home() {
     return (
         <>
             <Flex justify="end" p="5" position="fixed" top="0" width="100%">
-                <NoSSR>
-                    <Switch onClick={switchTheme} checked={theme === "dark"}></Switch>
-                </NoSSR>
+                <Suspense>
+                    <NoSSR>
+                        <Switch onClick={switchTheme} checked={theme === "dark"}></Switch>
+                    </NoSSR>
+                </Suspense>
                 &nbsp;
                 <div className={"social"}>
                     <a href="https://github.com/jonatascastro12" target="_blank"><GitHubLogoIcon/></a>

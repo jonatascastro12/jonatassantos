@@ -1,4 +1,4 @@
-import { Theme, themePropDefs } from '@radix-ui/themes';
+import { Theme } from '@radix-ui/themes';
 import type { Metadata } from 'next'
 import { ThemeProvider } from 'next-themes';
 import { Inter } from 'next/font/google'
@@ -17,7 +17,7 @@ export default function RootLayout({
                                    }: {
     children: React.ReactNode
 }) {
-    return <html>
+    return <html suppressHydrationWarning={true}>
     <body>
     <ThemeProvider attribute="class">
         <Theme accentColor={'gold'} scaling="105%" style={{height: "100%"}}>

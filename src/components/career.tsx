@@ -107,7 +107,7 @@ const Carrer = () => {
     return (
         <div>
             {content.map((item, index) => (
-                <Box key={index} mb="4">
+                <Box key={index} mb="6">
                     <Heading as="h3" mb="2" size="5">{item.title}</Heading>
                     <Text as="p"><Link href={item.url ?? undefined}
                                        target="_blank">{item.company}</Link> - {item.location}</Text>
