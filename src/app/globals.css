@@ -13,7 +13,6 @@
 body{
     height: 100vh;
     margin: 0;
-    filter: brightness(1.2);
 }
 
 .overlay {
@@ -27,6 +26,11 @@ body{
     aspect-ratio: 16 / 8.97;
     padding: 15px;
     object-fit: cover;
+    filter: brightness(1.2);
+}
+
+a {
+    text-decoration: underline !important;
 }
 
 .main-video-mask {
@@ -52,7 +56,7 @@ body{
 }
 
 .dark .main-video {
-    filter: invert(1);
+    filter: invert(1) brightness(1.2);
 }
 
 .jonatas.ol {
@@ -60,23 +64,21 @@ body{
 }
 
 .jonatas.ul {
-    list-style: disc;
+    list-style: none;
 }
 
 .jonatas.li {
-    margin-left: 14px;
+    padding-bottom: 5px;
 }
 
 .career{
     
 }
 
-.social {
-    display: flex;
-}
-
 .social svg{
-    width: 21px;
-    height: 21px;
-    color: var(--accent-9)
+    width: 25px;
+    height: 25px;
+    color: var(--accent-9);
+    padding-left: 4px;
+    padding-bottom: 5px
 }

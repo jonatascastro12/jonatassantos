@@ -5,14 +5,13 @@ import { Typewriter } from "react-simple-typewriter";
 const xpYears = new Date().getFullYear() - 2010;
 const words = [
     `coding for ${xpYears} yrs`,
-    "a generalist",
     "working remotely",
     "solving problems",
-    "unblocking other devs",
+    "ramping up other devs",
     "helping CEOs",
     "architecting solutions",
     "loving ❤️ startups",
-    "unleashing SaaS 🚀",
+    "building SaaS 🚀",
     "playing keyboards 🎹",
 ];
 
