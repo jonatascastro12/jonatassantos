@@ -27,6 +27,7 @@ body{
     padding: 15px;
     object-fit: cover;
     filter: brightness(1.2);
+    -webkit-filter: brightness(1.2);
 }
 
 a {
