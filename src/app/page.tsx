@@ -40,6 +40,7 @@ export default function Home() {
                 autoPlay
                 loop
                 muted
+                playsInline
                 src={"/jonatas-website-2-2.mp4"}
                 className={"main-video"}
               />
