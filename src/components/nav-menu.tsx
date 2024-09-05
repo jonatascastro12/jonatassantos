@@ -20,10 +20,10 @@ const NavMenu = ({displaySocial = true}) => {
             label: 'Projects',
             href: '/projects'
         },
-        // {
-        //     label: 'Blog',
-        //     href: '/blog'
-        // }
+        {
+            label: 'Blog',
+            href: '/blog'
+        }
     ];
 
     return <menu>
