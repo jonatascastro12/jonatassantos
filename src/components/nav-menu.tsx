@@ -27,14 +27,12 @@ const NavMenu = ({displaySocial = true}) => {
     ];
 
     return <menu>
-        <Flex justify={'between'} pt={'5'}>
-            <Box width="9"></Box>
+        <Flex justify={'center'} pt={'5'}>
             <Flex gap="5" justify={'center'}>
                 {menu.filter((item) => item.href !== pathname).map((item, index) => {
                     return <Link key={index} href={item.href}><Button>{item.label}</Button></Link>
                 })}
             </Flex>
-            { displaySocial ? <SocialBar/> : <div></div>}
         </Flex>
     </menu>;
 }

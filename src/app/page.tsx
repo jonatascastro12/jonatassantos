@@ -37,13 +37,16 @@ export default function Home() {
           <Box>
             <Box className="overflow-hidden main-video-mask">
               <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                src={"/jonatas-website-2-2.mp4"}
-                className={"main-video"}
-              />
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className={"main-video"}
+              >
+                <source src={"/jonatas-website-hevc-safari.mp4"} type='video/mp4; codecs="hvc1"' />
+                <source src={"/jonatas-website-vp9-chrome.webm"} type="video/webm" />
+              </video>
+              <div className="sibling"></div>
             </Box>
           </Box>
         </Flex>
