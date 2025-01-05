@@ -1,9 +1,10 @@
 import NavMenu from "@/components/nav-menu";
 import { defaultComponents } from '@/mdx-components';
 import { getAllPostIds, getPostData } from "@/lib/posts";
-import { Container, Heading, Link } from "@radix-ui/themes";
+import { Box, Container, Heading, Link } from "@radix-ui/themes";
 import React from 'react';
 import Markdown from "react-markdown";
+import { format } from "date-fns";
 
 type Params = {
   slug: string;
@@ -35,7 +36,8 @@ export default async function Post({ params }: Props) {
       <NavMenu />
 
       <Container size="2" height="100%" pt="9" p="3">
-        <Heading as={"h1"} size="9">{postData.title}</Heading>
+        <Heading as={"h1"} size="8">{postData.title}</Heading>
+        <Box>{format(postData.date, "dd MMM yyyy")}</Box>
 
         <div className="text-gray-500 font-medium mb-5">
           {/*<Date dateString={postData.date}/>*/}

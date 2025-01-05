@@ -3,8 +3,6 @@ import {
     differenceInMonths,
     differenceInYears,
     format,
-    formatDistance,
-    formatDistanceStrict,
     formatISO
 } from 'date-fns';
 

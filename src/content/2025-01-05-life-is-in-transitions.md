@@ -1,6 +1,11 @@
+---
+title: "Life's Transitions: Navigating the Unpredictable Journey"
+date: '2025-01-05'
+---
+
 I started reading this book called [Life's Transitions: Navigating the Unpredictable Journey](https://www.amazon.com/Life-Transitions-Mastering-Change-Any/dp/1594206821) the Bruce Feler.
 
-## Life's Transitions: Navigating the Unpredictable Journey
+## Life's Transitions
 
 Life rarely follows a straight path. This profound truth became crystal clear to author Bruce Feiler after witnessing his father's struggle with Parkinson's disease and subsequent suicide attempt.
 
@@ -14,6 +19,6 @@ His findings are eye-opening:
 
 - We face an average of one life disruption every 12-18 months
 - There are at least 52 different types of life conflicts we might encounter
-- Most people experience 3-5 major "lifequakes"—devastating disruptions that take years to recover from
+- Most people experience 3-5 major *_lifequakes_* —devastating disruptions that take years to recover from
 
 The key takeaway? Life transitions are inevitable, but they're also a skill we can master. As Feiler warns us: **Transitions are coming. Be prepared.**

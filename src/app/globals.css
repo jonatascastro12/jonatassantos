@@ -63,7 +63,9 @@ a {
 }
 
 .jonatas.ul {
-    list-style: none;
+    list-style: disc;
+    padding-left: 15px;
+    padding-bottom: 10px;
 }
 
 .jonatas.li {

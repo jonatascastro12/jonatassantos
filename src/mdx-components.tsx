@@ -18,7 +18,7 @@ const asJonatasComponent = (name: string) => {
 }
 
 export const defaultComponents = {
-    h1: (props: PropsWithChildren) => <Heading size="9" mb="7" {...{children: props.children}} />,
+    h1: (props: PropsWithChildren) => <Heading size="8" mb="7" {...{children: props.children}} />,
     h2: (props: PropsWithChildren) => <Heading as="h2" mb="2" size="7" {...{children: props.children}} />,
     h3: (props: PropsWithChildren) => <Heading as="h3" mb="2" size="5" {...{children: props.children}} />,
     h4: (props: PropsWithChildren) => <Heading as="h4" size="4" {...{children: props.children}} />,
