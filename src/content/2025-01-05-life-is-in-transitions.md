@@ -3,6 +3,8 @@ title: "Life's Transitions: Navigating the Unpredictable Journey"
 date: '2025-01-05'
 ---
 
+![Life Transitions](/blog-images/life-transitions.jpg)
+
 I started reading this book called [Life's Transitions: Navigating the Unpredictable Journey](https://www.amazon.com/Life-Transitions-Mastering-Change-Any/dp/1594206821) the Bruce Feler.
 
 ## Life's Transitions
@@ -22,3 +24,5 @@ His findings are eye-opening:
 - Most people experience 3-5 major *_lifequakes_* —devastating disruptions that take years to recover from
 
 The key takeaway? Life transitions are inevitable, but they're also a skill we can master. As Feiler warns us: **Transitions are coming. Be prepared.**
+
+Thanks for reading!

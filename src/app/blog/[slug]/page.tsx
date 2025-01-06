@@ -37,18 +37,14 @@ export default async function Post({ params }: Props) {
 
       <Container size="2" height="100%" pt="9" p="3">
         <Heading as={"h1"} size="8">{postData.title}</Heading>
-        <Box>{format(postData.date, "dd MMM yyyy")}</Box>
+        <Box className="text-gray-400 pb-4">{format(postData.date, "dd MMM yyyy")}</Box>
 
-        <div className="text-gray-500 font-medium mb-5">
-          {/*<Date dateString={postData.date}/>*/}
-        </div>
-
-        {/* Post Content */}
         <Markdown
           components={defaultComponents}
         >
           {postData.content}
         </Markdown>
+
       </Container>
     </>
   );

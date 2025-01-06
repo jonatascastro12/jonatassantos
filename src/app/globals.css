@@ -70,6 +70,7 @@ a {
 
 .jonatas.li {
     padding-bottom: 5px;
+    font-size: var(--font-size-4);
 }
 
 .career{

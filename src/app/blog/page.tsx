@@ -18,12 +18,12 @@ export default function Page() {
         </Heading>
         {postsData.map((post) => {
           return (
-            <Flex key={post.id} justify="between">
+            <Flex key={post.id} justify="between" className="pb-4">
               <Box>
                 <Link href={`/blog/${post.id}`}>{post.title}</Link>
               </Box>
 
-              <Box>{format(post.date, "dd MMM yyyy")}</Box>
+              <Box style={{minWidth: "100px"}} className="text-gray-400">{format(post.date, "dd MMM yyyy")}</Box>
             </Flex>
           );
         })}
