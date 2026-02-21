@@ -4,7 +4,6 @@ import { XLogoIcon } from "@/components/x-logo-icon";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { Flex, Switch } from "@radix-ui/themes";
 import { useTheme } from "next-themes";
-import { NoSSR } from "next/dist/shared/lib/lazy-dynamic/dynamic-no-ssr";
 import { Suspense } from "react";
 
 export function SocialBar() {
@@ -21,9 +20,7 @@ export function SocialBar() {
   return (
     <Flex justify="end" pr="5" className={"social"}>
       <Suspense fallback={<Switch checked={theme === "dark"}></Switch>}>
-        <NoSSR>
-          <Switch onClick={switchTheme} checked={theme === "dark"}></Switch>
-        </NoSSR>
+        <Switch onClick={switchTheme} checked={theme === "dark"}></Switch>
       </Suspense>
       &nbsp;
       <a href="https://github.com/jonatascastro12" target="_blank">
