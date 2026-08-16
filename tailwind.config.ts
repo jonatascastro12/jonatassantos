@@ -8,10 +8,32 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        display: ['var(--font-display)', 'Georgia', 'serif'],
+        body: ['var(--font-body)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-mono)', 'ui-monospace', 'monospace'],
+      },
+      colors: {
+        ink: 'var(--color-ink)',
+        stone: 'var(--color-stone)',
+        film: 'var(--color-film)',
+        signal: 'var(--color-signal)',
+        muted: 'var(--color-muted)',
+        accent: 'var(--color-accent)',
+      },
+      animation: {
+        'fade-up': 'fade-up 0.7s ease-out both',
+        'fade-in': 'fade-in 0.5s ease-out both',
+      },
+      keyframes: {
+        'fade-up': {
+          from: { opacity: '0', transform: 'translateY(12px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+        'fade-in': {
+          from: { opacity: '0' },
+          to: { opacity: '1' },
+        },
       },
     },
   },
