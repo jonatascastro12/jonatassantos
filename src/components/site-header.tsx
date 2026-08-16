@@ -49,13 +49,13 @@ export function SiteHeader() {
                             aria-label="Toggle dark mode"
                         />
                     </Suspense>
-                    <a href="https://github.com/jonatascastro12" target="_blank" rel="noreferrer" aria-label="GitHub">
+                    <a className="social-link" href="https://github.com/jonatascastro12" target="_blank" rel="noreferrer" aria-label="GitHub">
                         <GitHubLogoIcon />
                     </a>
-                    <a href="https://x.com/jonatascastro12" target="_blank" rel="noreferrer" aria-label="X">
+                    <a className="social-link" href="https://x.com/jonatascastro12" target="_blank" rel="noreferrer" aria-label="X">
                         <XLogoIcon />
                     </a>
-                    <a href="https://linkedin.com/in/jonatascastro12" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                    <a className="social-link" href="https://linkedin.com/in/jonatascastro12" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                         <LinkedInLogoIcon />
                     </a>
                 </div>

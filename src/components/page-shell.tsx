@@ -1,3 +1,4 @@
+import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 type PageShellProps = {
@@ -12,6 +13,7 @@ export function PageShell({ children, narrow = false }: PageShellProps) {
             <main className={`page-main ${narrow ? "page-main--narrow" : ""}`}>
                 {children}
             </main>
+            <SiteFooter />
         </>
     );
 }
