@@ -1,3 +1,4 @@
+import { AsciiBackground } from '@/components/ascii-background';
 import { Theme } from '@radix-ui/themes';
 import type { Metadata } from 'next'
 import { ThemeProvider } from 'next-themes';
@@ -49,8 +50,9 @@ export default function RootLayout({
             className={`${newsreader.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
         >
             <body>
+                <AsciiBackground />
                 <ThemeProvider attribute="class">
-                    <Theme accentColor="gold" scaling="100%" style={{ height: '100%' }}>
+                    <Theme accentColor="teal" scaling="100%" style={{ height: '100%' }}>
                         {children}
                     </Theme>
                 </ThemeProvider>

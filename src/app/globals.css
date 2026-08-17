@@ -3,30 +3,40 @@
 @tailwind utilities;
 
 :root {
-    --color-ink: #0c0d10;
-    --color-stone: #ededea;
-    --color-film: #f5f4f1;
-    --color-signal: #d8d6d0;
-    --color-muted: #5a616b;
-    --color-accent: #b8963e;
-    --color-accent-glow: rgba(184, 150, 62, 0.18);
-    --color-page-background: var(--color-stone);
+    --color-ink: #0f1724;
+    --color-stone: #eef2f7;
+    --color-film: #f7f9fc;
+    --color-signal: #d4dce8;
+    --color-muted: #5c6b80;
+    --color-accent: #0d9488;
+    --color-accent-soft: #5eead4;
+    --color-accent-glow: rgba(13, 148, 136, 0.12);
+    --color-syntax: #3b6ea8;
+    --color-page-background: #eef2f7;
     --color-text: var(--color-ink);
     --color-surface: #ffffff;
+    --color-ascii: rgba(13, 148, 136, 0.07);
+    --color-shade-top: rgba(94, 234, 212, 0.08);
+    --color-shade-bottom: rgba(59, 110, 168, 0.06);
     --header-height: 4rem;
 }
 
 :root.dark {
-    --color-ink: #ededea;
-    --color-stone: #0c0d10;
-    --color-film: #14161c;
-    --color-signal: #2a2d36;
-    --color-muted: #8b919c;
-    --color-accent: #d4b05a;
-    --color-accent-glow: rgba(212, 176, 90, 0.14);
-    --color-page-background: #0c0d10;
-    --color-text: #ededea;
-    --color-surface: #14161c;
+    --color-ink: #e8eef6;
+    --color-stone: #0a0e14;
+    --color-film: #111827;
+    --color-signal: #243044;
+    --color-muted: #8b9cb3;
+    --color-accent: #2dd4bf;
+    --color-accent-soft: #5eead4;
+    --color-accent-glow: rgba(45, 212, 191, 0.1);
+    --color-syntax: #7c9fd4;
+    --color-page-background: #0a0e14;
+    --color-text: #e8eef6;
+    --color-surface: #111827;
+    --color-ascii: rgba(45, 212, 191, 0.055);
+    --color-shade-top: rgba(45, 212, 191, 0.07);
+    --color-shade-bottom: rgba(124, 159, 212, 0.05);
 }
 
 .radix-themes {
@@ -34,16 +44,55 @@
     --default-font-family: var(--font-body), system-ui, sans-serif;
     --heading-font-family: var(--font-display), Georgia, serif;
     --color-background: var(--color-page-background);
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
 }
 
 body {
     min-height: 100vh;
     margin: 0;
     isolation: isolate;
-    background: var(--color-page-background);
+    background:
+        radial-gradient(ellipse 90% 60% at 15% -10%, var(--color-shade-top), transparent 55%),
+        radial-gradient(ellipse 70% 50% at 95% 100%, var(--color-shade-bottom), transparent 50%),
+        var(--color-page-background);
     color: var(--color-text);
     font-family: var(--font-body), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
+}
+
+.ascii-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.ascii-bg__grid {
+    position: absolute;
+    inset: -2rem -1rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 0.6875rem;
+    line-height: 1.55;
+    letter-spacing: 0.12em;
+    color: var(--color-ascii);
+    white-space: pre;
+    user-select: none;
+    mask-image: radial-gradient(ellipse 75% 65% at 50% 35%, black 10%, transparent 72%);
+    -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 35%, black 10%, transparent 72%);
+}
+
+.ascii-bg__shade {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to bottom, var(--color-page-background) 0%, transparent 18%, transparent 72%, var(--color-page-background) 100%),
+        linear-gradient(to right, color-mix(in srgb, var(--color-page-background) 70%, transparent), transparent 22%, transparent 78%, color-mix(in srgb, var(--color-page-background) 70%, transparent));
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -197,6 +246,7 @@ button:focus-visible,
     line-height: 1.02;
     letter-spacing: -0.03em;
     margin: 0 0 1rem;
+    text-shadow: 0 1px 24px color-mix(in srgb, var(--color-accent) 12%, transparent);
 }
 
 .hero-role {
@@ -290,6 +340,7 @@ button:focus-visible,
     height: 7px;
     border-radius: 50%;
     background: var(--color-accent);
+    box-shadow: 0 0 10px var(--color-accent-glow);
     border: 2px solid var(--color-page-background);
 }
 
@@ -453,5 +504,9 @@ button:focus-visible,
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+    }
+
+    .ascii-bg__grid {
+        display: none;
     }
 }
