@@ -18,8 +18,10 @@
     --color-ascii: rgba(13, 148, 136, 0.06);
     --color-shade-top: rgba(94, 234, 212, 0.1);
     --color-shade-bottom: rgba(59, 110, 168, 0.08);
-    --color-wave: rgba(13, 148, 136, 0.09);
-    --color-wave-alt: rgba(59, 110, 168, 0.07);
+    --color-wave: rgba(13, 148, 136, 0.2);
+    --color-wave-alt: rgba(59, 110, 168, 0.16);
+    --color-wave-deep: rgba(13, 148, 136, 0.12);
+    --color-blob: rgba(94, 234, 212, 0.14);
     --color-grid-line: rgba(13, 148, 136, 0.045);
     --header-height: 4rem;
 }
@@ -40,8 +42,10 @@
     --color-ascii: rgba(45, 212, 191, 0.045);
     --color-shade-top: rgba(45, 212, 191, 0.08);
     --color-shade-bottom: rgba(124, 159, 212, 0.06);
-    --color-wave: rgba(45, 212, 191, 0.07);
-    --color-wave-alt: rgba(124, 159, 212, 0.055);
+    --color-wave: rgba(45, 212, 191, 0.16);
+    --color-wave-alt: rgba(124, 159, 212, 0.12);
+    --color-wave-deep: rgba(45, 212, 191, 0.1);
+    --color-blob: rgba(45, 212, 191, 0.1);
     --color-grid-line: rgba(45, 212, 191, 0.03);
 }
 
@@ -81,40 +85,132 @@ body {
         radial-gradient(ellipse 80% 60% at 100% 0%, var(--color-shade-bottom), transparent 52%),
         radial-gradient(ellipse 70% 50% at 50% 100%, var(--color-wave-alt), transparent 55%),
         var(--color-page-background);
+    animation: ambient-mesh-shift 18s ease-in-out infinite alternate;
 }
 
-.ambient-bg__grid {
+.ambient-bg__blobs {
     position: absolute;
     inset: 0;
-    opacity: 0.55;
-    background-image:
-        linear-gradient(var(--color-grid-line) 1px, transparent 1px),
-        linear-gradient(90deg, var(--color-grid-line) 1px, transparent 1px);
-    background-size: 3.5rem 3.5rem;
-    mask-image: radial-gradient(ellipse 85% 70% at 50% 40%, black 5%, transparent 78%);
-    -webkit-mask-image: radial-gradient(ellipse 85% 70% at 50% 40%, black 5%, transparent 78%);
+    overflow: hidden;
 }
 
-.ambient-bg__wave {
+.ambient-bg__blob {
     position: absolute;
-    width: 220%;
-    left: -60%;
+    border-radius: 50%;
+    filter: blur(64px);
+    opacity: 0.75;
+    animation: ambient-blob-float 14s ease-in-out infinite alternate;
+}
+
+.ambient-bg__blob--one {
+    width: min(55vw, 28rem);
+    height: min(55vw, 28rem);
+    top: 8%;
+    left: -8%;
+    background: var(--color-blob);
+}
+
+.ambient-bg__blob--two {
+    width: min(45vw, 22rem);
+    height: min(45vw, 22rem);
+    bottom: 12%;
+    right: -6%;
+    background: var(--color-wave-alt);
+    animation-duration: 20s;
+    animation-direction: alternate-reverse;
+}
+
+.ambient-bg__waves {
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.ambient-bg__waves--top {
+    top: -2%;
+    height: 28%;
+    opacity: 0.45;
+    transform: scaleY(-1);
+}
+
+.ambient-bg__waves--mid {
+    top: 38%;
+    height: 22%;
+    opacity: 0.35;
+}
+
+.ambient-bg__waves--bottom {
+    bottom: -4%;
+    height: 38%;
+}
+
+.wave-strip {
+    position: absolute;
+    left: 0;
+    display: flex;
+    width: 200%;
+    height: 100%;
+    color: var(--color-wave);
+    animation: ambient-wave-flow 20s linear infinite;
+    will-change: transform;
+}
+
+.wave-strip svg {
+    flex: 0 0 50%;
+    width: 50%;
+    height: 100%;
+}
+
+.wave-strip--reverse {
+    animation-direction: reverse;
+}
+
+.wave-strip--slow {
+    bottom: 0;
+    height: 85%;
+    color: var(--color-wave-alt);
+    opacity: 0.7;
+}
+
+.wave-strip--mid {
+    bottom: 0;
+    height: 72%;
     color: var(--color-wave);
     opacity: 0.85;
+    animation-duration: 16s;
 }
 
-.ambient-bg__wave--back {
-    bottom: -18%;
-    height: 42%;
-    color: var(--color-wave-alt);
-    opacity: 0.55;
-    animation: ambient-wave-drift 38s ease-in-out infinite alternate;
+.wave-strip--fast {
+    bottom: 0;
+    height: 58%;
+    color: var(--color-wave-deep);
+    opacity: 0.95;
+    animation-duration: 11s;
 }
 
-.ambient-bg__wave--front {
-    bottom: -24%;
-    height: 36%;
-    animation: ambient-wave-drift 28s ease-in-out infinite alternate-reverse;
+.ambient-bg__waves--mid .wave-strip--mid {
+    top: 10%;
+    bottom: auto;
+    height: 90%;
+}
+
+.ambient-bg__waves--mid .wave-strip--fast {
+    top: 22%;
+    bottom: auto;
+    height: 78%;
+}
+
+.ambient-bg__waves--bottom .wave-strip:nth-child(1) {
+    animation-delay: -4s;
+}
+
+.ambient-bg__waves--bottom .wave-strip:nth-child(2) {
+    animation-delay: -9s;
+}
+
+.ambient-bg__waves--bottom .wave-strip:nth-child(3) {
+    animation-delay: -2s;
 }
 
 .ambient-bg__ascii-wrap {
@@ -136,7 +232,7 @@ body {
     color: var(--color-ascii);
     white-space: pre;
     user-select: none;
-    animation: ambient-ascii-drift 140s linear infinite;
+    animation: ambient-ascii-drift 90s linear infinite;
     will-change: transform;
 }
 
@@ -144,16 +240,36 @@ body {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(to bottom, var(--color-page-background) 0%, transparent 14%, transparent 78%, var(--color-page-background) 100%),
-        linear-gradient(to right, color-mix(in srgb, var(--color-page-background) 75%, transparent), transparent 18%, transparent 82%, color-mix(in srgb, var(--color-page-background) 75%, transparent));
+        linear-gradient(to bottom, var(--color-page-background) 0%, transparent 12%, transparent 80%, var(--color-page-background) 100%),
+        linear-gradient(to right, color-mix(in srgb, var(--color-page-background) 70%, transparent), transparent 15%, transparent 85%, color-mix(in srgb, var(--color-page-background) 70%, transparent));
 }
 
-@keyframes ambient-wave-drift {
+@keyframes ambient-wave-flow {
     from {
         transform: translate3d(0, 0, 0);
     }
     to {
-        transform: translate3d(8%, -2%, 0);
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+@keyframes ambient-mesh-shift {
+    from {
+        filter: hue-rotate(0deg) brightness(1);
+        transform: scale(1);
+    }
+    to {
+        filter: hue-rotate(8deg) brightness(1.03);
+        transform: scale(1.02);
+    }
+}
+
+@keyframes ambient-blob-float {
+    from {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    to {
+        transform: translate3d(4%, -3%, 0) scale(1.08);
     }
 }
 
@@ -658,8 +774,9 @@ button:focus-visible,
         animation: none;
     }
 
-    .ambient-bg__wave--back,
-    .ambient-bg__wave--front {
+    .ambient-bg__mesh,
+    .ambient-bg__blob,
+    .wave-strip {
         animation: none;
     }
 }
