@@ -15,9 +15,12 @@
     --color-page-background: #eef2f7;
     --color-text: var(--color-ink);
     --color-surface: #ffffff;
-    --color-ascii: rgba(13, 148, 136, 0.07);
-    --color-shade-top: rgba(94, 234, 212, 0.08);
-    --color-shade-bottom: rgba(59, 110, 168, 0.06);
+    --color-ascii: rgba(13, 148, 136, 0.06);
+    --color-shade-top: rgba(94, 234, 212, 0.1);
+    --color-shade-bottom: rgba(59, 110, 168, 0.08);
+    --color-wave: rgba(13, 148, 136, 0.09);
+    --color-wave-alt: rgba(59, 110, 168, 0.07);
+    --color-grid-line: rgba(13, 148, 136, 0.045);
     --header-height: 4rem;
 }
 
@@ -34,9 +37,12 @@
     --color-page-background: #0a0e14;
     --color-text: #e8eef6;
     --color-surface: #111827;
-    --color-ascii: rgba(45, 212, 191, 0.055);
-    --color-shade-top: rgba(45, 212, 191, 0.07);
-    --color-shade-bottom: rgba(124, 159, 212, 0.05);
+    --color-ascii: rgba(45, 212, 191, 0.045);
+    --color-shade-top: rgba(45, 212, 191, 0.08);
+    --color-shade-bottom: rgba(124, 159, 212, 0.06);
+    --color-wave: rgba(45, 212, 191, 0.07);
+    --color-wave-alt: rgba(124, 159, 212, 0.055);
+    --color-grid-line: rgba(45, 212, 191, 0.03);
 }
 
 .radix-themes {
@@ -53,16 +59,13 @@ body {
     min-height: 100vh;
     margin: 0;
     isolation: isolate;
-    background:
-        radial-gradient(ellipse 90% 60% at 15% -10%, var(--color-shade-top), transparent 55%),
-        radial-gradient(ellipse 70% 50% at 95% 100%, var(--color-shade-bottom), transparent 50%),
-        var(--color-page-background);
+    background: var(--color-page-background);
     color: var(--color-text);
     font-family: var(--font-body), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
-.ascii-bg {
+.ambient-bg {
     position: fixed;
     inset: 0;
     z-index: 0;
@@ -70,29 +73,97 @@ body {
     pointer-events: none;
 }
 
-.ascii-bg__grid {
+.ambient-bg__mesh {
     position: absolute;
-    inset: -2rem -1rem;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 100% 80% at 10% -20%, var(--color-shade-top), transparent 58%),
+        radial-gradient(ellipse 80% 60% at 100% 0%, var(--color-shade-bottom), transparent 52%),
+        radial-gradient(ellipse 70% 50% at 50% 100%, var(--color-wave-alt), transparent 55%),
+        var(--color-page-background);
+}
+
+.ambient-bg__grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.55;
+    background-image:
+        linear-gradient(var(--color-grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--color-grid-line) 1px, transparent 1px);
+    background-size: 3.5rem 3.5rem;
+    mask-image: radial-gradient(ellipse 85% 70% at 50% 40%, black 5%, transparent 78%);
+    -webkit-mask-image: radial-gradient(ellipse 85% 70% at 50% 40%, black 5%, transparent 78%);
+}
+
+.ambient-bg__wave {
+    position: absolute;
+    width: 220%;
+    left: -60%;
+    color: var(--color-wave);
+    opacity: 0.85;
+}
+
+.ambient-bg__wave--back {
+    bottom: -18%;
+    height: 42%;
+    color: var(--color-wave-alt);
+    opacity: 0.55;
+    animation: ambient-wave-drift 38s ease-in-out infinite alternate;
+}
+
+.ambient-bg__wave--front {
+    bottom: -24%;
+    height: 36%;
+    animation: ambient-wave-drift 28s ease-in-out infinite alternate-reverse;
+}
+
+.ambient-bg__ascii-wrap {
+    position: absolute;
+    inset: -4rem -2rem;
+    overflow: hidden;
+    mask-image: radial-gradient(ellipse 80% 68% at 48% 32%, black 8%, transparent 74%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 68% at 48% 32%, black 8%, transparent 74%);
+}
+
+.ambient-bg__ascii {
     margin: 0;
     padding: 0;
     border: 0;
     font-family: var(--font-mono), ui-monospace, monospace;
-    font-size: 0.6875rem;
-    line-height: 1.55;
-    letter-spacing: 0.12em;
+    font-size: 0.625rem;
+    line-height: 1.65;
+    letter-spacing: 0.14em;
     color: var(--color-ascii);
     white-space: pre;
     user-select: none;
-    mask-image: radial-gradient(ellipse 75% 65% at 50% 35%, black 10%, transparent 72%);
-    -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 35%, black 10%, transparent 72%);
+    animation: ambient-ascii-drift 140s linear infinite;
+    will-change: transform;
 }
 
-.ascii-bg__shade {
+.ambient-bg__vignette {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(to bottom, var(--color-page-background) 0%, transparent 18%, transparent 72%, var(--color-page-background) 100%),
-        linear-gradient(to right, color-mix(in srgb, var(--color-page-background) 70%, transparent), transparent 22%, transparent 78%, color-mix(in srgb, var(--color-page-background) 70%, transparent));
+        linear-gradient(to bottom, var(--color-page-background) 0%, transparent 14%, transparent 78%, var(--color-page-background) 100%),
+        linear-gradient(to right, color-mix(in srgb, var(--color-page-background) 75%, transparent), transparent 18%, transparent 82%, color-mix(in srgb, var(--color-page-background) 75%, transparent));
+}
+
+@keyframes ambient-wave-drift {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(8%, -2%, 0);
+    }
+}
+
+@keyframes ambient-ascii-drift {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-3%, -6%, 0);
+    }
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -506,7 +577,12 @@ button:focus-visible,
         transition-duration: 0.01ms !important;
     }
 
-    .ascii-bg__grid {
-        display: none;
+    .ambient-bg__ascii {
+        animation: none;
+    }
+
+    .ambient-bg__wave--back,
+    .ambient-bg__wave--front {
+        animation: none;
     }
 }
