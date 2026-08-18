@@ -1,51 +1,43 @@
-import NavMenu from "@/components/nav-menu";
-import { defaultComponents } from '@/mdx-components';
+import { PageShell } from "@/components/page-shell";
+import { defaultComponents } from "@/mdx-components";
 import { getAllPostIds, getPostData } from "@/lib/posts";
-import { Box, Container, Heading, Link } from "@radix-ui/themes";
-import React from 'react';
 import Markdown from "react-markdown";
 import { format } from "date-fns";
 
 type Params = {
-  slug: string;
+    slug: string;
 };
 
 type Props = {
-  params: Params;
+    params: Params;
 };
 
 type PostData = {
-  title: string;
-  date: string;
-  content: string;
+    title: string;
+    date: string;
+    content: string;
 };
 
 export async function generateMetadata({ params }: Props) {
-  const postData: PostData = await getPostData(params.slug);
+    const postData: PostData = await getPostData(params.slug);
 
-  return {
-    title: postData.title,
-  };
+    return {
+        title: postData.title,
+    };
 }
 
 export default async function Post({ params }: Props) {
-  const postData: PostData = await getPostData(params.slug);
+    const postData: PostData = await getPostData(params.slug);
 
-  return (
-    <>
-      <NavMenu />
-
-      <Container size="2" height="100%" pt="9" p="3">
-        <Heading as={"h1"} size="8">{postData.title}</Heading>
-        <Box className="text-gray-400 pb-4">{format(postData.date, "dd MMM yyyy")}</Box>
-
-        <Markdown
-          components={defaultComponents}
-        >
-          {postData.content}
-        </Markdown>
-
-      </Container>
-    </>
-  );
+    return (
+        <PageShell narrow>
+            <article className="prose-content animate-fade-up">
+                <h1 className="page-title">{postData.title}</h1>
+                <time className="blog-item-date" dateTime={postData.date}>
+                    {format(postData.date, "dd MMM yyyy")}
+                </time>
+                <Markdown components={defaultComponents}>{postData.content}</Markdown>
+            </article>
+        </PageShell>
+    );
 }

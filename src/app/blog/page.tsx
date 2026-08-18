@@ -1,33 +1,24 @@
-import NavMenu from "@/components/nav-menu";
+import { PageShell } from "@/components/page-shell";
 import { getSortedPostsData } from "@/lib/posts";
-import { Box, Container, Flex, Heading, Link } from "@radix-ui/themes";
-import {
-  format
-} from 'date-fns';
+import Link from "next/link";
+import { format } from "date-fns";
 
 export default function Page() {
-  const postsData = getSortedPostsData();
+    const postsData = getSortedPostsData();
 
-  return (
-    <>
-      <NavMenu />
-
-      <Container size="2" height="100%" pt="9" p="3">
-        <Heading as={"h1"} mb="5" size="8">
-          Blog
-        </Heading>
-        {postsData.map((post) => {
-          return (
-            <Flex key={post.id} justify="between" className="pb-4">
-              <Box>
-                <Link href={`/blog/${post.id}`}>{post.title}</Link>
-              </Box>
-
-              <Box style={{minWidth: "100px"}} className="text-gray-400">{format(post.date, "dd MMM yyyy")}</Box>
-            </Flex>
-          );
-        })}
-      </Container>
-    </>
-  );
+    return (
+        <PageShell narrow>
+            <h1 className="page-title animate-fade-up">Blog</h1>
+            <ul className="blog-list animate-fade-up">
+                {postsData.map((post) => (
+                    <li key={post.id} className="blog-item">
+                        <Link href={`/blog/${post.id}`}>{post.title}</Link>
+                        <time className="blog-item-date" dateTime={post.date}>
+                            {format(post.date, "dd MMM yyyy")}
+                        </time>
+                    </li>
+                ))}
+            </ul>
+        </PageShell>
+    );
 }
