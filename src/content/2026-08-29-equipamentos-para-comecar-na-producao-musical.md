@@ -147,6 +147,92 @@ Com isso, você já pode editar áudio, usar loops, programar instrumentos virtu
 
 As ferramentas nativas da sua DAW são suficientes para aprender boa parte dos fundamentos.
 
+## Exemplos de orçamento
+
+Os valores abaixo são referências consultadas em **29 de agosto de 2026**. Promoções, frete, disponibilidade e forma de pagamento podem alterar bastante o total. Nas compras em dólar, considere também cotação, IOF e eventuais impostos ou tributos locais. Confira sempre o preço final no anúncio antes de comprar.
+
+Estes links não são afiliados.
+
+### Referências de computadores
+
+- [Dell DC15, Core i5, 8 GB de RAM e SSD de 512 GB](https://www.mercadolivre.com.br/notebook-dell-dc15-i51334u-a50-156-fhd-i5-8gb-512gb-win-11/p/MLB70040749): cerca de **R$ 3.600 a R$ 4.300**. É uma opção de entrada para projetos menores, mas eu consideraria aumentar a memória para 16 GB quando possível.
+- [MacBook Air de 13 polegadas com M5, 16 GB e SSD de 512 GB](https://www.mercadolivre.com.br/macbook-air-de-13-polegadas-chip-m5-cpu-de-10nucleos-gpu-de-8nucleos-neuralengine-de-16nucleos-512gb-estelar/p/MLB66159970): aproximadamente **R$ 12.600 a R$ 14.000**, dependendo da loja e da promoção.
+- [MacBook Pro de 14 polegadas com M5 Pro, 24 GB e SSD de 2 TB](https://www.mercadolivre.com.br/macbook-pro-14-polegadas-apple-m5-pro-chip-com-15-nucleos-cpu-e-16-nucleos-gpu-24gb-2tb-ssd-preto-espacial-distribuidor-autorizado/p/MLB1066159911): configuração profissional que pode ficar na faixa de **R$ 30.000 a R$ 39.000**. É muito mais do que a maioria das pessoas precisa para começar.
+
+### Referências de interfaces
+
+- [Teyun Q24](https://www.mercadolivre.com.br/interface-de-audio-usb-teyun-q24-24bit-192khz-audiobox-2-entradas-4-saidas/p/MLB23574224): aproximadamente **R$ 220 a R$ 450**. É a alternativa mais econômica da lista, mas vale pesquisar drivers, suporte e estabilidade antes da compra.
+- [M-Audio M-Track Duo](https://www.mercadolivre.com.br/interface-de-audio-m-track-duo-usb-de-2-canais-m-audio-preto/p/MLB19866667): aproximadamente **R$ 750 a R$ 800**. Possui duas entradas combo, phantom power, monitoração direta e inclui o MPC Beats com instrumentos e efeitos. É uma opção econômica de fabricante mais conhecido, embora trabalhe com taxa de amostragem máxima de 48 kHz.
+- [Focusrite Scarlett Solo de 3ª geração](https://www.mercadolivre.com.br/interface-de-audio-focusrite-scarlett-solo-red-3-geracao/p/MLB19770634): cerca de **R$ 1.600 a R$ 1.800**. Atende bem quem grava uma voz ou um instrumento por vez.
+- [Focusrite Scarlett 2i2 de 4ª geração](https://www.mercadolivre.com.br/interface-focusrite-scarlett-2i2-4a-geracao-vermelha/p/MLB29501297): aproximadamente **R$ 2.000 a R$ 2.200**. Oferece duas entradas e é uma escolha equilibrada para um estúdio pessoal.
+- [Kit Focusrite Scarlett 2i2 Studio de 4ª geração](https://www.mercadolivre.com.br/kit-interface-audio-focusrite-scarlett-2i2-studio-4th-gen-cor-vermelho/p/MLB27884876): cerca de **R$ 3.000 a R$ 3.300**. O kit reúne interface, microfone condensador, fone fechado e cabo XLR, reduzindo a quantidade de compras separadas.
+- [PreSonus Quantum ES 2](https://intl.presonus.com/products/quantum-es-2-usb-c-audio-interface): **US$ 199,99** no site internacional. Ela possui duas entradas, pré-amplificadores com 75 dB de ganho, Auto Gain e licença perpétua da DAW da marca.
+- [PreSonus Studio 24c](https://www.presonus.com/products/studio-24c): **US$ 157,99** no site internacional da marca. Possui duas entradas, MIDI, medidores de nível e gravação em até 24 bits e 192 kHz. [Consulte também o anúncio no Mercado Livre](https://www.mercadolivre.com.br/interface-de-audio-presonus-studio-24c-2-entradas-saida-usb-c-midi-192khz/p/MLB15800033), cujo preço em reais pode ser diferente.
+
+A DAW da PreSonus era conhecida como **Studio One Pro** e atualmente se chama **Fender Studio Pro**. O software atual mantém o núcleo e a compatibilidade de sessões do Studio One.
+
+A Quantum ES 2 inclui, na oferta oficial atual, uma licença perpétua do Fender Studio Pro. A Studio 24c ficou conhecida por incluir o Studio One Artist; na oferta oficial atual, ela inclui seis meses de teste do Fender Studio Pro. Estoques antigos podem ter pacotes diferentes, então confirme com o vendedor qual licença acompanha a unidade.
+
+### Referências de software
+
+- [REAPER](https://www.reaper.fm/purchase.php): teste completo por 60 dias. A licença com desconto custa **US$ 60** para uso pessoal, educacional, sem fins lucrativos ou comercial com receita anual de até US$ 20 mil. A licença comercial custa **US$ 225**.
+- [Logic Pro](https://www.apple.com/br/logic-pro/): compra avulsa para Mac por **R$ 1.299,90**.
+- [Apple Creator Studio](https://creatorstudio.apple.com/pt-br/info/try): inclui Logic Pro, MainStage, Final Cut Pro, Pixelmator Pro e outros apps. Custa **R$ 39,90 por mês** ou **R$ 399 por ano**. O plano educacional custa R$ 14,90 por mês ou R$ 149 por ano para pessoas elegíveis.
+- [Ableton Live 12](https://www.ableton.com/en/shop/live/): **US$ 99** na edição Intro, **US$ 349** na Standard e **US$ 749** na Suite. A Suite também pode ser adquirida em 24 pagamentos de US$ 31,21 no modelo rent-to-own. Há uma avaliação gratuita da Suite por 30 dias. O Live é especialmente interessante para criação por clips, música eletrônica, improvisação e performance ao vivo.
+- [ACE Studio](https://acestudio.ai/pricing/): ferramenta opcional para vocais e instrumentos gerados por IA. Na consulta, os planos promocionais anuais apareciam a partir de **US$ 16,58 por mês**. O valor é cobrado em dólar e pode mudar após a promoção.
+
+### Orçamento 1: começar com o computador que você já possui
+
+- computador atual;
+- Teyun Q24: **R$ 220 a R$ 450**;
+- REAPER: **US$ 60**, após o período de avaliação;
+- fone e microfone que você já possui ou pretende escolher separadamente.
+
+**Subtotal de hardware: aproximadamente R$ 220 a R$ 450.**
+
+É a opção de menor investimento, mas a interface econômica exige mais pesquisa sobre compatibilidade e suporte.
+
+### Orçamento 2: setup Windows essencial
+
+- Dell DC15: **R$ 3.600 a R$ 4.300**;
+- M-Audio M-Track Duo: **R$ 750 a R$ 800**;
+- REAPER: **US$ 60**;
+- microfone, fone, cabo e pedestal comprados separadamente.
+
+**Subtotal de computador e interface: aproximadamente R$ 4.350 a R$ 5.100.**
+
+### Orçamento 3: setup completo para gravar
+
+- Dell DC15: **R$ 3.600 a R$ 4.300**;
+- kit Scarlett 2i2 Studio: **R$ 3.000 a R$ 3.300**;
+- REAPER: **US$ 60**.
+
+**Subtotal de hardware: aproximadamente R$ 6.600 a R$ 7.600.**
+
+Este é o orçamento mais completo para quem ainda não possui interface, microfone e fone.
+
+### Orçamento 4: setup Mac equilibrado
+
+- MacBook Air M5: **R$ 12.600 a R$ 14.000**;
+- Scarlett 2i2: **R$ 2.000 a R$ 2.200**;
+- Logic Pro avulso: **R$ 1.299,90**.
+
+**Total inicial aproximado: R$ 15.900 a R$ 17.500.**
+
+Em vez de comprar o Logic Pro, você pode começar pela assinatura do Apple Creator Studio e reduzir o desembolso inicial, lembrando que a assinatura gera um custo recorrente.
+
+### Alternativa de interface: ecossistema PreSonus
+
+- computador que você já possui ou um dos modelos acima;
+- Studio 24c: **US$ 157,99** no site internacional, com seis meses de Fender Studio Pro; ou
+- Quantum ES 2: **US$ 199,99** no site internacional, com licença perpétua do Fender Studio Pro.
+
+A Quantum ES 2 pode eliminar a compra separada da DAW. Esta comparação não é um orçamento fechado porque os preços oficiais estão em dólar e o computador não foi fixado. Para montar o total em reais, consulte um revendedor nacional e confirme câmbio, IOF, impostos, garantia e a licença incluída.
+
+### E o MacBook Pro?
+
+O MacBook Pro M5 Pro com 24 GB e 2 TB é uma opção para projetos muito grandes, bibliotecas extensas e cargas profissionais pesadas. Para uma pessoa iniciante, direcionar parte dessa diferença de preço para microfone, monitoração, acústica e formação costuma produzir um ganho mais perceptível.
+
 ## Meu setup como referência, não como regra
 
 Na minha demonstração de produção musical, uso um **MacBook Air M5**, uma **Focusrite Scarlett 18i8**, microfone, controlador **Novation SL 61** e fones ou monitores.
