@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1080" viewBox="0 0 720 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Comparação de quatro orçamentos iniciais de produção musical</title>
+  <desc id="desc">Os orçamentos vão de 220 reais usando o computador atual até aproximadamente 17.500 reais em um setup Mac equilibrado.</desc>
+  <defs>
+    <style>
+      .title{font-family:Arial,sans-serif;font-size:29px;font-weight:700;letter-spacing:.03em;fill:#e8eef6}.name{font-family:Arial,sans-serif;font-size:26px;font-weight:700;fill:#e8eef6}.price{font-family:Arial,sans-serif;font-size:26px;font-weight:700;fill:#2dd4bf}.detail{font-family:Arial,sans-serif;font-size:19px;font-weight:400;fill:#9bacc2}.axis{font-family:Arial,sans-serif;font-size:16px;font-weight:600;fill:#788aa2}.grid{stroke:#253147;stroke-width:1}.bar{fill:#0d9488}.bar2{fill:#2dd4bf}
+    </style>
+  </defs>
+  <rect width="720" height="1080" rx="28" fill="#0a0e14"/>
+  <text x="44" y="58" class="title">QUATRO PONTOS DE PARTIDA</text>
+  <text x="44" y="91" class="detail">Valores aproximados de hardware.</text>
+  <text x="44" y="118" class="detail">Software em dólar e acessórios podem ficar fora.</text>
+
+  <text x="52" y="185" class="name">PC atual + Q24</text><text x="52" y="216" class="detail">Menor investimento</text><text x="668" y="185" text-anchor="end" class="price">R$ 220 – 450</text>
+  <rect x="52" y="245" width="8" height="42" rx="4" class="bar"/><rect x="60" y="245" width="8" height="42" class="bar2" opacity=".72"/>
+  <line x1="52" y1="310" x2="668" y2="310" class="grid"/>
+
+  <text x="52" y="375" class="name">Windows essencial</text><text x="52" y="406" class="detail">Dell + M-Track Duo</text><text x="668" y="375" text-anchor="end" class="price">R$ 4,35 – 5,1 mil</text>
+  <rect x="52" y="435" width="153" height="42" rx="10" class="bar"/><rect x="205" y="435" width="27" height="42" class="bar2" opacity=".72"/>
+  <line x1="52" y1="500" x2="668" y2="500" class="grid"/>
+
+  <text x="52" y="565" class="name">Gravação completa</text><text x="52" y="596" class="detail">Dell + kit 2i2 Studio</text><text x="668" y="565" text-anchor="end" class="price">R$ 6,6 – 7,6 mil</text>
+  <rect x="52" y="625" width="232" height="42" rx="10" class="bar"/><rect x="284" y="625" width="35" height="42" class="bar2" opacity=".72"/>
+  <line x1="52" y1="690" x2="668" y2="690" class="grid"/>
+
+  <text x="52" y="755" class="name">Mac equilibrado</text><text x="52" y="786" class="detail">Air M5 + 2i2 + Logic</text><text x="668" y="755" text-anchor="end" class="price">R$ 15,9 – 17,5 mil</text>
+  <rect x="52" y="815" width="560" height="42" rx="10" class="bar"/><rect x="612" y="815" width="56" height="42" class="bar2" opacity=".72"/>
+
+  <line x1="52" y1="925" x2="668" y2="925" class="grid"/>
+  <text x="52" y="960" class="axis">R$ 0</text><text x="360" y="960" text-anchor="middle" class="axis">ESCALA LINEAR</text><text x="668" y="960" text-anchor="end" class="axis">R$ 17,5 MIL</text>
+  <text x="52" y="1020" class="detail">Faixas maiores representam mais investimento,</text><text x="52" y="1048" class="detail">não necessariamente mais criatividade.</text>
+</svg>

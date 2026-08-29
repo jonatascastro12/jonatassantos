@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1120" viewBox="0 0 720 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Caminho do sinal em um estúdio de produção musical</title>
+  <desc id="desc">O som sai do microfone ou instrumento, passa pela interface de áudio, entra no computador e na DAW e chega aos fones ou monitores.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#2dd4bf"/></marker>
+    <style>
+      .title{font-family:Arial,sans-serif;font-size:30px;font-weight:700;letter-spacing:.04em;fill:#e8eef6}.step{font-family:Arial,sans-serif;font-size:20px;font-weight:700;fill:#2dd4bf}.label{font-family:Arial,sans-serif;font-size:30px;font-weight:600;fill:#e8eef6}.detail{font-family:Arial,sans-serif;font-size:20px;font-weight:400;fill:#9bacc2}.node{fill:#111827;stroke:#2dd4bf;stroke-width:2}.arrow{fill:none;stroke:#2dd4bf;stroke-width:4;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="720" height="1120" rx="28" fill="#0a0e14"/>
+  <text x="48" y="58" class="title">CAMINHO DO SINAL</text>
+  <text x="48" y="91" class="detail">Da fonte sonora até a sua escuta</text>
+
+  <rect x="60" y="135" width="600" height="175" rx="22" class="node"/>
+  <text x="94" y="178" class="step">01 · FONTE</text><text x="94" y="228" class="label">Microfone ou instrumento</text><text x="94" y="272" class="detail">voz, guitarra, baixo ou teclado</text>
+  <path d="M360 310v58" class="arrow"/>
+
+  <rect x="60" y="380" width="600" height="175" rx="22" class="node"/>
+  <text x="94" y="423" class="step">02 · CONVERSÃO</text><text x="94" y="473" class="label">Interface de áudio</text><text x="94" y="517" class="detail">ganho, entrada, conversão e saída</text>
+  <path d="M360 555v58" class="arrow"/>
+
+  <rect x="60" y="625" width="600" height="175" rx="22" class="node"/>
+  <text x="94" y="668" class="step">03 · PRODUÇÃO</text><text x="94" y="718" class="label">Computador e DAW</text><text x="94" y="762" class="detail">gravação, edição, arranjo e mixagem</text>
+  <path d="M360 800v58" class="arrow"/>
+
+  <rect x="60" y="870" width="600" height="175" rx="22" class="node"/>
+  <text x="94" y="913" class="step">04 · ESCUTA</text><text x="94" y="963" class="label">Fones ou monitores</text><text x="94" y="1007" class="detail">onde você avalia cada decisão</text>
+  <text x="360" y="1084" text-anchor="middle" class="detail">Se algo falhar, verifique o fluxo de cima para baixo.</text>
+</svg>
