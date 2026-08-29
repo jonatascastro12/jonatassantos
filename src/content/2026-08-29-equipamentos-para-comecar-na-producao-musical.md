@@ -106,9 +106,13 @@ Em um setup simples, o áudio percorre este caminho:
 
 **Microfone ou instrumento → interface de áudio → computador e DAW → fones ou monitores**
 
+![Diagrama do caminho do sinal: fonte sonora, interface de áudio, computador com DAW e sistema de escuta](/blog-images/diagrama-caminho-do-sinal.svg)
+
 Entender esse fluxo ajuda a configurar entradas, saídas, ganho e monitoramento. Também facilita encontrar o problema quando algo não está funcionando.
 
 ## Três formas de começar
+
+![Fluxo de decisão para escolher entre um setup virtual, um setup de gravação e um setup com controlador MIDI](/blog-images/diagrama-escolha-do-setup.svg)
 
 ### Setup mínimo para aprender produção
 
@@ -221,6 +225,8 @@ Este é o orçamento mais completo para quem ainda não possui interface, microf
 **Total inicial aproximado: R$ 15.900 a R$ 17.500.**
 
 Em vez de comprar o Logic Pro, você pode começar pela assinatura do Apple Creator Studio e reduzir o desembolso inicial, lembrando que a assinatura gera um custo recorrente.
+
+![Comparação visual dos quatro orçamentos iniciais de produção musical](/blog-images/diagrama-comparacao-orcamentos.svg)
 
 ### Alternativa de interface: ecossistema PreSonus
 
