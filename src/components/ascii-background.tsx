@@ -1,65 +1,49 @@
-const asciiTile = [
+const asciiPool = [
     "  { }   [ ]   < >   =>   ::   //   &&   ||   ",
     "  fn    if    for   map   git   npm   pnpm    ",
     "  0x    0b    01    10    {}    []    <>   =>",
     "  ::    //    /*    */   ++   --   !=   ===  ",
-].join("\n");
+    "  let   var   const async await try   catch   ",
+    "  use   ref   memo  hook  ctx   jsx   tsx       ",
+    "  api   sql   db    orm   env   cli   ssh       ",
+    "  tcp   udp   dns   tls   jwt   oauth cors    ",
+    "  log   err   warn  info  debug trace stack     ",
+    "  src   lib   pkg   dep   dev   prod  test    ",
+    "  ===   !==   <=   >=   ??   ?.   |>   <|    ",
+    "  import export default return throw yield     ",
+    "  class struct enum  type  interface extends   ",
+    "  push  pop   shift slice splice filter reduce  ",
+    "  true  false null  void  never unknown any   ",
+    "  0xFF  0x00  0x1A  0x7E  0x42  0x99  0xCC  0x11",
+    "  #include <stdio>  malloc free sizeof void*  ",
+    "  SELECT FROM WHERE JOIN ON GROUP BY LIMIT    ",
+    "  docker compose up -d --build --force-recreate",
+    "  git commit -m \"fix\" && git push origin main  ",
+    "  pnpm install && pnpm dev && pnpm build       ",
+    "  npm run lint --fix && npm test -- --watch    ",
+    "  HTTP/1.1 200 OK  Content-Type: application   ",
+    "  POST /api/v1/users  Authorization: Bearer     ",
+];
 
-const asciiField = `${asciiTile}\n`.repeat(10);
+function buildAsciiField(rows: number, seed: number): string {
+    const count = asciiPool.length;
+    const lines: string[] = [];
 
-type WaveStripProps = {
-    className: string;
-    path: string;
-    duration: string;
-};
+    for (let i = 0; i < rows; i++) {
+        const index = (i * 17 + i * i * 5 + seed) % count;
+        lines.push(asciiPool[index]!);
+    }
 
-function WaveStrip({ className, path, duration }: WaveStripProps) {
-    const svg = (
-        <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill="currentColor" d={path} />
-        </svg>
-    );
-
-    return (
-        <div className={`wave-strip ${className}`} style={{ animationDuration: duration }}>
-            {svg}
-            {svg}
-        </div>
-    );
+    return lines.join("\n");
 }
 
-const wavePaths = {
-    soft:
-        "M0,100 C360,150 360,50 720,100 C1080,150 1080,50 1440,100 L1440,200 L0,200 Z",
-    deep:
-        "M0,115 C360,75 360,145 720,115 C1080,75 1080,145 1440,115 L1440,200 L0,200 Z",
-    crest:
-        "M0,90 C240,130 480,50 720,90 C960,130 1200,50 1440,90 L1440,200 L0,200 Z",
-};
+const asciiField = buildAsciiField(64, 3);
 
 export function AsciiBackground() {
     return (
         <div className="ambient-bg" aria-hidden="true">
             <div className="ambient-bg__mesh" />
-            <div className="ambient-bg__blobs">
-                <span className="ambient-bg__blob ambient-bg__blob--one" />
-                <span className="ambient-bg__blob ambient-bg__blob--two" />
-            </div>
-
-            <div className="ambient-bg__waves ambient-bg__waves--top">
-                <WaveStrip className="wave-strip--slow wave-strip--reverse" path={wavePaths.soft} duration="32s" />
-            </div>
-
-            <div className="ambient-bg__waves ambient-bg__waves--mid">
-                <WaveStrip className="wave-strip--mid" path={wavePaths.crest} duration="22s" />
-                <WaveStrip className="wave-strip--fast wave-strip--reverse" path={wavePaths.deep} duration="16s" />
-            </div>
-
-            <div className="ambient-bg__waves ambient-bg__waves--bottom">
-                <WaveStrip className="wave-strip--slow" path={wavePaths.deep} duration="26s" />
-                <WaveStrip className="wave-strip--mid wave-strip--reverse" path={wavePaths.soft} duration="18s" />
-                <WaveStrip className="wave-strip--fast" path={wavePaths.crest} duration="12s" />
-            </div>
+            <div className="ambient-bg__glow" />
 
             <div className="ambient-bg__ascii-wrap">
                 <pre className="ambient-bg__ascii">{asciiField}</pre>
