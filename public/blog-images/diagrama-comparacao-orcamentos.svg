@@ -2,8 +2,13 @@
   <title id="title">Comparação de quatro orçamentos iniciais de produção musical</title>
   <desc id="desc">Os orçamentos vão de 220 reais usando o computador atual até aproximadamente 17.500 reais em um setup Mac equilibrado.</desc>
   <defs>
+    <!-- Icons from Tabler Icons (MIT License) -->
+    <g id="icon-wallet"><path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3M19 16v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12M20 12v4h-4a2 2 0 0 1 0 -4z"/></g>
+    <g id="icon-windows"><path d="M17.8 20l-12 -1.5c-1 -.1 -1.8 -.9 -1.8 -1.9v-9.2c0 -1 .8 -1.8 1.8 -1.9l12 -1.5c1.2 -.1 2.2 .8 2.2 1.9v12.1c0 1.2 -1.1 2.1 -2.2 1.9M12 5v14M4 12h16"/></g>
+    <g id="icon-package"><path d="M12 3l8 4.5v9l-8 4.5l-8 -4.5v-9zM12 12l8 -4.5M12 12v9M12 12l-8 -4.5M16 5.25l-8 4.5"/></g>
+    <g id="icon-apple"><path d="M8.286 7.008c-3.216 0 -4.286 3.23 -4.286 5.92c0 3.229 2.143 8.072 4.286 8.072c1.165 -.05 1.799 -.538 3.214 -.538c1.406 0 1.607 .538 3.214 .538s4.286 -3.229 4.286 -5.381c-.03 -.011 -2.649 -.434 -2.679 -3.23c-.02 -2.335 2.589 -3.179 2.679 -3.228c-1.096 -1.606 -3.162 -2.113 -3.75 -2.153c-1.535 -.12 -3.032 1.077 -3.75 1.077c-.729 0 -2.036 -1.077 -3.214 -1.077M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2"/></g>
     <style>
-      .title{font-family:Arial,sans-serif;font-size:29px;font-weight:700;letter-spacing:.03em;fill:#e8eef6}.name{font-family:Arial,sans-serif;font-size:26px;font-weight:700;fill:#e8eef6}.price{font-family:Arial,sans-serif;font-size:26px;font-weight:700;fill:#2dd4bf}.detail{font-family:Arial,sans-serif;font-size:19px;font-weight:400;fill:#9bacc2}.axis{font-family:Arial,sans-serif;font-size:16px;font-weight:600;fill:#788aa2}.grid{stroke:#253147;stroke-width:1}.bar{fill:#0d9488}.bar2{fill:#2dd4bf}
+      .title{font-family:'IBM Plex Sans','DejaVu Sans',sans-serif;font-size:29px;font-weight:700;letter-spacing:.03em;fill:#e8eef6}.name{font-family:'IBM Plex Sans','DejaVu Sans',sans-serif;font-size:26px;font-weight:700;fill:#e8eef6}.price{font-family:'IBM Plex Sans','DejaVu Sans',sans-serif;font-size:26px;font-weight:700;fill:#2dd4bf}.detail{font-family:'IBM Plex Sans','DejaVu Sans',sans-serif;font-size:19px;font-weight:400;fill:#9bacc2}.axis{font-family:'IBM Plex Sans','DejaVu Sans',sans-serif;font-size:16px;font-weight:600;fill:#788aa2}.grid{stroke:#253147;stroke-width:1}.bar{fill:#0d9488}.bar2{fill:#2dd4bf}.icon{fill:none;stroke:#2dd4bf;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
     </style>
   </defs>
   <rect width="720" height="1080" rx="28" fill="#0a0e14"/>
@@ -11,19 +16,23 @@
   <text x="44" y="91" class="detail">Valores aproximados de hardware.</text>
   <text x="44" y="118" class="detail">Software em dólar e acessórios podem ficar fora.</text>
 
-  <text x="52" y="185" class="name">PC atual + Q24</text><text x="52" y="216" class="detail">Menor investimento</text><text x="668" y="185" text-anchor="end" class="price">R$ 220 – 450</text>
+  <use href="#icon-wallet" class="icon" transform="translate(52 158) scale(2)"/>
+  <text x="110" y="185" class="name">PC atual + Q24</text><text x="110" y="216" class="detail">Menor investimento</text><text x="668" y="185" text-anchor="end" class="price">R$ 220 – 450</text>
   <rect x="52" y="245" width="8" height="42" rx="4" class="bar"/><rect x="60" y="245" width="8" height="42" class="bar2" opacity=".72"/>
   <line x1="52" y1="310" x2="668" y2="310" class="grid"/>
 
-  <text x="52" y="375" class="name">Windows essencial</text><text x="52" y="406" class="detail">Dell + M-Track Duo</text><text x="668" y="375" text-anchor="end" class="price">R$ 4,35 – 5,1 mil</text>
+  <use href="#icon-windows" class="icon" transform="translate(52 348) scale(2)"/>
+  <text x="110" y="375" class="name">Windows essencial</text><text x="110" y="406" class="detail">Dell + M-Track Duo</text><text x="668" y="375" text-anchor="end" class="price">R$ 4,35 – 5,1 mil</text>
   <rect x="52" y="435" width="153" height="42" rx="10" class="bar"/><rect x="205" y="435" width="27" height="42" class="bar2" opacity=".72"/>
   <line x1="52" y1="500" x2="668" y2="500" class="grid"/>
 
-  <text x="52" y="565" class="name">Gravação completa</text><text x="52" y="596" class="detail">Dell + kit 2i2 Studio</text><text x="668" y="565" text-anchor="end" class="price">R$ 6,6 – 7,6 mil</text>
+  <use href="#icon-package" class="icon" transform="translate(52 538) scale(2)"/>
+  <text x="110" y="565" class="name">Gravação completa</text><text x="110" y="596" class="detail">Dell + kit 2i2 Studio</text><text x="668" y="565" text-anchor="end" class="price">R$ 6,6 – 7,6 mil</text>
   <rect x="52" y="625" width="232" height="42" rx="10" class="bar"/><rect x="284" y="625" width="35" height="42" class="bar2" opacity=".72"/>
   <line x1="52" y1="690" x2="668" y2="690" class="grid"/>
 
-  <text x="52" y="755" class="name">Mac equilibrado</text><text x="52" y="786" class="detail">Air M5 + 2i2 + Logic</text><text x="668" y="755" text-anchor="end" class="price">R$ 15,9 – 17,5 mil</text>
+  <use href="#icon-apple" class="icon" transform="translate(52 728) scale(2)"/>
+  <text x="110" y="755" class="name">Mac equilibrado</text><text x="110" y="786" class="detail">Air M5 + 2i2 + Logic</text><text x="668" y="755" text-anchor="end" class="price">R$ 15,9 – 17,5 mil</text>
   <rect x="52" y="815" width="560" height="42" rx="10" class="bar"/><rect x="612" y="815" width="56" height="42" class="bar2" opacity=".72"/>
 
   <line x1="52" y1="925" x2="668" y2="925" class="grid"/>
