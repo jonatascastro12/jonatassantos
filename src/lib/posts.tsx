@@ -1,11 +1,20 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import externalPosts from "../content/external-posts.json";
+
+type PostSummary = {
+  id: string;
+  date: string;
+  title: string;
+  externalUrl?: string;
+  source?: string;
+};
 
 const postsDirectory = path.join(process.cwd(), "src/content");
 
 export function getSortedPostsData() {
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = fs.readdirSync(postsDirectory).filter((filename) => filename.endsWith(".md"));
 
   const allPostsData = fileNames.map((filename) => {
     const id = filename.replace(/\.md$/, "");
@@ -20,17 +29,15 @@ export function getSortedPostsData() {
     };
   });
 
-  return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
+  const posts: PostSummary[] = [
+    ...allPostsData,
+    ...externalPosts,
+  ];
+  return posts.sort((a, b) => b.date.localeCompare(a.date));
 }
 
 export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = fs.readdirSync(postsDirectory).filter((filename) => filename.endsWith(".md"));
 
   return fileNames.map((fileName) => {
     return {

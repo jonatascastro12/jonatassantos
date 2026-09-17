@@ -1,0 +1,51 @@
+[
+  {
+    "id": "external-retiring-home-grown-scim",
+    "title": "Retiring home-grown SCIM without anyone noticing",
+    "date": "2026-08-14",
+    "externalUrl": "https://workos.com/blog/retiring-home-grown-scim",
+    "source": "WorkOS"
+  },
+  {
+    "id": "external-audit-trail-for-every-coding-agent",
+    "title": "One audit trail for every coding agent, and what it proves",
+    "date": "2026-08-13",
+    "externalUrl": "https://workos.com/blog/audit-trail-for-every-coding-agent",
+    "source": "WorkOS"
+  },
+  {
+    "id": "external-migrating-auth-at-scale",
+    "title": "Migrating auth at scale: What changes above 200K users",
+    "date": "2026-05-28",
+    "externalUrl": "https://workos.com/blog/migrating-auth-at-scale",
+    "source": "WorkOS"
+  },
+  {
+    "id": "external-auth0-to-workos-enterprise-connections",
+    "title": "Auth0 to WorkOS Enterprise Connections Migration Guide",
+    "date": "2026-02-27",
+    "externalUrl": "https://workos.com/guide/auth0-to-workos-enterprise-connections-migration-guide",
+    "source": "WorkOS"
+  },
+  {
+    "id": "external-preventing-login-csrf-attacks",
+    "title": "Preventing Login CSRF Attacks",
+    "date": "2026-02-13",
+    "externalUrl": "https://workos.com/blog/preventing-login-csrf-attacks",
+    "source": "WorkOS"
+  },
+  {
+    "id": "external-five-most-common-saml-errors",
+    "title": "Decoding and Solving the Five Most Common SAML Errors",
+    "date": "2025-07-09",
+    "externalUrl": "https://workos.com/blog/decoding-and-solving-the-five-most-common-saml-errors",
+    "source": "WorkOS"
+  },
+  {
+    "id": "external-self-signed-certificate-in-chain",
+    "title": "Understanding Self-Signed Certificate in Chain Issues on Node.js, npm, Git, and other applications",
+    "date": "2019-02-27",
+    "externalUrl": "https://medium.com/@jonatascastro12/understanding-self-signed-certificate-in-chain-issues-on-node-js-npm-git-and-other-applications-ad88547e7028",
+    "source": "Medium"
+  }
+]
