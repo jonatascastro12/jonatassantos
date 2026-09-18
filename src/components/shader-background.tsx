@@ -13,6 +13,7 @@ precision highp float;
 uniform vec2 resolution;
 uniform float time;
 uniform float dark;
+uniform vec3 background;
 vec2 hash(vec2 p) {
   return fract(sin(vec2(dot(p, vec2(127.1,311.7)), dot(p, vec2(269.5,183.3)))) * 43758.5453);
 }
@@ -54,7 +55,9 @@ void main() {
   float vignette = smoothstep(0.0,0.22,uv.y)*smoothstep(0.0,0.22,1.0-uv.y);
   float strength = (lines + points*0.4 + signal)*mix(0.035,0.55,sides)*vignette;
   vec3 ink = mix(vec3(0.04,0.43,0.41),vec3(0.18,0.78,0.68),dark);
-  gl_FragColor = vec4(ink, clamp(strength,0.0,0.65));
+  // Composite in GLSL, not in the browser: transparent WebGL layers can
+  // be misinterpreted as premultiplied on mobile compositors.
+  gl_FragColor = vec4(mix(background, ink, clamp(strength,0.0,0.65)), 1.0);
 }
 `;
 
@@ -64,7 +67,7 @@ export function ShaderBackground() {
     useEffect(() => {
         const canvas = ref.current;
         if (!canvas) return;
-        const gl = canvas.getContext("webgl", { alpha: true, premultipliedAlpha: false, antialias: false, powerPreference: "low-power" });
+        const gl = canvas.getContext("webgl", { alpha: false, preserveDrawingBuffer: true, antialias: false, powerPreference: "low-power" });
         if (!gl) return; // CSS provides the static fallback.
         const shaders: WebGLShader[] = [];
         const compile = (type: number, source: string) => {
@@ -103,6 +106,7 @@ export function ShaderBackground() {
         const resolution = gl.getUniformLocation(program, "resolution");
         const time = gl.getUniformLocation(program, "time");
         const dark = gl.getUniformLocation(program, "dark");
+        const background = gl.getUniformLocation(program, "background");
         const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
         let frame = 0;
         let elapsed = 0;
@@ -145,12 +149,21 @@ export function ShaderBackground() {
             cancelAnimationFrame(frame);
             canvas.style.opacity = "0";
         };
-        const observer = new MutationObserver(draw);
+        const updateTheme = () => {
+            // Read the actual CSS theme so shader and page cannot drift apart.
+            const color = getComputedStyle(document.documentElement).getPropertyValue("--site-page-background").trim();
+            if (/^#[0-9a-f]{6}$/i.test(color)) {
+                gl.uniform3f(background, parseInt(color.slice(1, 3), 16) / 255, parseInt(color.slice(3, 5), 16) / 255, parseInt(color.slice(5, 7), 16) / 255);
+            }
+            draw();
+        };
+        const observer = new MutationObserver(updateTheme);
         observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
         window.addEventListener("resize", resize);
         document.addEventListener("visibilitychange", resume);
         reduced.addEventListener("change", resume);
         canvas.addEventListener("webglcontextlost", onLost);
+        updateTheme();
         resize();
         resume();
         return () => {
