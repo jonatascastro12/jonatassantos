@@ -3,8 +3,11 @@ import { Theme } from '@radix-ui/themes';
 import type { Metadata } from 'next'
 import { ThemeProvider } from 'next-themes';
 import { IBM_Plex_Mono, IBM_Plex_Sans, Newsreader } from 'next/font/google'
+import { notFound } from 'next/navigation';
+import { isLocale, locales, messages, type Locale } from '@/lib/i18n';
+import { siteUrl } from '@/lib/metadata';
 import '@radix-ui/themes/styles.css';
-import './globals.css'
+import '../globals.css'
 
 const newsreader = Newsreader({
     subsets: ['latin'],
@@ -33,19 +36,30 @@ const ibmPlexMono = IBM_Plex_Mono({
     display: 'swap',
 })
 
-export const metadata: Metadata = {
-    title: 'Jônatas Santos',
-    description: 'Software Engineering, Technology and Music',
+export function generateStaticParams() {
+    return locales.map((locale) => ({ locale }));
+}
+
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+    if (!isLocale(params.locale)) notFound();
+    return {
+        metadataBase: new URL(siteUrl),
+        title: 'Jônatas Santos',
+        description: messages[params.locale].description,
+    };
 }
 
 export default function RootLayout({
     children,
+    params,
 }: {
     children: React.ReactNode
+    params: { locale: Locale }
 }) {
+    if (!isLocale(params.locale)) notFound();
     return (
         <html
-            lang="en"
+            lang={params.locale === "pt" ? "pt-BR" : "en"}
             suppressHydrationWarning
             className={`${newsreader.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
         >

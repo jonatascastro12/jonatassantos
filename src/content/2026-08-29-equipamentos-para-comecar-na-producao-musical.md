@@ -1,251 +1,252 @@
 ---
-title: "Equipamentos para começar na produção musical"
+title: "Equipment to get started with music production"
 date: "2026-08-29"
+description: "Build a practical first music-production setup: computers, audio interfaces, microphones, monitoring, MIDI controllers, and example budgets."
 ---
 
-![Fones de ouvido sobre um teclado MIDI em frente a uma DAW](/blog-images/equipamentos-producao-musical.jpg)
+![Headphones on a MIDI keyboard in front of a DAW](/blog-images/equipamentos-producao-musical.jpg)
 
-_Foto: [Dima Zimakov / Unsplash](https://unsplash.com/photos/headphones-rest-on-a-music-production-keyboard-wUcXPyX56Ug)._
+_Photo: [Dima Zimakov / Unsplash](https://unsplash.com/photos/headphones-rest-on-a-music-production-keyboard-wUcXPyX56Ug)._
 
-Uma dúvida comum de quem quer produzir música é: **quais equipamentos eu preciso comprar para começar?**
+A common question when you want to produce music is: **what equipment do I need to buy to get started?**
 
-A resposta curta é que você precisa de menos coisas do que imagina. Um estúdio cheio de equipamentos pode ser útil, mas não substitui prática, escuta e domínio das ferramentas que você já possui.
+You probably need less than you think. A studio full of equipment can be useful, but it cannot replace practice, careful listening, and knowing the tools you already have.
 
-Neste artigo, vou apresentar um setup inicial equilibrado e explicar a função de cada equipamento.
+Here is a balanced starting setup, with an explanation of what each piece does.
 
-## 1. Um computador adequado
+## 1. A suitable computer
 
-O computador é o centro do estúdio digital. É nele que você vai executar a DAW, gravar, editar áudio, usar instrumentos virtuais e organizar o projeto.
+The computer is the center of a digital studio. It runs your digital audio workstation (DAW), records and edits audio, hosts virtual instruments, and organizes your projects.
 
-Você não precisa começar comprando o computador mais caro. Antes de trocar de máquina, teste o que já possui. Para projetos iniciais, o mais importante é ter:
+You do not need to start with the most expensive computer. Before replacing your machine, try the one you already own. For your first projects, the priorities are:
 
-- armazenamento suficiente para projetos e bibliotecas de áudio;
-- memória para executar a DAW e alguns plugins;
-- uma porta compatível com sua interface de áudio;
-- um sistema estável para gravar sem interrupções.
+- enough storage for projects and audio libraries;
+- enough memory to run your DAW and a few plugins;
+- a port compatible with your audio interface;
+- a stable system that can record without interruptions.
 
-Se o computador atual consegue executar sua DAW com estabilidade, ele já pode ser o ponto de partida.
+If your current computer runs your DAW reliably, it can be your starting point.
 
-## 2. Uma interface de áudio
+## 2. An audio interface
 
-A interface de áudio conecta microfones e instrumentos ao computador. Ela também converte o áudio digital do projeto para os fones ou monitores.
+An audio interface connects microphones and instruments to your computer. It also converts the project's digital audio into a signal for headphones or speakers.
 
-Para começar gravando uma ou duas fontes por vez, uma interface com duas entradas costuma ser suficiente. A **Focusrite Scarlett 2i2** é um exemplo conhecido dessa categoria, mas existem boas alternativas de outras marcas.
+If you are recording one or two sources at a time, a two-input interface is usually enough. The **Focusrite Scarlett 2i2** is a familiar example, but other manufacturers offer good alternatives.
 
-Observe principalmente:
+Pay attention to:
 
-- quantidade e tipo de entradas;
-- alimentação phantom de 48 V para microfones condensadores;
-- saída para fones com controle de volume;
-- saídas para monitores;
-- compatibilidade com seu computador e sua DAW.
+- the number and type of inputs;
+- 48 V phantom power for condenser microphones;
+- a headphone output with a volume control;
+- outputs for studio monitors;
+- compatibility with your computer and DAW.
 
-Não escolha apenas pelo número de conexões. Pense no que você realmente pretende gravar ao mesmo tempo.
+Do not choose solely by the number of connections. Think about what you actually need to record simultaneously.
 
-## 3. Um microfone
+## 3. A microphone
 
-Se você pretende gravar voz, instrumentos acústicos ou amplificadores, precisará de um microfone.
+If you want to record vocals, acoustic instruments, or amplifiers, you will need a microphone.
 
-Os dois tipos mais comuns para um primeiro setup são:
+The two common choices for a first setup are:
 
-- **Dinâmico:** costuma ser uma escolha prática para voz, amplificadores e apresentações. Muitos modelos possuem menor sensibilidade, o que pode ajudar em alguns ambientes domésticos.
-- **Condensador:** costuma captar mais detalhes e transientes, mas exige atenção maior à sala e ao posicionamento.
+- **Dynamic:** often a practical choice for vocals, amplifiers, and live performances. Many models have lower sensitivity, which can be useful in some home environments.
+- **Condenser:** often captures more detail and transients, but calls for closer attention to the room and microphone placement.
 
-A quantidade de som ambiente captada não depende apenas do tipo de microfone. O padrão polar, a distância da fonte, o posicionamento e o ganho também influenciam bastante o resultado.
+The amount of room sound in a recording depends on more than the microphone type. Polar pattern, distance from the source, placement, and gain all affect the result.
 
-Um microfone condensador não é automaticamente melhor. Em um quarto com muito eco ou barulho, um bom microfone dinâmico pode produzir um resultado mais controlado.
+A condenser microphone is not automatically better. In a noisy or echoey room, a good dynamic microphone may give you a more controlled recording.
 
-Inclua no orçamento um cabo XLR e um pedestal. Um pop filter também é útil para gravações vocais.
+Budget for an XLR cable and a stand. A pop filter is also useful for vocals.
 
-## 4. Fones de ouvido ou monitores
+## 4. Headphones or studio monitors
 
-Você precisa ouvir o que está gravando e as decisões que está tomando.
+You need to hear what you are recording and the choices you are making.
 
-### Fones de ouvido
+### Headphones
 
-São a opção mais simples quando o ambiente não possui tratamento acústico ou quando você precisa trabalhar sem incomodar outras pessoas.
+Headphones are the simplest option in an untreated room or when you need to work without disturbing other people.
 
-Para gravar voz, prefira um modelo fechado, que reduz o vazamento do playback para o microfone. Para editar e mixar, conforto e familiaridade com o som são muito importantes.
+For vocal recording, choose closed-back headphones to reduce playback leaking into the microphone. For editing and mixing, comfort and familiarity with their sound matter a great deal.
 
-### Monitores de áudio
+### Studio monitors
 
-Monitores podem oferecer uma percepção mais natural de espaço e equilíbrio, mas dependem bastante da posição das caixas e da acústica da sala.
+Monitors can offer a more natural sense of space and balance, but speaker placement and room acoustics strongly affect what you hear.
 
-Se o orçamento estiver apertado, comece com um bom fone. Monitores não corrigem um ambiente problemático por conta própria.
+If your budget is tight, start with good headphones. Monitors cannot fix a problematic room on their own.
 
-## 5. Um teclado controlador MIDI, se fizer sentido
+## 5. A MIDI keyboard controller, if it fits your work
 
-O teclado MIDI não produz áudio sozinho. Ele envia informações para controlar instrumentos virtuais dentro da DAW.
+A MIDI controller does not produce audio on its own. It sends information to control virtual instruments in your DAW.
 
-Ele é especialmente útil para:
+It is particularly useful for:
 
-- gravar acordes e melodias;
-- tocar pianos, sintetizadores e órgãos virtuais;
-- programar bateria e baixo;
-- controlar parâmetros de instrumentos e plugins.
+- recording chords and melodies;
+- playing virtual pianos, synthesizers, and organs;
+- programming drums and bass;
+- controlling instrument and plugin parameters.
 
-Para quem trabalha principalmente com voz, guitarra ou edição de áudio, o controlador pode esperar. Para tecladistas, compositores e arranjadores, ele tende a acelerar bastante o processo criativo.
+If you mainly record vocals or guitar, or edit audio, a controller can wait. For keyboard players, composers, and arrangers, it can make the creative process much faster.
 
-## 6. Os itens pequenos que fazem diferença
+## 6. Small items that make a difference
 
-Alguns acessórios parecem secundários, mas são necessários para o setup funcionar:
+Some accessories seem secondary, but your setup needs them to work:
 
-- cabos XLR e P10 (6,35 mm) adequados;
-- pedestal de microfone;
-- pop filter para voz;
-- adaptadores confiáveis;
-- filtro de linha ou proteção elétrica;
-- suporte para os monitores, quando necessário;
-- armazenamento externo ou backup dos projetos.
+- suitable XLR and 1/4-inch (6.35 mm) cables;
+- a microphone stand;
+- a pop filter for vocals;
+- reliable adapters;
+- a power strip or surge protection;
+- monitor stands, when needed;
+- external storage or backups for your projects.
 
-Evite comprar cabos e adaptadores sem saber qual conexão cada equipamento utiliza. Desenhe primeiro o caminho do sinal.
+Before buying cables and adapters, check the connections on each device. Draw the signal path first.
 
-## O caminho do sinal
+## The signal path
 
-Em um setup simples, o áudio percorre este caminho:
+In a simple setup, audio follows this path:
 
-**Microfone ou instrumento → interface de áudio → computador e DAW → fones ou monitores**
+**Microphone or instrument → audio interface → computer and DAW → headphones or monitors**
 
-![Diagrama do caminho do sinal: fonte sonora, interface de áudio, computador com DAW e sistema de escuta](/blog-images/diagrama-caminho-do-sinal.svg)
+![Signal path from a sound source through an audio interface and computer to headphones or monitors](/blog-images/diagrama-caminho-do-sinal.en.svg)
 
-Entender esse fluxo ajuda a configurar entradas, saídas, ganho e monitoramento. Também facilita encontrar o problema quando algo não está funcionando.
+Understanding this flow makes it easier to configure inputs, outputs, gain, and monitoring. It also helps you find the problem when something is not working.
 
-## Três formas de começar
+## Three ways to start
 
-![Fluxo de decisão para escolher entre um setup virtual, um setup de gravação e um setup com controlador MIDI](/blog-images/diagrama-escolha-do-setup.svg)
+![Decision guide for a virtual-instrument setup, a recording setup, or a MIDI-controller setup](/blog-images/diagrama-escolha-do-setup.en.svg)
 
-### Setup mínimo para aprender produção
+### A minimal setup for learning production
 
-- computador;
+- computer;
 - DAW;
-- fones de ouvido.
+- headphones.
 
-Com isso, você já pode editar áudio, usar loops, programar instrumentos virtuais e estudar arranjo e mixagem.
+With those tools, you can edit audio, use loops, program virtual instruments, and study arrangement and mixing.
 
-### Setup para gravar voz ou instrumento
+### A setup for recording vocals or instruments
 
-- computador;
+- computer;
 - DAW;
-- interface de áudio com duas entradas;
-- microfone adequado ao ambiente;
-- cabo, pedestal e pop filter;
-- fones fechados.
+- two-input audio interface;
+- microphone suited to the room;
+- cable, stand, and pop filter;
+- closed-back headphones.
 
-### Setup para composição e arranjo
+### A setup for composition and arrangement
 
-- computador;
+- computer;
 - DAW;
-- fones ou monitores;
-- teclado controlador MIDI;
-- interface de áudio, caso você também grave fontes externas.
+- headphones or monitors;
+- MIDI keyboard controller;
+- audio interface, if you also record external sources.
 
-## O que eu evitaria comprar no início
+## What I would avoid buying at the beginning
 
-É fácil gastar muito antes de entender suas necessidades. Eu evitaria começar com:
+It is easy to spend heavily before understanding your needs. I would avoid starting with:
 
-- muitos plugins com funções parecidas;
-- interface com várias entradas que nunca serão usadas;
-- monitores caros em uma sala sem posicionamento adequado;
-- vários microfones antes de dominar um;
-- equipamentos escolhidos apenas porque aparecem no setup de outro produtor.
+- many plugins that do similar things;
+- an interface with inputs you will never use;
+- expensive monitors without suitable placement in your room;
+- several microphones before learning to use one well;
+- equipment chosen only because another producer uses it.
 
-As ferramentas nativas da sua DAW são suficientes para aprender boa parte dos fundamentos.
+Your DAW's built-in tools are enough to learn many of the fundamentals.
 
-## Exemplos de orçamento
+## Example budgets
 
-Os valores abaixo são referências consultadas em **29 de agosto de 2026**. Promoções, frete, disponibilidade e forma de pagamento podem alterar bastante o total. Nas compras em dólar, considere também cotação, IOF e eventuais impostos ou tributos locais. Confira sempre o preço final no anúncio antes de comprar.
+The prices below were recorded on **August 29, 2026**. They are historical reference points, not live quotes. Promotions, shipping, availability, and payment methods can substantially change the total. For purchases in U.S. dollars, also account for exchange rates, Brazil's IOF tax where applicable, and other local taxes. Check the final price before buying.
 
-Estes links não são afiliados.
+These are not affiliate links. The examples use Brazilian retailers and Brazilian reais (R$); dollar amounts are in U.S. dollars (US$).
 
-### Referências de computadores
+### Computer reference prices
 
-- [Dell DC15, Core i5, 8 GB de RAM e SSD de 512 GB](https://www.mercadolivre.com.br/notebook-dell-dc15-i51334u-a50-156-fhd-i5-8gb-512gb-win-11/p/MLB70040749): cerca de **R$ 3.600 a R$ 4.300**. É uma opção de entrada para projetos menores, mas eu consideraria aumentar a memória para 16 GB quando possível.
-- [MacBook Air de 13 polegadas com M5, 16 GB e SSD de 512 GB](https://www.mercadolivre.com.br/macbook-air-de-13-polegadas-chip-m5-cpu-de-10nucleos-gpu-de-8nucleos-neuralengine-de-16nucleos-512gb-estelar/p/MLB66159970): aproximadamente **R$ 12.600 a R$ 14.000**, dependendo da loja e da promoção.
-- [MacBook Pro de 14 polegadas com M5 Pro, 24 GB e SSD de 2 TB](https://www.mercadolivre.com.br/macbook-pro-14-polegadas-apple-m5-pro-chip-com-15-nucleos-cpu-e-16-nucleos-gpu-24gb-2tb-ssd-preto-espacial-distribuidor-autorizado/p/MLB1066159911): configuração profissional que pode ficar na faixa de **R$ 30.000 a R$ 39.000**. É muito mais do que a maioria das pessoas precisa para começar.
+- [Dell DC15, Core i5, 8 GB RAM, and 512 GB SSD](https://www.mercadolivre.com.br/notebook-dell-dc15-i51334u-a50-156-fhd-i5-8gb-512gb-win-11/p/MLB70040749): around **R$ 3,600–4,300**. An entry-level option for smaller projects; I would consider upgrading to 16 GB RAM when possible.
+- [13-inch MacBook Air with M5, 16 GB RAM, and 512 GB SSD](https://www.mercadolivre.com.br/macbook-air-de-13-polegadas-chip-m5-cpu-de-10nucleos-gpu-de-8nucleos-neuralengine-de-16nucleos-512gb-estelar/p/MLB66159970): approximately **R$ 12,600–14,000**, depending on the retailer and promotion.
+- [14-inch MacBook Pro with M5 Pro, 24 GB RAM, and 2 TB SSD](https://www.mercadolivre.com.br/macbook-pro-14-polegadas-apple-m5-pro-chip-com-15-nucleos-cpu-e-16-nucleos-gpu-24gb-2tb-ssd-preto-espacial-distribuidor-autorizado/p/MLB1066159911): a professional configuration in the **R$ 30,000–39,000** range. This is far more than most beginners need.
 
-### Referências de interfaces
+### Audio-interface reference prices
 
-- [Teyun Q24](https://www.mercadolivre.com.br/interface-de-audio-usb-teyun-q24-24bit-192khz-audiobox-2-entradas-4-saidas/p/MLB23574224): aproximadamente **R$ 220 a R$ 450**. É a alternativa mais econômica da lista, mas vale pesquisar drivers, suporte e estabilidade antes da compra.
-- [M-Audio M-Track Duo](https://www.mercadolivre.com.br/interface-de-audio-m-track-duo-usb-de-2-canais-m-audio-preto/p/MLB19866667): aproximadamente **R$ 750 a R$ 800**. Possui duas entradas combo, phantom power, monitoração direta e inclui o MPC Beats com instrumentos e efeitos. É uma opção econômica de fabricante mais conhecido, embora trabalhe com taxa de amostragem máxima de 48 kHz.
-- [Focusrite Scarlett Solo de 3ª geração](https://www.mercadolivre.com.br/interface-de-audio-focusrite-scarlett-solo-red-3-geracao/p/MLB19770634): cerca de **R$ 1.600 a R$ 1.800**. Atende bem quem grava uma voz ou um instrumento por vez.
-- [Focusrite Scarlett 2i2 de 4ª geração](https://www.mercadolivre.com.br/interface-focusrite-scarlett-2i2-4a-geracao-vermelha/p/MLB29501297): aproximadamente **R$ 2.000 a R$ 2.200**. Oferece duas entradas e é uma escolha equilibrada para um estúdio pessoal.
-- [Kit Focusrite Scarlett 2i2 Studio de 4ª geração](https://www.mercadolivre.com.br/kit-interface-audio-focusrite-scarlett-2i2-studio-4th-gen-cor-vermelho/p/MLB27884876): cerca de **R$ 3.000 a R$ 3.300**. O kit reúne interface, microfone condensador, fone fechado e cabo XLR, reduzindo a quantidade de compras separadas.
-- [PreSonus Quantum ES 2](https://intl.presonus.com/products/quantum-es-2-usb-c-audio-interface): **US$ 199,99** no site internacional. Ela possui duas entradas, pré-amplificadores com 75 dB de ganho, Auto Gain e licença perpétua da DAW da marca.
-- [PreSonus Studio 24c](https://www.presonus.com/products/studio-24c): **US$ 157,99** no site internacional da marca. Possui duas entradas, MIDI, medidores de nível e gravação em até 24 bits e 192 kHz. [Consulte também o anúncio no Mercado Livre](https://www.mercadolivre.com.br/interface-de-audio-presonus-studio-24c-2-entradas-saida-usb-c-midi-192khz/p/MLB15800033), cujo preço em reais pode ser diferente.
+- [Teyun Q24](https://www.mercadolivre.com.br/interface-de-audio-usb-teyun-q24-24bit-192khz-audiobox-2-entradas-4-saidas/p/MLB23574224): approximately **R$ 220–450**. The least expensive option here, but research drivers, support, and reliability before buying.
+- [M-Audio M-Track Duo](https://www.mercadolivre.com.br/interface-de-audio-m-track-duo-usb-de-2-canais-m-audio-preto/p/MLB19866667): approximately **R$ 750–800**. It has two combo inputs, phantom power, direct monitoring, and includes MPC Beats with instruments and effects. It is a budget option from an established manufacturer, with a maximum sample rate of 48 kHz.
+- [Third-generation Focusrite Scarlett Solo](https://www.mercadolivre.com.br/interface-de-audio-focusrite-scarlett-solo-red-3-geracao/p/MLB19770634): around **R$ 1,600–1,800**. Suitable for someone recording one vocal or instrument at a time.
+- [Fourth-generation Focusrite Scarlett 2i2](https://www.mercadolivre.com.br/interface-focusrite-scarlett-2i2-4a-geracao-vermelha/p/MLB29501297): approximately **R$ 2,000–2,200**. Two inputs make it a balanced choice for a personal studio.
+- [Fourth-generation Focusrite Scarlett 2i2 Studio kit](https://www.mercadolivre.com.br/kit-interface-audio-focusrite-scarlett-2i2-studio-4th-gen-cor-vermelho/p/MLB27884876): around **R$ 3,000–3,300**. The kit includes an interface, condenser microphone, closed-back headphones, and an XLR cable, reducing the number of separate purchases.
+- [PreSonus Quantum ES 2](https://intl.presonus.com/products/quantum-es-2-usb-c-audio-interface): **US$ 199.99** on the international store at the time of comparison. It has two inputs, preamps with 75 dB of gain, Auto Gain, and a perpetual license for the manufacturer's DAW.
+- [PreSonus Studio 24c](https://www.presonus.com/products/studio-24c): **US$ 157.99** on the manufacturer's international store at the time of comparison. It has two inputs, MIDI, level meters, and recording up to 24-bit/192 kHz. [See the Mercado Livre listing too](https://www.mercadolivre.com.br/interface-de-audio-presonus-studio-24c-2-entradas-saida-usb-c-midi-192khz/p/MLB15800033), where the price in reais may differ.
 
-A DAW da PreSonus era conhecida como **Studio One Pro** e atualmente se chama **Fender Studio Pro**. O software atual mantém o núcleo e a compatibilidade de sessões do Studio One.
+At the time of this comparison, the DAW previously known as **Studio One Pro** had become **Fender Studio Pro**, retaining Studio One's core and session compatibility.
 
-A Quantum ES 2 inclui, na oferta oficial atual, uma licença perpétua do Fender Studio Pro. A Studio 24c ficou conhecida por incluir o Studio One Artist; na oferta oficial atual, ela inclui seis meses de teste do Fender Studio Pro. Estoques antigos podem ter pacotes diferentes, então confirme com o vendedor qual licença acompanha a unidade.
+The Quantum ES 2 offer included a perpetual Fender Studio Pro license. The Studio 24c had historically included Studio One Artist; the offer checked for this article included a six-month Fender Studio Pro trial. Older stock may have different bundles, so confirm the included license with the seller.
 
-### Referências de software
+### Software reference prices
 
-- [REAPER](https://www.reaper.fm/purchase.php): teste completo por 60 dias. A licença com desconto custa **US$ 60** para uso pessoal, educacional, sem fins lucrativos ou comercial com receita anual de até US$ 20 mil. A licença comercial custa **US$ 225**.
-- [Logic Pro](https://www.apple.com/br/logic-pro/): compra avulsa para Mac por **R$ 1.299,90**.
-- [Apple Creator Studio](https://creatorstudio.apple.com/pt-br/info/try): inclui Logic Pro, MainStage, Final Cut Pro, Pixelmator Pro e outros apps. Custa **R$ 39,90 por mês** ou **R$ 399 por ano**. O plano educacional custa R$ 14,90 por mês ou R$ 149 por ano para pessoas elegíveis.
-- [Ableton Live 12](https://www.ableton.com/en/shop/live/): **US$ 99** na edição Intro, **US$ 349** na Standard e **US$ 749** na Suite. A Suite também pode ser adquirida em 24 pagamentos de US$ 31,21 no modelo rent-to-own. Há uma avaliação gratuita da Suite por 30 dias. O Live é especialmente interessante para criação por clips, música eletrônica, improvisação e performance ao vivo.
-- [ACE Studio](https://acestudio.ai/pricing/): ferramenta opcional para vocais e instrumentos gerados por IA. Na consulta, os planos promocionais anuais apareciam a partir de **US$ 16,58 por mês**. O valor é cobrado em dólar e pode mudar após a promoção.
-- [Suno Studio](https://suno.com/studio): ambiente de produção musical com IA que funciona no navegador. Ele combina timeline multitrack, MIDI, instrumentos, efeitos, automação, criação de plugins por texto, separação avançada de stems e exportação para outras DAWs. O acesso ao Studio exige o plano Premier, que aparecia por **US$ 24 por mês no pagamento anual** durante a consulta. O Suno concede uso comercial para novas músicas criadas durante uma assinatura paga, mas recomenda conferir os termos e as regras de direitos autorais antes de distribuir um projeto.
+- [REAPER](https://www.reaper.fm/purchase.php): a fully functional 60-day evaluation. The discounted license was **US$ 60** for personal, educational, nonprofit, or commercial use with annual revenue up to US$ 20,000. The commercial license was **US$ 225**.
+- [Logic Pro](https://www.apple.com/br/logic-pro/): a one-time Mac purchase for **R$ 1,299.90**.
+- [Apple Creator Studio](https://creatorstudio.apple.com/pt-br/info/try): includes Logic Pro, MainStage, Final Cut Pro, Pixelmator Pro, and other apps. Reference prices were **R$ 39.90/month** or **R$ 399/year**, with an education plan at R$ 14.90/month or R$ 149/year for eligible users.
+- [Ableton Live 12](https://www.ableton.com/en/shop/live/): **US$ 99** for Intro, **US$ 349** for Standard, and **US$ 749** for Suite. Suite also offered 24 rent-to-own payments of US$ 31.21 and a 30-day free trial. Live is particularly useful for clip-based creation, electronic music, improvisation, and live performance.
+- [ACE Studio](https://acestudio.ai/pricing/): an optional tool for AI-generated vocals and instruments. Promotional annual plans started at the equivalent of **US$ 16.58/month** when checked. Billing is in dollars, and prices may change after a promotion.
+- [Suno Studio](https://suno.com/studio): a browser-based AI music-production environment with a multitrack timeline, MIDI, instruments, effects, automation, text-based plugin creation, stem separation, and export to other DAWs. At the time of comparison, Studio required the Premier plan, listed at the equivalent of **US$ 24/month with annual billing**. Check Suno's commercial-use terms and applicable copyright rules before distributing a project.
 
-### Orçamento 1: começar com o computador que você já possui
+### Budget 1: use the computer you already own
 
-- computador atual;
-- Teyun Q24: **R$ 220 a R$ 450**;
-- REAPER: **US$ 60**, após o período de avaliação;
-- fone e microfone que você já possui ou pretende escolher separadamente.
+- your current computer;
+- Teyun Q24: **R$ 220–450**;
+- REAPER: **US$ 60**, after the evaluation period;
+- headphones and a microphone you already own or will choose separately.
 
-**Subtotal de hardware: aproximadamente R$ 220 a R$ 450.**
+**Hardware subtotal: approximately R$ 220–450.**
 
-É a opção de menor investimento, mas a interface econômica exige mais pesquisa sobre compatibilidade e suporte.
+This requires the least investment, but the budget interface calls for more research into compatibility and support.
 
-### Orçamento 2: setup Windows essencial
+### Budget 2: an essential Windows setup
 
-- Dell DC15: **R$ 3.600 a R$ 4.300**;
-- M-Audio M-Track Duo: **R$ 750 a R$ 800**;
+- Dell DC15: **R$ 3,600–4,300**;
+- M-Audio M-Track Duo: **R$ 750–800**;
 - REAPER: **US$ 60**;
-- microfone, fone, cabo e pedestal comprados separadamente.
+- microphone, headphones, cable, and stand purchased separately.
 
-**Subtotal de computador e interface: aproximadamente R$ 4.350 a R$ 5.100.**
+**Computer and interface subtotal: approximately R$ 4,350–5,100.**
 
-### Orçamento 3: setup completo para gravar
+### Budget 3: a complete recording setup
 
-- Dell DC15: **R$ 3.600 a R$ 4.300**;
-- kit Scarlett 2i2 Studio: **R$ 3.000 a R$ 3.300**;
+- Dell DC15: **R$ 3,600–4,300**;
+- Scarlett 2i2 Studio kit: **R$ 3,000–3,300**;
 - REAPER: **US$ 60**.
 
-**Subtotal de hardware: aproximadamente R$ 6.600 a R$ 7.600.**
+**Hardware subtotal: approximately R$ 6,600–7,600.**
 
-Este é o orçamento mais completo para quem ainda não possui interface, microfone e fone.
+This is the most complete option for someone who does not yet own an interface, microphone, or headphones.
 
-### Orçamento 4: setup Mac equilibrado
+### Budget 4: a balanced Mac setup
 
-- MacBook Air M5: **R$ 12.600 a R$ 14.000**;
-- Scarlett 2i2: **R$ 2.000 a R$ 2.200**;
-- Logic Pro avulso: **R$ 1.299,90**.
+- MacBook Air M5: **R$ 12,600–14,000**;
+- Scarlett 2i2: **R$ 2,000–2,200**;
+- standalone Logic Pro: **R$ 1,299.90**.
 
-**Total inicial aproximado: R$ 15.900 a R$ 17.500.**
+**Approximate initial total: R$ 15,900–17,500.**
 
-Em vez de comprar o Logic Pro, você pode começar pela assinatura do Apple Creator Studio e reduzir o desembolso inicial, lembrando que a assinatura gera um custo recorrente.
+Instead of buying Logic Pro outright, an Apple Creator Studio subscription can reduce the initial expense, but adds a recurring cost.
 
-![Comparação visual dos quatro orçamentos iniciais de produção musical](/blog-images/diagrama-comparacao-orcamentos.svg)
+![Comparison of four starting budgets for music production](/blog-images/diagrama-comparacao-orcamentos.en.svg)
 
-### Alternativa de interface: ecossistema PreSonus
+### An alternative: the PreSonus ecosystem
 
-- computador que você já possui ou um dos modelos acima;
-- Studio 24c: **US$ 157,99** no site internacional, com seis meses de Fender Studio Pro; ou
-- Quantum ES 2: **US$ 199,99** no site internacional, com licença perpétua do Fender Studio Pro.
+- your current computer or one of the models above;
+- Studio 24c: **US$ 157.99** on the international store, with six months of Fender Studio Pro; or
+- Quantum ES 2: **US$ 199.99** on the international store, with a perpetual Fender Studio Pro license.
 
-A Quantum ES 2 pode eliminar a compra separada da DAW. Esta comparação não é um orçamento fechado porque os preços oficiais estão em dólar e o computador não foi fixado. Para montar o total em reais, consulte um revendedor nacional e confirme câmbio, IOF, impostos, garantia e a licença incluída.
+The Quantum ES 2 bundle can eliminate a separate DAW purchase. This is not a complete budget: the official prices are in dollars, and no specific computer is included. For a total in reais, check a Brazilian retailer and confirm exchange rates, IOF, other taxes, warranty, and the included license.
 
-### E o MacBook Pro?
+### What about the MacBook Pro?
 
-O MacBook Pro M5 Pro com 24 GB e 2 TB é uma opção para projetos muito grandes, bibliotecas extensas e cargas profissionais pesadas. Para uma pessoa iniciante, direcionar parte dessa diferença de preço para microfone, monitoração, acústica e formação costuma produzir um ganho mais perceptível.
+A MacBook Pro with M5 Pro, 24 GB RAM, and 2 TB storage is an option for very large projects, extensive libraries, and demanding professional workloads. For a beginner, putting some of that price difference into microphones, monitoring, acoustics, and learning is likely to make a more noticeable difference.
 
-## Meu setup como referência, não como regra
+## My setup as a reference
 
-Na minha demonstração de produção musical, uso um **MacBook Air M5**, uma **Focusrite Scarlett 18i8**, microfone, controlador **Novation SL 61** e fones ou monitores.
+In my music-production demonstration, I use a **MacBook Air M5**, a **Focusrite Scarlett 18i8**, a microphone, a **Novation SL 61** controller, and headphones or monitors.
 
-Esse setup atende à minha forma de trabalhar com composição, arranjos, instrumentos virtuais e gravação. Ele não é uma lista obrigatória. Seu setup deve acompanhar o tipo de música que você produz e a etapa em que você está.
+This setup suits how I compose, arrange, use virtual instruments, and record. It is not a required shopping list. Your setup should reflect the music you make and the stage you are at.
 
-> Você não precisa começar com muitos equipamentos. Precisa conhecer bem os equipamentos que possui.
+> You do not need to start with lots of equipment. You need to know the equipment you have.
 
-Escolha um objetivo concreto, monte o menor setup capaz de realizá-lo e produza uma música completa. A experiência de terminar projetos vai mostrar com muito mais clareza qual deve ser sua próxima compra.
+Choose a concrete goal, build the smallest setup that can achieve it, and finish a complete song. Finishing projects will make it much clearer what you should buy next.

@@ -1,52 +1,67 @@
 "use client";
 
 import { XLogoIcon } from "@/components/x-logo-icon";
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon, GlobeIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { Switch } from "@radix-ui/themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { Suspense } from "react";
+import { localizedPath, messages, withoutLocale, type Locale } from "@/lib/i18n";
 
 const navItems = [
-    { label: "About", href: "/about" },
-    { label: "Projects", href: "/projects" },
-    { label: "Blog", href: "/blog" },
-];
+    { label: "about", href: "/about" },
+    { label: "projects", href: "/projects" },
+    { label: "blog", href: "/blog" },
+] as const;
 
-export function SiteHeader() {
+export function SiteHeader({ locale = "en" }: { locale?: Locale }) {
     const pathname = usePathname();
-    const { theme, setTheme } = useTheme();
+    const currentPath = withoutLocale(pathname);
+    const text = messages[locale];
+    const targetLocale = locale === "en" ? "pt" : "en";
+    const { resolvedTheme, setTheme } = useTheme();
 
     const switchTheme = () => {
-        setTheme(theme === "light" ? "dark" : "light");
+        setTheme(resolvedTheme === "dark" ? "light" : "dark");
     };
 
     return (
+        <>
         <header className="site-header">
             <div className="site-header-inner">
-                <Link href="/" className="site-mark">
+                <Link href={localizedPath(locale, "/")} className="site-mark">
                     Jônatas Santos
                 </Link>
 
-                <nav className="site-nav site-nav--desktop" aria-label="Main">
+                <nav className="site-nav site-nav--desktop" aria-label={text.navigation}>
                     {navItems.map((item) => (
                         <Link
                             key={item.href}
-                            href={item.href}
-                            aria-current={pathname === item.href ? "page" : undefined}
+                            href={localizedPath(locale, item.href)}
+                            aria-current={currentPath === item.href || currentPath.startsWith(`${item.href}/`) ? "page" : undefined}
                         >
-                            {item.label}
+                            {text[item.label]}
                         </Link>
                     ))}
                 </nav>
 
                 <div className="site-actions social">
-                    <Suspense fallback={<Switch checked={theme === "dark"} />}>
+                    <Link
+                        href={localizedPath(targetLocale, currentPath)}
+                        className="language-switch"
+                        hrefLang={targetLocale === "pt" ? "pt-BR" : "en"}
+                        lang={targetLocale === "pt" ? "pt-BR" : "en"}
+                        aria-label={text.switchLanguage}
+                    >
+                        <GlobeIcon aria-hidden="true" />
+                        {text.language}
+                    </Link>
+                    <Suspense fallback={<Switch checked={resolvedTheme === "dark"} />}>
                         <Switch
                             onClick={switchTheme}
-                            checked={theme === "dark"}
-                            aria-label="Toggle dark mode"
+                            checked={resolvedTheme === "dark"}
+                            aria-label={text.darkMode}
                         />
                     </Suspense>
                     <a className="social-link" href="https://github.com/jonatascastro12" target="_blank" rel="noreferrer" aria-label="GitHub">
@@ -60,18 +75,19 @@ export function SiteHeader() {
                     </a>
                 </div>
             </div>
+        </header>
 
-            <nav className="site-nav site-nav--mobile" aria-label="Mobile">
+            <nav className="site-nav site-nav--mobile" aria-label={text.mobileNavigation}>
                 {navItems.map((item) => (
                     <Link
                         key={item.href}
-                        href={item.href}
-                        aria-current={pathname === item.href ? "page" : undefined}
+                        href={localizedPath(locale, item.href)}
+                        aria-current={currentPath === item.href || currentPath.startsWith(`${item.href}/`) ? "page" : undefined}
                     >
-                        {item.label}
+                        {text[item.label]}
                     </Link>
                 ))}
             </nav>
-        </header>
+        </>
     );
 }

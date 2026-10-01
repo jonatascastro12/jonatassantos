@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { Locale } from "@/lib/i18n";
 
 type ProjectType = "professional" | "side" | "paper" | "academic";
 
@@ -7,6 +8,13 @@ const labels: Record<ProjectType, string> = {
     side: "Side project",
     paper: "Paper or article",
     academic: "Academic work",
+};
+
+const portugueseLabels: Record<ProjectType, string> = {
+    professional: "Projeto profissional",
+    side: "Projeto pessoal",
+    paper: "Artigo ou publicação",
+    academic: "Trabalho acadêmico",
 };
 
 const icons: Record<ProjectType, ReactNode> = {
@@ -84,31 +92,33 @@ const icons: Record<ProjectType, ReactNode> = {
 
 type ProjectIconProps = {
     type: ProjectType;
+    locale?: Locale;
 };
 
-export function ProjectIcon({ type }: ProjectIconProps) {
+export function ProjectIcon({ type, locale = "en" }: ProjectIconProps) {
+    const label = locale === "pt" ? portugueseLabels[type] : labels[type];
     return (
-        <span className={`project-icon project-icon--${type}`} title={labels[type]}>
+        <span className={`project-icon project-icon--${type}`} title={label}>
             {icons[type]}
-            <span className="sr-only">{labels[type]}: </span>
+            <span className="sr-only">{label}: </span>
         </span>
     );
 }
 
-const legendItems: { type: ProjectType; label: string }[] = [
-    { type: "professional", label: "Professional" },
-    { type: "side", label: "Side project" },
-    { type: "paper", label: "Paper / article" },
-    { type: "academic", label: "Academic" },
+const legendItems: { type: ProjectType; label: string; labelPt: string }[] = [
+    { type: "professional", label: "Professional", labelPt: "Profissional" },
+    { type: "side", label: "Side project", labelPt: "Projeto pessoal" },
+    { type: "paper", label: "Paper / article", labelPt: "Artigo / publicação" },
+    { type: "academic", label: "Academic", labelPt: "Acadêmico" },
 ];
 
-export function ProjectLegend() {
+export function ProjectLegend({ locale = "en" }: { locale?: Locale }) {
     return (
-        <div className="project-legend" aria-label="Project types">
+        <div className="project-legend" aria-label={locale === "pt" ? "Tipos de projeto" : "Project types"}>
             {legendItems.map((item) => (
                 <span key={item.type} className="project-legend__item">
-                    <ProjectIcon type={item.type} />
-                    <span>{item.label}</span>
+                    <ProjectIcon type={item.type} locale={locale} />
+                    <span>{locale === "pt" ? item.labelPt : item.label}</span>
                 </span>
             ))}
         </div>
