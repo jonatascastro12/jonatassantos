@@ -22,6 +22,8 @@ Both editions have their own canonical URL and reciprocal language metadata. `/s
 
 ## Validation
 
+Use Node.js 24, matching the deployment runtime and the Volta pin in `package.json`.
+
 ```sh
 node --test tests/posts.test.cjs tests/typewriter.test.cjs
 pnpm build
