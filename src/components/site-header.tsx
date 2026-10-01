@@ -51,11 +51,10 @@ export function SiteHeader({ locale = "en" }: { locale?: Locale }) {
                         href={localizedPath(targetLocale, currentPath)}
                         className="language-switch"
                         hrefLang={targetLocale === "pt" ? "pt-BR" : "en"}
-                        lang={targetLocale === "pt" ? "pt-BR" : "en"}
                         aria-label={text.switchLanguage}
                     >
                         <GlobeIcon aria-hidden="true" />
-                        {text.language}
+                        <span lang={targetLocale === "pt" ? "pt-BR" : "en"}>{text.language}</span>
                     </Link>
                     <Suspense fallback={<Switch checked={resolvedTheme === "dark"} />}>
                         <Switch
