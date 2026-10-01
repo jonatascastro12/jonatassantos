@@ -14,10 +14,19 @@ export function generateMetadata({ params }: { params: { locale: Locale } }) {
 export default function Page({ params }: { params: { locale: Locale } }) {
     const postsData = getSortedPostsData(params.locale);
     const text = messages[params.locale];
+    const archivePosts = postsData.filter((post) => post.legacy);
 
     return (
         <PageShell narrow locale={params.locale}>
             <h1 className="page-title animate-fade-up">Blog</h1>
+            {archivePosts.length ? (
+                <p className="blog-archive-intro">
+                    {params.locale === "pt"
+                        ? `Textos recentes e ${archivePosts.length} artigos do meu antigo blog. `
+                        : `Recent writing and ${archivePosts.length} articles from my earlier blog. `}
+                    <a href="#archive">{params.locale === "pt" ? "Ver o arquivo ↓" : "Browse the archive ↓"}</a>
+                </p>
+            ) : null}
             <ul className="blog-list animate-fade-up">
                 {postsData.map((post) => (
                     <li key={post.id} className="blog-item">
@@ -29,7 +38,10 @@ export default function Page({ params }: { params: { locale: Locale } }) {
                                 <span className="sr-only"> ({post.source}, {text.externalLink})</span>
                             </a>
                         ) : (
-                            <Link href={localizedPath(params.locale, `/blog/${post.id}`)}>{post.title}</Link>
+                            <Link id={post.id === archivePosts[0]?.id ? "archive" : undefined} href={localizedPath(params.locale, `/blog/${post.id}`)}>
+                                {post.title}
+                                {post.legacy ? <span className="blog-archive-label"> · {params.locale === "pt" ? "Arquivo" : "Archive"}</span> : null}
+                            </Link>
                         )}
                         <time className="blog-item-date" dateTime={post.date}>
                             {format(parseISO(post.date), "dd MMM yyyy", { locale: params.locale === "pt" ? ptBR : undefined })}

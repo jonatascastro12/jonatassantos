@@ -7,6 +7,7 @@ const base = process.env.TEST_BASE_URL || 'http://localhost:3100';
 const canonicalBase = 'https://www.jonatassantos.me';
 const postIds = fs.readdirSync('src/content').filter((name) => name.endsWith('.md')).map((name) => name.slice(0, -3));
 const paths = ['/', '/about', '/projects', '/blog', ...postIds.map((id) => `/blog/${id}`)];
+const escapeHtml = (text) => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#x27;');
 const localized = (path, locale) => locale === 'pt' ? `/pt${path === '/' ? '' : path}` : path;
 
 test('every page has a translated edition, a matching language switch, and reciprocal search metadata', async () => {
@@ -31,7 +32,7 @@ test('every page has a translated edition, a matching language switch, and recip
       const id = path.slice('/blog/'.length);
       const file = `src/content/${locale === 'pt' ? 'pt/' : ''}${id}.md`;
       const title = matter(fs.readFileSync(file, 'utf8')).data.title;
-      assert.ok(html.includes(title.replaceAll("'", '&#x27;')), `Translated article title: ${publicPath}`);
+      assert.ok(html.includes(escapeHtml(title)), `Translated article title: ${publicPath}`);
     }
   })));
 });

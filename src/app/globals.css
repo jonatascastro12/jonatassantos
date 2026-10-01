@@ -417,6 +417,65 @@ button:focus-visible,
     height: auto;
 }
 
+.article-archive-note {
+    color: var(--color-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin: 1.25rem 0 2rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--color-signal);
+}
+
+.blog-archive-label {
+    color: var(--color-muted);
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 0.7rem;
+    white-space: nowrap;
+}
+
+.blog-archive-intro {
+    color: var(--color-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin: -0.75rem 0 2rem;
+}
+
+.blog-list #archive {
+    scroll-margin-top: 7rem;
+}
+
+.article-table-scroll {
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.article-table-scroll:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+.prose-content table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.prose-content th, .prose-content td {
+    border-bottom: 1px solid var(--color-signal);
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.prose-content th {
+    font-weight: 600;
+}
+
+.prose-content a {
+    overflow-wrap: anywhere;
+}
+
 .sr-only {
     position: absolute;
     width: 1px;

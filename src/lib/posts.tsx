@@ -10,6 +10,7 @@ type PostSummary = {
   title: string;
   externalUrl?: string;
   source?: string;
+  legacy?: boolean;
 };
 
 const postsDirectory = path.join(process.cwd(), "src/content");
@@ -63,6 +64,6 @@ export async function getPostData(slug: string, locale: Locale = "en") {
   return {
     slug,
     content: matterResult.content,
-    ...(matterResult.data as { date: string; title: string; description?: string }),
+    ...(matterResult.data as { date: string; title: string; description?: string; legacy?: boolean; revised?: string }),
   };
 }

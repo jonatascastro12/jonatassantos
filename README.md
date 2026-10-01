@@ -35,3 +35,13 @@ With the site running, validate article links, language editions, search metadat
 ```sh
 TEST_BASE_URL=http://localhost:3100 node --test tests/blog.test.cjs tests/i18n.test.cjs
 ```
+
+## Legacy blog archive
+
+The 16 posts linked from `jonatascastro.com` now have matching English and Portuguese editions. Imported posts are marked as archive entries, retain their original dates, and use local recovered images. See [the migration record](docs/legacy-migration.md) for editorial decisions, missing ebook PDFs, asset inventory, and old-domain redirect preparation.
+
+With the production build running, include the migration checks:
+
+```sh
+TEST_BASE_URL=http://localhost:3100 node --test tests/posts.test.cjs tests/typewriter.test.cjs tests/blog.test.cjs tests/i18n.test.cjs tests/legacy-posts.test.cjs tests/legacy-redirect.test.cjs
+```
