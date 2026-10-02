@@ -3,8 +3,9 @@ import path from "path";
 import matter from "gray-matter";
 import externalPosts from "../content/external-posts.json";
 import type { Locale } from "./i18n";
+import type { PostTaxonomy } from "./post-taxonomy";
 
-type PostSummary = {
+type PostSummary = PostTaxonomy & {
   id: string;
   date: string;
   title: string;
@@ -64,6 +65,6 @@ export async function getPostData(slug: string, locale: Locale = "en") {
   return {
     slug,
     content: matterResult.content,
-    ...(matterResult.data as { date: string; title: string; description?: string; legacy?: boolean; revised?: string }),
+    ...(matterResult.data as PostTaxonomy & { date: string; title: string; description?: string; legacy?: boolean; revised?: string }),
   };
 }

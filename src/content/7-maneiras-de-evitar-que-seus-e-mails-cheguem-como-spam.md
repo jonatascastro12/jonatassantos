@@ -4,6 +4,8 @@ date: "2016-05-27"
 description: "Improve legitimate email delivery with permission, clear content, authentication, and predictable sending."
 legacy: true
 revised: "2026-10-01"
+category: "marketing"
+tags: ["email"]
 ---
 
 An email campaign is useful only if people want to receive it and can find it. The original version of this article offered seven suggestions for keeping newsletters out of the spam folder.

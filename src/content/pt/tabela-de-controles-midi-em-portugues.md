@@ -3,6 +3,8 @@ title: "Tabela de controles MIDI em português"
 date: "2016-12-20"
 legacy: true
 description: "Artigo do arquivo original: Tabela de controles MIDI em português"
+category: "music"
+tags: ["midi"]
 ---
 
 **MIDI** é o acrônimo de Musical Instrument Digital Interface que significa, do inglês, Interface Digital para Instrumentos Musicais. Trata-se de um protocolo desenvolvido nos anos 1980, que permite a comunicação entre instrumentos musicais eletrônicos, bem como, outros equipamentos digitais que possuam essa interface.

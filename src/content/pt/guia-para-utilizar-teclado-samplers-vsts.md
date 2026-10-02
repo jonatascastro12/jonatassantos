@@ -3,6 +3,8 @@ title: "Guia para utilizar teclado, samplers & VSTs no palco: performances ao vi
 date: "2016-12-13"
 legacy: true
 description: "Artigo do arquivo original: Guia para utilizar teclado, samplers & VSTs no palco: performances ao vivo"
+category: "music"
+tags: ["live-performance", "virtual-instruments"]
 ---
 
 **Indico para:** tecladistas e pianistas amadores e profissionais

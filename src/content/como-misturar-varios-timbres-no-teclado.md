@@ -4,6 +4,8 @@ date: "2016-05-27"
 description: "Combine voices through layers, performance modes, MIDI connections, and virtual instruments."
 legacy: true
 revised: "2026-10-01"
+category: "music"
+tags: ["keyboards", "virtual-instruments"]
 ---
 
 By “mixing sounds on a keyboard,” I mean **playing more than one sound with a single key press**. A piano and a pad might sound together, for example, even though your hands are playing just one part.

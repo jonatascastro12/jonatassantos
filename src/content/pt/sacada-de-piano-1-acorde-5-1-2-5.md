@@ -3,6 +3,8 @@ title: "Acorde sensacional para tocar uma música inteira"
 date: "2016-07-08"
 legacy: true
 description: "Artigo do arquivo original: Acorde sensacional para tocar uma música inteira"
+category: "music"
+tags: ["piano"]
 ---
 
 [Assista à aula original no YouTube](https://www.youtube.com/watch?v=gxy1xr2_C7M)

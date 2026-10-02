@@ -3,6 +3,8 @@ title: "Gestão de leads: a chave de sucesso para o Marketing de Afiliados"
 date: "2016-12-16"
 legacy: true
 description: "Artigo do arquivo original: Gestão de leads: a chave de sucesso para o Marketing de Afiliados"
+category: "marketing"
+tags: ["affiliate-marketing", "lead-management"]
 ---
 
 A gestão de ***leads*** é uma das etapas mais importantes para o sucesso do **marketing de afiliados**. Os seus processos são os que fazem o meio de campo entre os consumidores que acabaram de conhecer o seu trabalho e os leads mais próximos de se tornarem clientes.

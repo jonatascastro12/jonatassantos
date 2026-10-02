@@ -1,6 +1,8 @@
 ---
 title: "Equipamentos para começar na produção musical"
 date: "2026-08-29"
+category: "music"
+tags: ["music-production", "gear"]
 ---
 
 ![Fones de ouvido sobre um teclado MIDI em frente a uma DAW](/blog-images/equipamentos-producao-musical.jpg)

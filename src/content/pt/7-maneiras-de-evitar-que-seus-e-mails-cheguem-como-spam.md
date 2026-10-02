@@ -3,6 +3,8 @@ title: "7 maneiras de evitar que seus e-mails cheguem como SPAM"
 date: "2016-05-27"
 legacy: true
 description: "Artigo do arquivo original: 7 maneiras de evitar que seus e-mails cheguem como SPAM"
+category: "marketing"
+tags: ["email"]
 ---
 
 Entregar e-mails na caixa de entrada de seus clientes é crucial para sua campanha de e-mail marketing. Foi revelado em uma pesquisa de 2011 que apenas 2% dos usuários verificam a caixa de SPAM. Isso significa que, se sua newsletter chega como lixo eletrônico, ela passará despercebida, logo suas vendas irão sofrer drasticamente.

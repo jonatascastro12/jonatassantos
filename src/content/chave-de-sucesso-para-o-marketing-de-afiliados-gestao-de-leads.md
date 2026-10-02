@@ -4,6 +4,8 @@ date: "2016-12-16"
 description: "An introduction to sales funnels, relevant follow-up, qualification, lead scoring, and marketing automation."
 legacy: true
 revised: "2026-10-01"
+category: "marketing"
+tags: ["affiliate-marketing", "lead-management"]
 ---
 
 Not everyone who discovers an offer is ready to buy it. Some people are still trying to understand a problem; others are comparing options. Sending the same sales message to all of them can miss what they need.

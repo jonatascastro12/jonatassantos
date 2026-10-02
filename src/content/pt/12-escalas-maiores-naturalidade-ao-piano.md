@@ -3,6 +3,8 @@ title: "[e-book]: 12 escalas maiores: naturalidade ao piano"
 date: "2016-12-12"
 legacy: true
 description: "Artigo do arquivo original: [e-book]: 12 escalas maiores: naturalidade ao piano"
+category: "music"
+tags: ["piano"]
 ---
 
 ](https://goo.gl/i75Fjt)

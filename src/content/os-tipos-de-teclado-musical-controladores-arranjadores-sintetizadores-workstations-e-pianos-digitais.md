@@ -4,6 +4,8 @@ date: "2016-12-15"
 description: "Compare five keyboard categories by purpose, with the original 2016–2017 examples kept in context."
 legacy: true
 revised: "2026-10-01"
+category: "music"
+tags: ["keyboards", "gear"]
 ---
 
 Choosing a keyboard is a little like choosing a car: several categories can look similar while serving different purposes. Over the years, I have tried arrangers, controllers, digital pianos, synthesizers, and workstations.

@@ -4,6 +4,8 @@ date: "2017-01-23"
 description: "Practice relative pitch, listen for the tonic and bass, and test the harmony to identify a song’s key."
 legacy: true
 revised: "2026-10-01"
+category: "music"
+tags: ["ear-training", "piano"]
 ---
 
 Finding a song's key is easier when you practice listening to how its notes and chords relate to one another. That skill is part of **ear training**.

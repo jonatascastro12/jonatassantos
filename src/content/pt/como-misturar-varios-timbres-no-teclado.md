@@ -3,6 +3,8 @@ title: "5 maneiras de misturar vários timbres no teclado"
 date: "2016-05-27"
 legacy: true
 description: "Artigo do arquivo original: 5 maneiras de misturar vários timbres no teclado"
+category: "music"
+tags: ["keyboards", "virtual-instruments"]
 ---
 
 Dizer: “Misturar timbres no teclado” é bastante genérico. Existem várias formas de combinar mais de um timbre. Para ser mais enfático, vamos fechar nosso conceito de “misturar vários timbres no teclado”: ***“Reproduzir mais de um timbre simultaneamente com um único toque.”***

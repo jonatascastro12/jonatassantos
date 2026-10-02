@@ -3,6 +3,8 @@ title: "Descomplicando MIDI – interface digital para instrumentos musicais"
 date: "2016-12-21"
 legacy: true
 description: "Artigo do arquivo original: Descomplicando MIDI – interface digital para instrumentos musicais"
+category: "music"
+tags: ["midi", "keyboards"]
 ---
 
 Se você já “fuçou” qualquer teclado, é bem provável que você tenha visto o nome **MIDI**. Pretendo, com essa postagem memorável, explicar “o que é” e para quê serve esse tal de MIDI.

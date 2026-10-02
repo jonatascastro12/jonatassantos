@@ -4,6 +4,8 @@ date: "2016-06-11"
 description: "Start practicing C major and correct the original video’s explanation of finger numbering."
 legacy: true
 revised: "2026-10-01"
+category: "music"
+tags: ["piano"]
 ---
 
 I began my piano-course series with major scales, starting with **C major**. Learning scales makes it easier to recognize patterns and play music in different keys.

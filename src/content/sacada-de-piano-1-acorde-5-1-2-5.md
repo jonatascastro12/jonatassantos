@@ -4,6 +4,8 @@ date: "2016-07-08"
 description: "A recovered short video lesson about a useful piano chord voicing and listening to it in context."
 legacy: true
 revised: "2026-10-01"
+category: "music"
+tags: ["piano"]
 ---
 
 Practicing piano reveals just how many combinations a keyboard can offer: ten fingers, dozens of keys, and countless ways to arrange notes into chords.

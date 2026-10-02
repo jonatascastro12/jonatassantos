@@ -2,6 +2,8 @@
 title: "Equipment to get started with music production"
 date: "2026-08-29"
 description: "Build a practical first music-production setup: computers, audio interfaces, microphones, monitoring, MIDI controllers, and example budgets."
+category: "music"
+tags: ["music-production", "gear"]
 ---
 
 ![Headphones on a MIDI keyboard in front of a DAW](/blog-images/equipamentos-producao-musical.jpg)

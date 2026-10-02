@@ -4,6 +4,8 @@ date: "2016-12-12"
 description: "The original introduction to an email-list ebook, with clear expectations and download status."
 legacy: true
 revised: "2026-10-01"
+category: "marketing"
+tags: ["email"]
 ---
 
 Why build an email list when you already have a blog or social-media account?

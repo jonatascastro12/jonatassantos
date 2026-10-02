@@ -4,6 +4,8 @@ date: "2016-12-21"
 description: "Understand MIDI 1.0, note messages, velocity, pitch bend, control changes, and practical routing."
 legacy: true
 revised: "2026-10-01"
+category: "music"
+tags: ["midi", "keyboards"]
 ---
 
 If you have explored the back panel or settings of a keyboard, you have probably seen **MIDI**. Understanding it makes it much easier to connect instruments, configure a DAW, and control virtual sounds.

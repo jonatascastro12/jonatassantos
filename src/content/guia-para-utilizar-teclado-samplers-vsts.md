@@ -4,6 +4,8 @@ date: "2016-12-13"
 description: "Connect a keyboard, computer, and audio interface; understand routing, latency, and performance preparation."
 legacy: true
 revised: "2026-10-01"
+category: "music"
+tags: ["live-performance", "virtual-instruments"]
 ---
 
 I started exploring computer-based keyboard sounds around 2009, when I owned a **Roland Fantom FA-76** and was becoming interested in music production. A friend from São Paulo introduced me to virtual instruments and samplers, and I gradually tried taking them onto the stage.

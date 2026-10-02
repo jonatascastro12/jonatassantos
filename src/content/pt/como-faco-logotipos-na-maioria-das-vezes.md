@@ -3,6 +3,8 @@ title: "Como faço logotipos, na maioria das vezes?"
 date: "2016-05-25"
 legacy: true
 description: "Artigo do arquivo original: Como faço logotipos, na maioria das vezes?"
+category: "marketing"
+tags: ["branding"]
 ---
 
 O logotipo é o principal elemento de uma identidade visual.

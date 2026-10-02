@@ -3,6 +3,8 @@ title: "Dicas de percepção musical: como descobrir o tom de uma música"
 date: "2017-01-23"
 legacy: true
 description: "Artigo do arquivo original: Dicas de percepção musical: como descobrir o tom de uma música"
+category: "music"
+tags: ["ear-training", "piano"]
 ---
 
 Antes de prosseguir com as dicas, é necessário introduzir uma assunto muito importante: **percepção musical.**

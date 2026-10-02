@@ -4,6 +4,8 @@ date: "2016-05-24"
 description: "The story behind a website and podcast created to share Pastor Eli Vilela’s daily devotional messages."
 legacy: true
 revised: "2026-10-01"
+category: "faith"
+tags: ["devotionals", "podcast"]
 ---
 
 **Maná do Céu** began as a simple idea: give daily devotional messages a home online, where more people could find and read them.

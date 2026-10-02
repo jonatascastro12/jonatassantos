@@ -4,6 +4,8 @@ date: "2016-05-25"
 description: "A candid archive reflection on logo templates, visual inspiration, and the value of custom identity design."
 legacy: true
 revised: "2026-10-01"
+category: "marketing"
+tags: ["branding"]
 ---
 
 A logo is often the most recognizable part of a visual identity. In 2016, I wrote candidly about the shortcut I sometimes used when someone asked me to create one.

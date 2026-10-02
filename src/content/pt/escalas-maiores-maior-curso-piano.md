@@ -3,6 +3,8 @@ title: "Escalas maiores: Dó Maior – Curso de Piano #1"
 date: "2016-06-11"
 legacy: true
 description: "Artigo do arquivo original: Escalas maiores: Dó Maior – Curso de Piano #1"
+category: "music"
+tags: ["piano"]
 ---
 
 [Assista à aula original no YouTube](https://www.youtube.com/watch?v=zspP0Q5tCJs)

@@ -3,6 +3,8 @@ title: "Conectores de webapps – Zapier e outras ferramentas"
 date: "2017-03-30"
 legacy: true
 description: "Artigo do arquivo original: Conectores de webapps – Zapier e outras ferramentas"
+category: "engineering"
+tags: ["automation", "web-apps"]
 ---
 
 Já faz um tempo que não escrevo sobre Marketing Digital. Ultimamente, me envolvi em diversos projetos onde foram necessários realizar **automações** entre ferramentas de E-mail, redes sociais, CRM e afins, utilizando **Zapier**.

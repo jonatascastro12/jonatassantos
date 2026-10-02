@@ -1,4 +1,5 @@
 import { PageShell } from "@/components/page-shell";
+import { PostBadges } from "@/components/post-badges";
 import { defaultComponents } from "@/mdx-components";
 import { getAllPostIds, getPostData } from "@/lib/posts";
 import Markdown from "react-markdown";
@@ -41,9 +42,12 @@ export default async function Post({ params }: Props) {
         <PageShell narrow locale={params.locale}>
             <article className="prose-content animate-fade-up">
                 <h1 className="page-title">{postData.title}</h1>
-                <time className="blog-item-date" dateTime={postData.date}>
-                    {format(parseISO(postData.date), "dd MMM yyyy", { locale: params.locale === "pt" ? ptBR : undefined })}
-                </time>
+                <div className="article-post-meta">
+                    <time className="blog-item-date" dateTime={postData.date}>
+                        {format(parseISO(postData.date), "dd MMM yyyy", { locale: params.locale === "pt" ? ptBR : undefined })}
+                    </time>
+                    <PostBadges category={postData.category} tags={postData.tags} locale={params.locale} />
+                </div>
                 {postData.legacy ? (
                     <p className="article-archive-note">
                         {params.locale === "pt"

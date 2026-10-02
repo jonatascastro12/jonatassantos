@@ -4,6 +4,8 @@ date: "2016-12-12"
 description: "Why major scales and their fingerings help you move between keys, with recovered video lessons."
 legacy: true
 revised: "2026-10-01"
+category: "music"
+tags: ["piano"]
 ---
 
 Several keyboard players have told me they feel comfortable in C major but struggle when a song moves to a key with more black keys. F♯ major or A♭ major can feel intimidating when your hands do not yet recognize the patterns.

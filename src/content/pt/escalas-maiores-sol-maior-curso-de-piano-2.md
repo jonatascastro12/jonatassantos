@@ -3,6 +3,8 @@ title: "Escalas maiores: Sol Maior – Curso de Piano #2"
 date: "2016-06-18"
 legacy: true
 description: "Artigo do arquivo original: Escalas maiores: Sol Maior – Curso de Piano #2"
+category: "music"
+tags: ["piano"]
 ---
 
 [Assista à aula original no YouTube](https://www.youtube.com/watch?v=j9MxfbWe3IY)

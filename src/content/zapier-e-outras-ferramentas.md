@@ -4,6 +4,8 @@ date: "2017-03-30"
 description: "How automation tools connect triggers and actions, with historical context from the original comparison."
 legacy: true
 revised: "2026-10-01"
+category: "engineering"
+tags: ["automation", "web-apps"]
 ---
 
 When I wrote this article in 2017, I had been working on projects that needed email tools, social networks, and CRM systems to exchange information automatically. Zapier helped connect those separate pieces.

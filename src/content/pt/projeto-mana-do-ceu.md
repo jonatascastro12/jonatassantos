@@ -3,6 +3,8 @@ title: "Projeto Maná do Céu – Devocionais Diários"
 date: "2016-05-24"
 legacy: true
 description: "Artigo do arquivo original: Projeto Maná do Céu – Devocionais Diários"
+category: "faith"
+tags: ["devotionals", "podcast"]
 ---
 
 O [**Maná do Céu**](http://www.manadoceu.com/) é um projeto de devocionais diários disponíveis em mídias onlines.

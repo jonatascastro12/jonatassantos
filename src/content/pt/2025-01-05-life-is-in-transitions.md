@@ -2,6 +2,8 @@
 title: 'As transições da vida: como navegar por uma jornada imprevisível'
 date: '2025-01-05'
 description: 'Reflexões sobre mudanças, histórias de família e o livro de Bruce Feiler sobre as transições da vida.'
+category: "personal"
+tags: ["reflections"]
 ---
 
 ![As transições da vida](/blog-images/life-transitions.jpg)

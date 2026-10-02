@@ -4,6 +4,8 @@ date: "2016-12-20"
 description: "A readable reference for common MIDI 1.0 control numbers, pedal assignments, and channel mode messages."
 legacy: true
 revised: "2026-10-01"
+category: "music"
+tags: ["midi"]
 ---
 
 MIDI devices exchange messages about notes, controls, and other performance events. A **Control Change** message identifies a control number and supplies a value, usually from **0 to 127** in MIDI 1.0.

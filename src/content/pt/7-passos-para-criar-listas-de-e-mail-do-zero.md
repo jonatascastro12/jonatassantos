@@ -3,6 +3,8 @@ title: "[e-book]: 7 passos para criar listas de e-mail do zero"
 date: "2016-12-12"
 legacy: true
 description: "Artigo do arquivo original: [e-book]: 7 passos para criar listas de e-mail do zero"
+category: "marketing"
+tags: ["email"]
 ---
 
 Pode ser que você esteja se perguntando, para que eu preciso de uma lista de e-mail?

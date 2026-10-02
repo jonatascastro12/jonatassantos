@@ -1,6 +1,8 @@
 ---
 title: "Life's Transitions: Navigating the Unpredictable Journey"
 date: '2025-01-05'
+category: "personal"
+tags: ["reflections"]
 ---
 
 ![Life Transitions](/blog-images/life-transitions.jpg)

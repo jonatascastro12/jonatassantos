@@ -4,6 +4,8 @@ date: "2016-06-18"
 description: "Learn the notes and fingering of G major, with the original two-octave lesson and scale illustration."
 legacy: true
 revised: "2026-10-01"
+category: "music"
+tags: ["piano"]
 ---
 
 This is the second lesson in my piano-course series. After starting with C major, we move to **G major**.
