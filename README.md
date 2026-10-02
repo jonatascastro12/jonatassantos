@@ -18,6 +18,8 @@ Each local article has an English Markdown file in `src/content` and a Portugues
 
 Post front matter includes a `category` and `tags` using stable IDs from `src/lib/post-taxonomy.ts`. Keep these IDs identical in both language editions; badge labels are translated by the shared taxonomy. External entries use the same fields in `src/content/external-posts.json`. Badges appear below titles in the blog list and beside article metadata.
 
+Badges link to `/blog/category/[category]` and `/blog/tag/[tag]`, with matching Portuguese pages under `/pt`. The category bar at the top of blog listings includes an All posts link and highlights the current category. These pages are generated from the shared taxonomy, filter both local and external articles, and appear in the bilingual sitemap.
+
 External articles keep their original destination. Their Portuguese titles use `titlePt` in `src/content/external-posts.json`, and the Portuguese blog marks those links as English content.
 
 Both editions have their own canonical URL and reciprocal language metadata. `/sitemap.xml` lists both languages; `/robots.txt` exposes the sitemap.
@@ -35,7 +37,7 @@ pnpm start --port 3100
 With the site running, validate article links, language editions, search metadata, and missing-page responses:
 
 ```sh
-TEST_BASE_URL=http://localhost:3100 node --test tests/blog.test.cjs tests/i18n.test.cjs
+TEST_BASE_URL=http://localhost:3100 node --test tests/blog.test.cjs tests/i18n.test.cjs tests/taxonomy.test.cjs
 ```
 
 ## Legacy blog archive

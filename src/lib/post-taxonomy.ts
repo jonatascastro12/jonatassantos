@@ -44,3 +44,17 @@ export type PostTaxonomy = {
     category?: string;
     tags?: string[];
 };
+
+export const taxonomies = { category: categories, tag: tags };
+
+export function getTaxonomyParams() {
+    return (Object.keys(taxonomies) as (keyof typeof taxonomies)[]).flatMap((taxonomy) =>
+        Object.keys(taxonomies[taxonomy]).map((term) => ({ taxonomy, term })),
+    );
+}
+
+export function getTaxonomyLabel(taxonomy: string, term: string, locale: Locale) {
+    if (taxonomy !== "category" && taxonomy !== "tag") return null;
+    const labels = taxonomies[taxonomy];
+    return Object.hasOwn(labels, term) ? labels[term][locale] : null;
+}

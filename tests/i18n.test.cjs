@@ -6,7 +6,10 @@ const matter = require('gray-matter');
 const base = process.env.TEST_BASE_URL || 'http://localhost:3100';
 const canonicalBase = 'https://www.jonatassantos.me';
 const postIds = fs.readdirSync('src/content').filter((name) => name.endsWith('.md')).map((name) => name.slice(0, -3));
-const paths = ['/', '/about', '/projects', '/blog', ...postIds.map((id) => `/blog/${id}`)];
+const articlePaths = postIds.map((id) => `/blog/${id}`);
+const posts = [...postIds.map((id) => matter(fs.readFileSync(`src/content/${id}.md`, 'utf8')).data), ...require('../src/content/external-posts.json')];
+const taxonomyPaths = [...new Set(posts.flatMap((post) => [`/blog/category/${post.category}`, ...post.tags.map((tag) => `/blog/tag/${tag}`)]))];
+const paths = ['/', '/about', '/projects', '/blog', ...articlePaths, ...taxonomyPaths];
 const escapeHtml = (text) => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#x27;');
 const localized = (path, locale) => locale === 'pt' ? `/pt${path === '/' ? '' : path}` : path;
 
@@ -28,7 +31,7 @@ test('every page has a translated edition, a matching language switch, and recip
     const switchLink = html.match(/<a[^>]*class="language-switch"[^>]*>[\s\S]*?<\/a>/)?.[0];
     assert.ok(switchLink?.includes(`href="${localized(path, locale === 'pt' ? 'en' : 'pt')}"`), `Same-page switch: ${publicPath}`);
     assert.ok(switchLink?.includes(locale === 'pt' ? 'English' : 'Português'), publicPath);
-    if (path.startsWith('/blog/')) {
+    if (articlePaths.includes(path)) {
       const id = path.slice('/blog/'.length);
       const file = `src/content/${locale === 'pt' ? 'pt/' : ''}${id}.md`;
       const title = matter(fs.readFileSync(file, 'utf8')).data.title;
