@@ -1,11 +1,13 @@
 ---
 title: "Life's Transitions: Navigating the Unpredictable Journey"
 date: '2025-01-05'
+category: "personal"
+tags: ["reflections"]
 ---
 
 ![Life Transitions](/blog-images/life-transitions.jpg)
 
-I started reading this book called [Life's Transitions: Navigating the Unpredictable Journey](https://www.amazon.com/Life-Transitions-Mastering-Change-Any/dp/1594206821) the Bruce Feler.
+I started reading [Life Is in Transitions](https://www.amazon.com/Life-Transitions-Mastering-Change-Any/dp/1594206821) by Bruce Feiler.
 
 ## Life's Transitions
 

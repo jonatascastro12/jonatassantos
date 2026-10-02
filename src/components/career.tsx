@@ -1,9 +1,12 @@
-import { differenceInMonths, differenceInYears, format, formatISO } from "date-fns";
+import { differenceInMonths, differenceInYears, format, formatISO, parseISO } from "date-fns";
+import { ptBR } from "date-fns/locale/pt-BR";
 import Link from "next/link";
+import type { Locale } from "@/lib/i18n";
 
 const content = [
     {
         title: "Software Engineer",
+        titlePt: "Engenheiro de software",
         company: "WorkOS",
         url: "https://workos.com",
         location: "Remote from Brazil",
@@ -11,6 +14,7 @@ const content = [
     },
     {
         title: "Senior Software Engineer",
+        titlePt: "Engenheiro de software sênior",
         company: "Zapier",
         url: "https://zapier.com",
         location: "Remote from Brazil",
@@ -18,6 +22,7 @@ const content = [
     },
     {
         title: "Senior Python Engineer",
+        titlePt: "Engenheiro Python sênior",
         company: "LeafLink",
         url: "https://leaflink.com",
         location: "Remote from Brazil",
@@ -25,6 +30,7 @@ const content = [
     },
     {
         title: "Analyst of Planning and Management in IT",
+        titlePt: "Analista de planejamento e gestão em TI",
         company: "IBGE",
         url: "https://www.ibge.gov.br",
         location: "Rio de Janeiro, Brazil",
@@ -32,6 +38,7 @@ const content = [
     },
     {
         title: "Full Stack Developer and Researcher",
+        titlePt: "Desenvolvedor full stack e pesquisador",
         company: "TV Globo",
         url: "https://globo.com",
         location: "Rio de Janeiro, Brazil",
@@ -39,6 +46,7 @@ const content = [
     },
     {
         title: "Business Analyst - Technology Advisory",
+        titlePt: "Analista de negócios — consultoria em tecnologia",
         company: "Deloitte",
         url: "https://www2.deloitte.com",
         location: "Rio de Janeiro, Brazil",
@@ -46,6 +54,7 @@ const content = [
     },
     {
         title: "Web Developer",
+        titlePt: "Desenvolvedor web",
         company: "Grupo Emídia",
         url: "https://grupoemidia.com",
         location: "Juiz de Fora, Brazil",
@@ -53,6 +62,7 @@ const content = [
     },
     {
         title: "Web Developer",
+        titlePt: "Desenvolvedor web",
         company: "Brasdev Devenvolvedores",
         url: null,
         location: "Juiz de Fora, Brazil",
@@ -60,35 +70,35 @@ const content = [
     },
 ] as const;
 
-const monthFormat = (date: string) => format(date, "MMM yyyy");
+const monthFormat = (date: string, locale: Locale) => format(parseISO(date), "MMM yyyy", { locale: locale === "pt" ? ptBR : undefined });
 
-const distanceFormat = (start: string, end: string) => {
+const distanceFormat = (start: string, end: string, locale: Locale) => {
     const deltaYears = differenceInYears(end, start);
     const deltaMonths = differenceInMonths(end, start) % 12;
 
     const months = (() => {
         if (deltaMonths === 0) return "";
-        if (deltaMonths === 1) return "1 m";
-        return `${deltaMonths} m`;
+        if (deltaMonths === 1) return locale === "pt" ? "1 mês" : "1 m";
+        return locale === "pt" ? `${deltaMonths} meses` : `${deltaMonths} m`;
     })();
 
     if (deltaYears === 0) return months;
 
     const years = (() => {
-        if (deltaYears === 1) return "1 yr";
-        return `${deltaYears} yrs`;
+        if (deltaYears === 1) return locale === "pt" ? "1 ano" : "1 yr";
+        return locale === "pt" ? `${deltaYears} anos` : `${deltaYears} yrs`;
     })();
 
     if (months && deltaYears) return `${years}, ${months}`;
     return years;
 };
 
-const Carrer = () => {
+const Carrer = ({ locale = "en" }: { locale?: Locale }) => {
     return (
         <div className="career-timeline">
             {content.map((item, index) => (
                 <article key={index} className="career-entry">
-                    <h3 className="career-entry-title">{item.title}</h3>
+                    <h3 className="career-entry-title">{locale === "pt" ? item.titlePt : item.title}</h3>
                     <p className="career-entry-meta">
                         {item.url ? (
                             <Link href={item.url} target="_blank" rel="noreferrer">
@@ -98,13 +108,13 @@ const Carrer = () => {
                             item.company
                         )}
                         {" · "}
-                        {item.location}
+                        {locale === "pt" ? item.location.replace("Remote from Brazil", "Remoto, do Brasil").replace("Brazil", "Brasil") : item.location}
                     </p>
                     <p className="career-entry-dates">
-                        {monthFormat(item.period.start)} –{" "}
-                        {item.period.end ? monthFormat(item.period.end) : "Current"}
+                        {monthFormat(item.period.start, locale)} –{" "}
+                        {item.period.end ? monthFormat(item.period.end, locale) : locale === "pt" ? "Atual" : "Current"}
                         {" · "}
-                        ({distanceFormat(item.period.start, item.period.end ?? formatISO(new Date()))})
+                        ({distanceFormat(item.period.start, item.period.end ?? formatISO(new Date()), locale)})
                     </p>
                 </article>
             ))}

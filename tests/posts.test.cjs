@@ -18,7 +18,7 @@ test('blog combines all project articles with local posts in descending date ord
   assert.equal(external.length, 7);
   assert.equal(new Set(posts.map((post) => post.id)).size, posts.length);
   assert.deepEqual(posts.map((post) => post.date), posts.map((post) => post.date).sort().reverse());
-  const projects = fs.readFileSync('src/app/projects/page.mdx', 'utf8');
+  const projects = fs.readFileSync('src/content/pages/projects.en.mdx', 'utf8');
   const workosUrls = [...projects.matchAll(/type="paper" \/> \[[^\]]+\]\((https:\/\/workos.com[^)]+)\)/g)].map((match) => match[1]);
   for (const url of workosUrls) assert.ok(external.some((post) => post.externalUrl === url), url);
   for (const post of external) {

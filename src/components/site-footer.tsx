@@ -1,9 +1,10 @@
 import { XLogoIcon } from "@/components/x-logo-icon";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { messages, type Locale } from "@/lib/i18n";
 
-export function SiteFooter() {
+export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
     return (
-        <footer className="site-footer social" aria-label="Social links">
+        <footer className="site-footer social" aria-label={messages[locale].socialLinks}>
             <a href="https://github.com/jonatascastro12" target="_blank" rel="noreferrer" aria-label="GitHub">
                 <GitHubLogoIcon />
             </a>
