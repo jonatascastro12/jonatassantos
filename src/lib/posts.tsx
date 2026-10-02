@@ -5,7 +5,7 @@ import externalPosts from "../content/external-posts.json";
 import type { Locale } from "./i18n";
 import type { PostTaxonomy } from "./post-taxonomy";
 
-type PostSummary = PostTaxonomy & {
+export type PostSummary = PostTaxonomy & {
   id: string;
   date: string;
   title: string;

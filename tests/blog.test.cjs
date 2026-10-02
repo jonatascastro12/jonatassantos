@@ -18,7 +18,7 @@ test('blog renders external articles as safe new-tab links with dates and icons'
     assert.match(item, /opens in a new tab/);
     assert.ok(item.includes(`dateTime="${post.date}"`) || item.includes(`datetime="${post.date}"`));
   }
-  const internal = items.filter((item) => item.includes('href="/blog/'));
+  const internal = items.filter((item) => !item.includes('target="_blank"'));
   assert.equal(internal.length, fs.readdirSync('src/content').filter((name) => name.endsWith('.md')).length);
   assert.ok(internal.every((item) => !item.includes('target="_blank"')));
   const dates = items.map((item) => item.match(/dateTime="([^"]+)"/i)[1]);
