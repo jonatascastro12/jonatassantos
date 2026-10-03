@@ -24,6 +24,12 @@ External articles keep their original destination. Their Portuguese titles use `
 
 Both editions have their own canonical URL and reciprocal language metadata. `/sitemap.xml` lists both languages; `/robots.txt` exposes the sitemap.
 
+## Analytics
+
+The production Vercel deployment loads Google Tag Manager container `GTM-5HQWTBB8`. Local development and preview deployments do not load it. The container sends data to the existing GA4 web stream `G-WWX2439MQM` in property `368213084`.
+
+`GoogleTagManager` emits one `site_page_view` data-layer event per page navigation, including language and category changes, with `page_location`, `page_title`, and `page_referrer`. In GTM, the Google tag must have `send_page_view` set to `false`, and a GA4 `page_view` event tag must consume `site_page_view` with those three data-layer variables. Keep automatic history-based page views disabled in the GA4 stream to avoid duplicates.
+
 ## Validation
 
 Use Node.js 24, matching the deployment runtime and the Volta pin in `package.json`.

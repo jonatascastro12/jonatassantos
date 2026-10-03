@@ -1,4 +1,5 @@
 import { ShaderBackground } from '@/components/shader-background';
+import { GoogleTagManager } from '@/components/google-tag-manager';
 import { Theme } from '@radix-ui/themes';
 import type { Metadata } from 'next'
 import { ThemeProvider } from 'next-themes';
@@ -57,6 +58,7 @@ export default function RootLayout({
     params: { locale: Locale }
 }) {
     if (!isLocale(params.locale)) notFound();
+    const analyticsEnabled = process.env.VERCEL_ENV === "production";
     return (
         <html
             lang={params.locale === "pt" ? "pt-BR" : "en"}
@@ -64,6 +66,12 @@ export default function RootLayout({
             className={`${newsreader.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
         >
             <body>
+                {analyticsEnabled ? (
+                    <noscript>
+                        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HQWTBB8" height="0" width="0" style={{ display: "none", visibility: "hidden" }} title="Google Tag Manager" />
+                    </noscript>
+                ) : null}
+                {analyticsEnabled ? <GoogleTagManager /> : null}
                 <ShaderBackground />
                 <ThemeProvider attribute="class">
                     <Theme accentColor="teal" scaling="100%" style={{ height: '100%' }}>
