@@ -1,5 +1,5 @@
-// Prepared for a CloudFront viewer-request association on jonatascastro.com.
-// Activate only after the destination articles are published. Unknown paths retain the S3 origin.
+// CloudFront viewer-request function for jonatascastro.com and www.jonatascastro.com.
+// Unknown paths retain the S3 origin, including assets and unmigrated pages.
 var redirects = {
   "/": "/pt/blog",
   "/page/2": "/pt/blog",
@@ -41,17 +41,36 @@ var wordpressIds = {
 
 function handler(event) {
     var request = event.request;
-    var uri = request.uri.replace(/\/$/, "") || "/";
+    var uri = request.uri.replace(/\/index\.html$/, "/").replace(/\/$/, "") || "/";
+    // The legacy bucket has no readable robots.txt. Keep the move crawlable.
+    if (uri === "/robots.txt") return {
+        statusCode: 200,
+        headers: {
+            "content-type": { value: "text/plain; charset=utf-8" },
+            "cache-control": { value: "public, max-age=3600" }
+        },
+        body: "User-agent: *\nAllow: /\nSitemap: https://www.jonatassantos.me/sitemap.xml\n"
+    };
     var destination = redirects[uri];
     if (uri === "/" && request.querystring.p) {
         destination = wordpressIds[request.querystring.p.value];
     }
     if (!destination) return request;
+    // CloudFront supplies the original URL-encoded query components.
+    // Preserve campaign attribution and repeated values; consume only the old post ID.
+    var query = [];
+    Object.keys(request.querystring).forEach(function (key) {
+        if (uri === "/" && key === "p") return;
+        var item = request.querystring[key];
+        (item.multiValue || [item]).forEach(function (entry) {
+            query.push(key + "=" + entry.value);
+        });
+    });
     return {
         statusCode: 301,
         statusDescription: "Moved Permanently",
         headers: {
-            location: { value: "https://www.jonatassantos.me" + destination },
+            location: { value: "https://www.jonatassantos.me" + destination + (query.length ? "?" + query.join("&") : "") },
             "cache-control": { value: "public, max-age=3600" }
         }
     };
