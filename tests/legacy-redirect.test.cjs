@@ -8,10 +8,16 @@ const context = vm.createContext({});
 vm.runInContext(source, context);
 const request = (uri, querystring = {}) => ({ uri, querystring, method: 'GET', headers: {} });
 
-test('prepared CloudFront redirects preserve each article and WordPress ID without swallowing unknown paths', () => {
+test('the old domain remains crawlable and advertises the destination sitemap', () => {
+  const response = context.handler({ request: request('/robots.txt') });
+  assert.equal(response.statusCode, 200);
+  assert.equal(response.body, 'User-agent: *\nAllow: /\nSitemap: https://www.jonatassantos.me/sitemap.xml\n');
+});
+
+test('CloudFront redirects preserve each article and WordPress ID without swallowing unknown paths', () => {
   assert.ok(Buffer.byteLength(source) < 10000);
   for (const post of legacy) {
-    for (const uri of [post.oldPath, post.oldPath.replace(/\/$/, '')]) {
+    for (const uri of [post.oldPath, post.oldPath.replace(/\/$/, ''), `${post.oldPath}index.html`]) {
       const response = context.handler({ request: request(uri) });
       assert.equal(response.statusCode, 301);
       assert.equal(response.headers.location.value, `https://www.jonatassantos.me${post.portuguesePath}`);
@@ -29,4 +35,17 @@ test('prepared CloudFront redirects preserve each article and WordPress ID witho
   }
   const unknownId = request('/', { p: { value: 'not-a-post' } });
   assert.equal(context.handler({ request: unknownId }), unknownId);
+});
+
+test('redirects preserve encoded campaign parameters and repeated values without retaining the WordPress ID', () => {
+  const response = context.handler({ request: request('/index.html', {
+    p: { value: '495' },
+    utm_source: { value: 'old%20newsletter' },
+    utm_content: { value: 'one', multiValue: [{ value: 'one' }, { value: 'two%26three' }] },
+    empty: { value: '' }
+  }) });
+  assert.equal(response.headers.location.value, 'https://www.jonatassantos.me/pt/blog/descomplicando-midi?utm_source=old%20newsletter&utm_content=one&utm_content=two%26three&empty=');
+  for (const uri of ['/', '/index.html', '/page/2/']) {
+    assert.equal(context.handler({ request: request(uri) }).headers.location.value, 'https://www.jonatassantos.me/pt/blog');
+  }
 });
