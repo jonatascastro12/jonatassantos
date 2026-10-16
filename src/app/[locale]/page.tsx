@@ -1,9 +1,8 @@
 import { PageShell } from "@/components/page-shell";
 import MyTypewriter from "@/components/typewriter";
+import { HarmonicSculpture } from "@/components/harmonic-sculpture";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
-import portrait from "../../../public/jonatas.jpg";
 import { localizedPath, messages, type Locale } from "@/lib/i18n";
 import { pageDescriptions, pageMetadata } from "@/lib/metadata";
 
@@ -36,6 +35,8 @@ export default function Home({ params }: { params: { locale: Locale } }) {
                     </p>
                 </div>
 
+                <HarmonicSculpture />
+
                 <nav className="hero-links" aria-label={text.explore}>
                     {quickLinks.map((link) => (
                         <Link key={link.href} href={localizedPath(params.locale, link.href)} className="hero-link">
@@ -47,13 +48,6 @@ export default function Home({ params }: { params: { locale: Locale } }) {
                         </Link>
                     ))}
                 </nav>
-                <Image
-                    className="hero-portrait"
-                    src={portrait}
-                    alt="Jônatas Santos"
-                    priority
-                    sizes="(max-width: 768px) 88px, 352px"
-                />
             </section>
         </PageShell>
     );

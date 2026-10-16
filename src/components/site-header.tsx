@@ -1,8 +1,7 @@
 "use client";
 
 import { XLogoIcon } from "@/components/x-logo-icon";
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import { Switch } from "@radix-ui/themes";
+import { GitHubLogoIcon, LinkedInLogoIcon, MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -26,6 +25,7 @@ export function SiteHeader({ locale = "en" }: { locale?: Locale }) {
         mounted,
         setMounted,
     ] = useState(false);
+    const themeAction = mounted ? (resolvedTheme === "dark" ? text.lightMode : text.darkMode) : text.toggleTheme;
 
     useEffect(() => setMounted(true), []);
 
@@ -66,11 +66,17 @@ export function SiteHeader({ locale = "en" }: { locale?: Locale }) {
                         />
                         <span lang={targetLocale === "pt" ? "pt-BR" : "en"}>{text.language}</span>
                     </Link>
-                    <Switch
-                        onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
-                        checked={mounted && resolvedTheme === "dark"}
-                        aria-label={text.darkMode}
-                    />
+                    <button
+                        type="button"
+                        className="theme-toggle"
+                        onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+                        aria-label={themeAction}
+                        title={themeAction}
+                        disabled={!mounted}
+                    >
+                        <MoonIcon className="theme-icon-moon" aria-hidden="true" />
+                        <SunIcon className="theme-icon-sun" aria-hidden="true" />
+                    </button>
                     <a className="social-link" href="https://github.com/jonatascastro12" target="_blank" rel="noreferrer" aria-label="GitHub">
                         <GitHubLogoIcon />
                     </a>

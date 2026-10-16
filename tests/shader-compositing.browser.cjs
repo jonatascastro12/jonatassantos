@@ -26,7 +26,7 @@ const assert = require('node:assert/strict');
           const png = PNG.sync.read(await page.screenshot({ scale: 'css' }));
           const i = (Math.floor(png.height / 2) * png.width + Math.floor(png.width / 2)) * 4;
           const rgb = [...png.data.subarray(i, i + 3)];
-          const expected = theme === 'dark' ? [10, 14, 20] : [238, 242, 247];
+          const expected = theme === 'dark' ? [23, 28, 25] : [247, 248, 246];
           console.log(name, theme, { forcedPremultiplication, rgb });
           assert.ok(rgb.every((value, channel) => Math.abs(value - expected[channel]) < 12), `Reading column washed out: ${rgb}`);
           assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));

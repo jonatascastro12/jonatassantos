@@ -1,3 +1,4 @@
+import { ShaderBackground } from '@/components/shader-background';
 import { GoogleTagManager } from '@/components/google-tag-manager';
 import { Theme } from '@radix-ui/themes';
 import type { Metadata } from 'next'
@@ -63,6 +64,7 @@ export default function RootLayout({
                     </noscript>
                 ) : null}
                 {analyticsEnabled ? <GoogleTagManager /> : null}
+                <ShaderBackground />
                 <ThemeProvider attribute="class">
                     <Theme accentColor="teal" scaling="100%" style={{ height: '100%' }}>
                         {children}
