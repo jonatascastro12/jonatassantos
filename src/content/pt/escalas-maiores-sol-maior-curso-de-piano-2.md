@@ -2,7 +2,7 @@
 title: "Escalas maiores: Sol Maior – Curso de Piano #2"
 date: "2016-06-18"
 legacy: true
-description: "Artigo do arquivo original: Escalas maiores: Sol Maior – Curso de Piano #2"
+description: "Aprenda a escala de Sol maior no piano, sua alteração em Fá sustenido e a digitação em duas oitavas, com a aula original em vídeo."
 category: "music"
 tags: ["piano"]
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Equipamentos para começar na produção musical"
 date: "2026-08-29"
+description: "Monte seu primeiro setup de produção musical: computador, interface de áudio, microfones, monitores, fones, controlador MIDI e exemplos de orçamento."
 category: "music"
 tags: ["music-production", "gear"]
 ---

@@ -2,7 +2,7 @@
 title: "Conectores de webapps – Zapier e outras ferramentas"
 date: "2017-03-30"
 legacy: true
-description: "Artigo do arquivo original: Conectores de webapps – Zapier e outras ferramentas"
+description: "Como conectores de webapps automatizam tarefas entre serviços. Comparação histórica de IFTTT, Zapier e Microsoft Flow, publicada em 2017."
 category: "engineering"
 tags: ["automation", "web-apps"]
 ---

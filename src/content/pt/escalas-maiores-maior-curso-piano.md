@@ -2,7 +2,7 @@
 title: "Escalas maiores: Dó Maior – Curso de Piano #1"
 date: "2016-06-11"
 legacy: true
-description: "Artigo do arquivo original: Escalas maiores: Dó Maior – Curso de Piano #1"
+description: "Aula de piano sobre a escala de Dó maior, com vídeo, sugestões de prática e uma errata sobre a numeração dos dedos."
 category: "music"
 tags: ["piano"]
 ---

@@ -24,6 +24,21 @@ External articles keep their original destination. Their Portuguese titles use `
 
 Both editions have their own canonical URL and reciprocal language metadata. `/sitemap.xml` lists both languages; `/robots.txt` exposes the sitemap.
 
+## Search metadata and authorship
+
+Every article edition must include a specific `description` in its front matter. Use `revised` only for a known editorial revision date for that edition. Original publication dates stay unchanged. Recorded revisions appear visibly, in article structured data, and as sitemap `lastmod`; unknown modification dates are omitted rather than set to build time.
+
+Server-rendered JSON-LD connects `WebSite`, `Person`, `ProfilePage`, and `BlogPosting` using stable identifiers. Author links point to the matching language's About page. Article previews use a local image already present in the article when available. Keep identity links and metadata consistent with visible content.
+
+The existing wildcard robots policy permits search crawlers, including Googlebot, Bingbot, and OAI-SearchBot. Search access and AI training preferences are separate decisions; do not change GPTBot or other training controls as a side effect of search work. No special AI text file is required for search eligibility, and markup does not guarantee indexing or citations.
+
+Validate the JSON-LD serializer and the generated production HTML:
+
+```sh
+node --test tests/structured-data.test.cjs
+TEST_BASE_URL=http://localhost:3100 node --test tests/seo.test.cjs tests/i18n.test.cjs
+```
+
 ## Analytics
 
 The production Vercel deployment loads Google Tag Manager container `GTM-5HQWTBB8`. Local development and preview deployments do not load it. The container sends data to the existing GA4 web stream `G-WWX2439MQM` in property `368213084`.

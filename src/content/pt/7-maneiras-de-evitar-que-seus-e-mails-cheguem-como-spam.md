@@ -2,7 +2,7 @@
 title: "7 maneiras de evitar que seus e-mails cheguem como SPAM"
 date: "2016-05-27"
 legacy: true
-description: "Artigo do arquivo original: 7 maneiras de evitar que seus e-mails cheguem como SPAM"
+description: "Sete cuidados com newsletters: permissão, frequência, conteúdo, avaliação de spam e pré-visualização. Recomendações do arquivo de 2016."
 category: "marketing"
 tags: ["email"]
 ---

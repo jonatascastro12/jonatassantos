@@ -493,6 +493,18 @@ button:focus-visible,
     margin-bottom: 1.75rem;
 }
 
+.article-author,
+.article-revised {
+    display: block;
+    color: var(--color-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.article-author {
+    margin-bottom: 0.25rem;
+}
+
 .page-title {
     font-family: var(--font-display), system-ui, sans-serif;
     font-size: clamp(2rem, 4vw, 3rem);

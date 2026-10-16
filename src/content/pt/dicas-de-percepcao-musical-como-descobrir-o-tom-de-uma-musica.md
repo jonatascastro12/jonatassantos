@@ -2,7 +2,7 @@
 title: "Dicas de percepção musical: como descobrir o tom de uma música"
 date: "2017-01-23"
 legacy: true
-description: "Artigo do arquivo original: Dicas de percepção musical: como descobrir o tom de uma música"
+description: "Dicas de percepção musical para descobrir o tom de uma música: ouvir o baixo, encontrar a tônica e reconhecer o campo harmônico."
 category: "music"
 tags: ["ear-training", "piano"]
 ---

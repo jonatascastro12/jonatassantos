@@ -2,7 +2,7 @@
 title: "Guia para utilizar teclado, samplers & VSTs no palco: performances ao vivo"
 date: "2016-12-13"
 legacy: true
-description: "Artigo do arquivo original: Guia para utilizar teclado, samplers & VSTs no palco: performances ao vivo"
+description: "Como conectar teclado controlador, computador e interface de áudio para usar samplers e VSTs ao vivo. Guia com contexto e equipamentos de 2016."
 category: "music"
 tags: ["live-performance", "virtual-instruments"]
 ---

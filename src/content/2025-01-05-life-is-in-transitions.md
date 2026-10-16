@@ -1,6 +1,7 @@
 ---
 title: "Life's Transitions: Navigating the Unpredictable Journey"
 date: '2025-01-05'
+description: 'Reflections on life changes, family stories, and adapting to uncertainty while reading Life Is in Transitions by Bruce Feiler.'
 category: "personal"
 tags: ["reflections"]
 ---
