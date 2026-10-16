@@ -2,230 +2,171 @@
 title: "Guia para utilizar teclado, samplers & VSTs no palco: performances ao vivo"
 date: "2016-12-13"
 legacy: true
-description: "Artigo do arquivo original: Guia para utilizar teclado, samplers & VSTs no palco: performances ao vivo"
+revised: "2026-10-16"
+description: "Monte um setup de teclado e instrumentos virtuais para tocar ao vivo: hosts, compatibilidade, interface, latência, ensaio e plano de reserva. Revisão de 2026."
 category: "music"
 tags: ["live-performance", "virtual-instruments"]
 ---
 
-**Indico para:** tecladistas e pianistas amadores e profissionais
+**Indico para:** tecladistas e pianistas que querem levar instrumentos virtuais para o palco.
 
-Comecei com essa história em meados de 2009. Na época eu possuía um ***Roland Fantom FA-76*** e forte interesse em produção musical.
+**Revisado em 16 de outubro de 2026.** A publicação original é de 2016. Esta revisão atualiza as orientações técnicas e as opções de software com base na documentação dos fabricantes; não é um teste comparativo dos produtos.
 
-Através de um amigo de São Paulo, aprendi bastante sobre o mundo dos **VSTs, VSTis e Samplers.** Aos poucos, fui experimentando maneiras de levar esse arcabouço para o palco.
+Comecei com essa história em meados de 2009. Na época eu possuía um **Roland Fantom FA-76** e tinha um forte interesse em produção musical. Através de um amigo de São Paulo, conheci melhor os instrumentos virtuais e samplers. Aos poucos, fui experimentando maneiras de levar tudo isso para o palco.
 
-Hoje, eu tenho um “setup” formado que me atende bastante, mas demorou um pouco até eu ficar totalmente satisfeito. É claro que ainda posso melhorar muito em termos de equipamento, no entanto, o que vale enfatizar é que, no início, não foi tão fácil me adaptar. De fato, existem desvantagens de utilizar esse esquema de “controlador + computador”, mas não se comparam as vantagens que você pode desfrutar.
+Demorou até encontrar uma configuração que me atendesse. A liberdade de escolher os timbres era ótima, mas havia outra parte do trabalho: preparar o computador, organizar os controles e aprender a resolver problemas.
 
-Pretendo nesse artigo, introduzir você, caro leitor, a esse mundo. Deixa eu explicar melhor do que estou falando, com um esquema:
+A ideia deste guia continua sendo um *quickstart*. **Comece com um timbre confiável, toque com ele e só depois aumente a complexidade.** Um bom setup é aquele que você consegue operar enquanto faz música.
 
-![Diagrama do teclado, computador e interface de áudio](/blog-images/legacy/2016/12/esquema-audio-e1481631692853-1024x678.png)
+## O caminho do som
 
-Esse é um esquema genérico “mínimo”. São basicamente 3 elementos:
+São três elementos principais:
 
-1. Teclado Controlador
-2. Computador
-3. Interface de Áudio
+1. **Teclado:** envia MIDI — notas, intensidade, pedal e outros comandos.
+2. **Computador:** executa o host, os instrumentos virtuais e os efeitos.
+3. **Interface de áudio:** converte o áudio digital em sinal para fones, monitores ou a mesa de som.
 
-Vamos ver uma visão geral de cada elemento. É claro que TUDO DEPENDE! Depende de quanto você quer gastar, depende de que timbres você precisa, depende de que tipo de performance você vai fazer.
+![Diagrama original do teclado, computador e interface de áudio](/blog-images/legacy/2016/12/esquema-audio-e1481631692853-1024x678.png)
 
-Se você curtir essa postagem, **deixe um comentário**. Você tem alguma **sugestão** ou dúvida? Será muito bem-vinda. Sobre o que você quer ler em próximas postagens?
+*O desenho original continua útil: MIDI leva os comandos ao computador; o som sai pela interface de áudio.*
 
-Portanto, a ideia aqui é prover um *“quickstart”* para quem quer partir para esse nível de performance ao vivo.
+MIDI não é áudio. Um cabo USB pode transportar MIDI, áudio ou ambos, conforme o equipamento; ter uma porta USB não significa que o teclado envia seu som por ela. Se quiser misturar os timbres internos do teclado com os virtuais, planeje também a conexão de áudio do teclado.
 
-Ao logo dos dias, estarem postando artigos mais específicos para cada assunto. Acompanhe meu site!
+Uma workstation reúne várias dessas funções no mesmo instrumento. Aqui, nós as distribuímos entre dispositivos. Ganhamos flexibilidade e assumimos a responsabilidade pelas conexões.
 
-Vale comparar o modelo do nosso esquema genérico a um **teclado convencional**, seja uma **arranjador**, um **sintetizador** ou **workstation**. Esses teclados possuem um **computador interno** que processa os timbres, bem como, uma **interface de áudio interna**. Este é o componente que possui o conector da saída de som na traseira do teclado (*P10*, por exemplo). Por isso, a ideia é a mesma, a diferença é que estamos separando todos os componentes.
+## O teclado controlador
 
-![Diagrama de um teclado convencional](/blog-images/legacy/2016/12/teclado-conv-1-1024x326.jpg)
+Você não precisa comprar um controlador dedicado se o teclado que já possui envia MIDI compatível. USB-MIDI costuma permitir conexão direta; uma saída MIDI DIN de cinco pinos precisa de uma entrada MIDI, presente em algumas interfaces de áudio ou em uma interface MIDI separada.
 
-## O Teclado Controlador
+Escolha pelas suas mãos e pelo repertório:
 
-O teclado controlador é um dos itens mais importantes aqui. Quando digo “teclado controlador”, não significa que o teclado para seu *setup* tem que ser exatamente do tipo **controlador**. Na realidade o teclado deve ter, pelo menos, uma saída [MIDI](/pt/blog/descomplicando-midi) ou USB.
+- **Teclas e extensão:** ação confortável, resposta à velocidade e quantidade de teclas suficiente para seus splits.
+- **Pedais:** entrada de sustain; expressão, se necessária. Confira compatibilidade e polaridade no manual.
+- **Controles:** botões para trocar timbres e faders ou knobs que você realmente vai usar.
+- **Expressividade:** pitch bend, modulação e aftertouch fazem sentido quando o instrumento virtual responde a eles.
+- **Alimentação e conexões:** confirme se funciona por USB e teste o hub, quando necessário.
 
-[Para saber mais sobre os tipos de teclado que existem, veja essa postagem.](/pt/blog/os-tipos-de-teclado-musical-controladores-arranjadores-sintetizadores-workstations-e-pianos-digitais)
+Experimente a curva de velocidade com seu piano virtual. Um controlador cheio de recursos pode ser uma escolha pior do que um modelo simples com teclas adequadas à sua técnica.
 
-A vantagem de o teclado prover conexão USB é que você pode liga-lo direto no computador sem necessidade de passar uma interface MIDI. Uma maior vantagem ainda é que alguns controladores, como o ***M-Audio Axiom 61***, também podem ter a energia alimentada pelo USB sem necessidade de fonte de alimentação.
+Os modelos e preços citados em 2016 saíram desta lista de compra: não existe um teto em reais que continue válido para todos. Inclua pedais, cabos, suporte e transporte no orçamento. Para entender as categorias, veja [os tipos de teclado musical](/pt/blog/os-tipos-de-teclado-musical-controladores-arranjadores-sintetizadores-workstations-e-pianos-digitais).
 
-**Quais são as características de um bom controlador?**
+## O computador: escolha pelo repertório
 
-* Teclas sensitivas
-* Muito Knobs
-* Muitos Faders
-* Muitos Sliders
-* Possua Pitchbend/Modwheel
-* Possua pelo menos 2 entradas para pedais de controle
-* Possua *Aftertouch*
+**Não precisa ser Mac.** Precisa executar, com folga, a combinação de host, plugins e bibliotecas que você vai usar.
 
-**Quanto gastar?**
+Como ponto de partida para uma compra, eu priorizaria **16 GB de RAM e SSD**; consideraria **32 GB ou mais** para várias bibliotecas grandes carregadas ao mesmo tempo. É uma recomendação de planejamento, não um requisito universal nem uma promessa de desempenho. Um projeto leve pode funcionar em menos memória; um piano pesado com várias camadas pode exigir mais.
 
-Penso que um controlador não deve ser tão caro. Você encontra controladores de R$ 500,00, mas também encontra alguns de R$ 3.500,00.
+O antigo “Core i5 + 4 GB + HD de 500 GB” não serve mais como regra. Verifique o modelo e a geração do processador, a memória exigida pelas bibliotecas, espaço livre, refrigeração e portas. Os [requisitos do Live](https://help.ableton.com/hc/en-us/articles/115001663530-Live-Minimum-System-Requirements), por exemplo, distinguem processadores e instruções compatíveis: o nome “i7” sozinho não responde à pergunta.
 
-Você deve aproveitar a vantagem do bom custo-benefício dessa arquitetura e não investir mais de que R$ 2.000,00 em um controlador.
+Reserve espaço para instrumentos, samples e backups. Se as bibliotecas estiverem em SSD externo, esse disco e seu cabo passam a fazer parte do instrumento: precisam estar conectados e com os caminhos corretos antes de abrir o show.
 
-**Algumas sugestões ([Veja uma lista mais completa de controladores](/pt/blog/os-tipos-de-teclado-musical-controladores-arranjadores-sintetizadores-workstations-e-pianos-digitais)):**
+### Compatibilidade vem antes da atualização
 
-![Teclado Controlador: Oxygen 61](/blog-images/legacy/2016/12/Oxygen61_top_media_00.jpg)
+Confira a combinação completa: **versão do sistema → host → formato e arquitetura do plugin → driver da interface**. Verifique também o instalador e o gerenciador de licenças.
 
-**Teclado Controlador: M-Audio Oxygen 61 V4**
+- **Apple Silicon:** prefira versões nativas ou Universal. No Live rodando nativamente, VST2/VST3 precisam ser compatíveis com Apple Silicon; o comportamento de AU pode ser diferente. Rosetta e bridges dependem do host e do sistema, e não garantem que qualquer plugin antigo funcione. Veja a [orientação da Ableton para plugins no Mac](https://help.ableton.com/hc/en-us/articles/4410323149074-Plug-ins-on-Mac-in-Live-11-1-and-later).
+- **Windows:** confira a arquitetura do computador. Uma aplicação x64, um plugin ARM e um driver de interface não são automaticamente intercambiáveis. Em um notebook com Windows on Arm, exija confirmação para cada parte do setup.
+- **Sistema suportado:** um host ainda aceitar Windows 10 não significa que o sistema tenha suporte regular. O suporte padrão do Windows 10 terminou em 14 de outubro de 2025; programas de atualização estendida e edições especiais têm condições próprias. Planeje a migração fora da agenda de apresentações. [Ciclo de suporte da Microsoft](https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/windows-10-support-has-ended-on-october-14-2025).
 
-![Axiom 61 MKII](/blog-images/legacy/2016/12/Axiom61MKII-fnt-e1481642463891-1024x381.jpg)
+Faça backup e reserve tempo para ensaiar depois de atualizar. A véspera do show não é o momento de descobrir que uma biblioteca deixou de abrir.
 
-**Teclado Controlador: M-Audio Axiom 61 MKII**
+## Host, DAW e instrumentos virtuais
 
-![Teclado controlador: Waldman Krypton 61](/blog-images/legacy/2016/12/710887waldman_controlador_midi_krypton61_front-1024x274.jpg)
+O **host** carrega plugins e organiza MIDI, efeitos e saídas. Uma **DAW** também pode fazer isso, além de gravar, editar e sequenciar. Você não precisa obrigatoriamente de uma DAW completa para tocar piano e pad.
 
-**Teclado controlador: Waldman Krypton 61**
+### Qual host escolher?
 
-[![M-Audio Keystation 61 II](/blog-images/legacy/2016/12/19188626_1SZ-e1481728131276.jpg)](https://goo.gl/GrgajT)
+Esta é uma seleção por necessidade, não um ranking. Confira os requisitos da versão e os recursos da edição antes de comprar.
 
-**Teclado controlador: M-Audio Keystation 61 II**
+| Host | Sistema e formatos |
+| --- | --- |
+| MainStage | macOS; instrumentos internos e Audio Units (AU). Não carrega VST diretamente. |
+| Gig Performer | Windows e macOS; VST2/VST3, além de AU no Mac. |
+| Cantabile | Windows; VST2/VST3. |
+| Ableton Live | Windows e macOS; VST2/VST3, além de AU no Mac. |
 
-## O Computador
+- **[MainStage](https://apps.apple.com/us/app/mainstage/id634159523):** para organizar patches, splits e layers no Mac, com uma coleção de instrumentos incluída.
+- **[Gig Performer](https://gigperformer.com/):** para conectar plugins visualmente e organizar sons, músicas e setlists. Confira as diferenças entre edições.
+- **[Cantabile](https://www.cantabilesoftware.com/compare):** para um setup de teclado com roteamento e controles MIDI. Lite permite começar; setlists entram no Solo, e estados e racks compartilhados no Performer.
+- **[Ableton Live](https://www.ableton.com/en/live/):** para quem também precisa de clips, cenas, loops, backing tracks e produção no mesmo ambiente.
 
-Primeiro, vamos falar de *hardware* (a parte física). Você definitivamente precisa de um bom computador para utilizar em suas performances de palco, mas não precisa ser tão *top* assim.
+Para a instalação, consulte os [requisitos do Cantabile](https://www.cantabilesoftware.com/guides/installation), os [downloads do Gig Performer](https://gigperformer.com/download) e os [formatos aceitos no Live](https://help.ableton.com/hc/en-us/articles/5937501570460-Supported-Plug-in-Formats). Os requisitos de cada plugin também contam.
 
-### Hardware
+**Atenção à edição do MainStage:** na consulta desta revisão, a ficha de compra avulsa acima exige macOS 15.6 ou posterior. A oferta [MainStage: Perform Live, do Apple Creator Studio](https://apps.apple.com/us/app/mainstage-perform-live/id6746637089), exige também chip Apple M1 ou posterior. Confira a ficha da edição que pretende instalar, especialmente em um Mac Intel; ter uma versão antiga funcionando não comprova compatibilidade com a atual.
 
-**O que seria um bom computador aqui?**
+O Brainspawn Forte citado no texto de 2016 fica como referência histórica, fora desta seleção atual. Se você já trabalha bem em outra DAW, avalie o que falta no seu fluxo antes de trocar: mudança de timbres, controles acessíveis e recuperação rápida são mais importantes do que o rótulo do programa.
 
-Seria um computador com um bom processador, boa quantidade de memória e bastante espaço para armazenamento. E placa de vídeo? No nosso caso, é totalmente desnecessário se preocupar com vídeo.
+### VST3, AU e Kontakt não são a mesma coisa
 
-**Qual é a melhor marca?**
+**VST2, VST3 e AU são formatos de plugin.** Um instrumento pode existir em vários deles. “VSTi” costuma indicar um instrumento virtual, enquanto outros plugins processam áudio como efeitos. Para um setup novo, prefira um formato atual que o fabricante e o host suportem — normalmente VST3, ou AU no MainStage. Salve uma cópia do projeto antes de trocar de formato: não presuma que os presets e as automações serão transferidos automaticamente.
 
-Não se preocupe tanto com a marca e sim com a configuração, isto é, “qual processador”, “quanto de memória”, “quanto de HD”, “entradas USB”.
+**Kontakt é uma plataforma de instrumentos baseados em samples.** A biblioteca é o conteúdo carregado dentro dele; instalar o Kontakt não instala todos os timbres. O Kontakt 8 oferece VST3, AU no Mac e AAX, além do modo independente; não oferece VST2. Confira os [formatos e requisitos do Kontakt](https://www.native-instruments.com/products/kontakt).
 
-A qualidade de tecnologia avança absurdamente, por isso, é muito difícil (pelo menos pra mim, que sou formado em Ciência da Computação) especificar um computador ideal, mas nosso objetivo aqui é tornar a coisa fácil e sucinta. Então, uma boa configuração seria:
+Antes de comprar uma biblioteca, veja se ela funciona no **Kontakt Player gratuito** ou exige o **Kontakt completo**, e qual versão mínima pede. Instrumentos que exigem a versão completa podem entrar em modo de demonstração limitado no Player. Esse detalhe não pode aparecer só no palco. [Comparação oficial do Kontakt Player](https://www.native-instruments.com/products/kontakt-player).
 
-* Processador **Core i5 (ou mais)**
-* Memória: **4GB (ou mais)**
-* HD: **500GB (ou mais) – SSD é recomendável**
-* Entrada **USB** (de preferência 3.0)
-
-**Tem que ser Apple?**
-
-Essa é a maior falácia.
-
-> Você não precisa ter um Apple Macbook
-
-Não vou dizer que o Macbook seja a melhor opção, mas **não é requisito**! É verdade que as máquinas da Apple provêm uma combinação de *hardware* e *software* muito bem arquitetados para garantir muita **estabilidade**. Isso é muito importante. Entretanto, os equipamentos da “maçãzinha” são extremamente caros. Existem soluções excelentes com um custo muito mais em conta.
-
-**Algumas sugestões:**
-
-[![Notebook Acer Aspire F5 Intel Core i5 6ª Geração](/blog-images/legacy/2016/12/216838300.jpg "Clique para ver preço na loja")](http://www.magazinevoce.com.br/magazineproaudio/p/notebook-acer-aspire-f5-intel-core-i5-6a-geracao-8gb-1tb-led-156-windows-10/147291/)
-
-Notebook Acer Aspire F5 Intel Core i5 6ª Geração
-
-[![Notebook Acer Aspire E5 Intel Core i7 6ª Geração](/blog-images/legacy/2016/12/216501200.jpg "Clique para ver preço na loja")](http://www.magazinevoce.com.br/magazineproaudio/p/notebook-acer-aspire-e5-intel-core-i7-6a-geracao-8gb-1tb-lcd-156-placa-de-video-4gb-windows-10/143498/)
-
-Notebook Acer Aspire E5 Intel Core i7 6ª Geração
-
-Agora, vamos falar da parte mais legal. Você precisa dos *softwares* certos.
-
-### Software
-
-*Softwares* são programas de computador. Existem pelo menos três tipos de *softwares* que você precisa:
-
-1. **Driver da interface de áudio:**é um programa responsável por controlar a interface de áudio. Os outros *softwares* se comunicam com sua interface de áudio através desse programa, também chamado de **controlador de dispositivo**.
-2. **DAW (Digital Audio Workstation):** em português: “estação de trabalho de áudio digital”. Esse programa é um dos mais fundamentais. É o local onde você vai gerenciar todo seu *setup* de timbres e sequencias. Existem duas classes de DAW, uma mais voltada para produção e gravação e outra com um fim de performance ao vivo. No nosso caso, é mais recomendável utilizar DAWs voltadas para performance ao vivo, exemplos:
-   1. [Brainspawn Forte](http://www.brainspawn.com/)
-   2. [Cantabile](https://www.cantabilesoftware.com/)
-   3. [Ableton Live](https://www.ableton.com/)
-   4. [MainStage (para MAC apenas)](http://www.apple.com/br/mainstage/)
-3. **VST/VSTi/AU (instrumentos virtuais):** esses programas são os mais fundamentais e você pode ter vários deles em seu *setup.*Cada VSTi pode ter diversos timbres e sons. Por exemplo, você pode ter um VSTi para piano, um VSTi para cordas e um VSTi de samplers (ex: Kontakt). Atualmente, existem milhares de VSTi já produzidos com diferentes finalidades. Aqui vai uma lista de alguns **fabricantes** mais famosos:
-   1. [Native Instruments](https://www.native-instruments.com/en/)
-   2. [Steinberg](https://www.steinberg.net/)
-   3. [IK Multimedia](http://www.ikmultimedia.com/pt/)
-   4. [Ample Sound](http://www.amplesound.net/en/index.asp)
-   5. [Cakewalk](http://www.cakewalk.com/)
+Escolha poucos timbres que resolvam seu repertório. Um piano, um elétrico, um órgão e um pad bem preparados podem ser mais úteis do que dezenas de bibliotecas que você ainda não conhece.
 
 ## A interface de áudio
 
-A interface de áudio é outro item essencial do nosso *setup*. Você pode ter ouvido outros nomes para ***interface de áudio***: *placa de som, “cérebro”, “cabeçote”, “sampler”, “processador”;* mas o nome mais certo é interface de áudio (saiba o porquê).
+Áudio integrado também usa uma interface, interna ao computador. Uma interface externa costuma trazer conexões mais adequadas ao palco, controles físicos e opções de driver e roteamento. Ela não resolve sozinha problemas de CPU ou de plugins.
 
-**Para que serve?**
+Priorize:
 
-É na interface áudio que você conectará o cabo da saída de som. O objetivo da interface é converter e/ou processar o sinal digital, que vem do computador.
+- Driver e firmware compatíveis com seu sistema e suporte do fabricante.
+- Saídas de linha adequadas à mesa, preferencialmente balanceadas, e controle de fones.
+- Quantidade de **saídas independentes**: para estéreo no PA e um click separado, planeje pelo menos três canais de saída; interfaces com quatro saídas de linha facilitam esse arranjo. Uma saída de fones que apenas duplica o par principal não resolve.
+- Cabos, alimentação e adaptadores que você consiga montar com segurança.
 
-**Por que preciso?**
+No Windows, comece pelo **ASIO do fabricante**. No macOS, use **Core Audio** e instale o driver se o fabricante exigir. ASIO4ALL pode ser uma alternativa para dispositivos sem ASIO próprio; não substitui uma interface física nem garante baixa latência. [Configuração de interfaces pela Ableton](https://help.ableton.com/hc/en-us/articles/211476789-Setting-up-an-Audio-Interface).
 
-Porque a interface de áudio vai te dar a melhor qualidade de conversão/processamento com baixa latência. Você já deve ter visto os termos: *sample rate*, *44.1 kHz, 48kHz, 96kHz…* Trata-se da *taxa de amostragem*. Quando maior essa taxa, mais qualidade. Entretanto, quanto maior essa taxa, mais você precisa de processamento e memória.
+USB-C descreve um conector; não é uma medida de latência. USB 3 ou Thunderbolt também não garantem resposta melhor que uma boa interface USB 2. A recomendação antiga de priorizar FireWire saiu do guia. Escolha pela compatibilidade e pelo desempenho do conjunto.
 
-**É possível “não utilizar interface de áudio”?**
+Combine com o técnico as saídas, os cabos e a necessidade de DI. Confirme se o PA receberá mono ou estéreo e ouça seus timbres nessa configuração. Mantenha o click fora das saídas destinadas ao público.
 
-Sim, é possível utilizando um driver genérico que se chama [ASIO4ALL](http://www.asio4all.com/) (ou similar). No caso, utiliza-se a interface de áudio interna que toda placa mãe disponibiliza por padrão. Entretanto, você terá uma qualidade inferior de conversão (pode até ser aceitável). Porém, o problema será a ***latência***.
+## Latência: resposta rápida sem estalos
 
-**O que é latência?**
+Latência é o atraso entre tocar e ouvir. O número mostrado pelo host pode representar entrada, saída ou ida e volta do áudio; não é necessariamente o tempo completo entre a tecla e o retorno. Para um instrumento virtual controlado por MIDI, a entrada de áudio não faz parte do mesmo caminho de um microfone processado pelo computador.
 
-É o tempo de atraso que pode ocorrer no processamento da interface de áudio. Uma latência aceitável, que você não vai “sentir no dedo”, deve estar abaixo de ***5ms***.
+Uma conta ajuda a entender a escala: **128 samples ÷ 48.000 samples por segundo ≈ 2,67 ms por buffer**. Isso não significa latência total de 2,67 ms: ainda existem outras etapas. Portanto, “menos de 5 ms” não deve ser uma regra absoluta. [Como a latência funciona](https://help.ableton.com/hc/en-us/articles/360010545559-How-Latency-Works).
 
-**Algumas sugestões básicas de interfaces de áudio USB:**
+Meu ponto de partida para testar seria **44,1 ou 48 kHz e buffer de 128 ou 256 samples**, conforme o equipamento. São valores iniciais de ensaio, não uma configuração garantida. Toque o trecho mais pesado, com sustain, camadas e efeitos; ajuste até encontrar uma resposta confortável sem interrupções.
 
-[![Focusrite Scarlett 2i2 USB](/blog-images/legacy/2016/12/8380826_1GG-e1481648247324.jpg)](https://goo.gl/QnD6it)
+Buffer menor reduz a espera, mas exige processamento mais frequente. Taxas maiores também aumentam a carga; não são automaticamente a melhor escolha para o palco. Efeitos com *lookahead* e outros processamentos podem acrescentar atraso. Evite Bluetooth no caminho de monitoração do instrumento. [Orientações para reduzir latência](https://help.ableton.com/hc/en-us/articles/209072289-How-to-reduce-latency).
 
-Focusrite Scarlett 2i2 USB (Clique para comprar)
+O **direct monitoring** da interface monitora uma entrada física sem passar pelo host. Ele não elimina o processamento necessário para um piano virtual gerar som. [Monitoração direta e latência](https://help.ableton.com/hc/en-us/articles/360011924559-How-to-reduce-latency-while-monitoring).
 
-[![Interface De Audio Usb Roland Duo Capture Ex](/blog-images/legacy/2016/12/duo-capture_ex_front_angle_gal-1024x385.jpg)](/blog-images/legacy/2016/12/duo-capture_ex_front_angle_gal.jpg)
+## Monte o primeiro show em sete passos
 
-Roland Duo Capture Ex USB
+1. **Faça um único timbre tocar.** Conecte teclado e interface, selecione as portas de MIDI e áudio, carregue um piano e confirme canal MIDI, sustain e saída. Salve e reabra o projeto.
+2. **Crie as combinações necessárias.** Experimente piano com pad em layer e baixo com piano em split. Ajuste regiões, oitavas e velocidade. Confira se o sustain deve afetar todas as camadas. Veja [como misturar timbres](/pt/blog/como-misturar-varios-timbres-no-teclado).
+3. **Organize a ordem das músicas.** Nomeie patches por música e seção. Mapeie avançar, voltar, volume e um comando de emergência (*panic*, para notas presas). Teste o que cada comando realmente interrompe.
+4. **Ensaie as transições.** Troque de patch segurando notas e sustain; ouça cortes, caudas de reverb e saltos de volume. Preload pode ajudar, mas usa memória. Não presuma transição contínua só porque o host oferece esse recurso.
+5. **Equilibre os volumes no contexto.** Compare piano, órgão, synth e camadas junto da banda. Deixe margem antes do clipping. Se usar click ou backing tracks, teste o roteamento de cada saída separadamente.
+6. **Ensaie como se fosse o show.** Use o mesmo controlador, pedais, interface, cabos e alimentação durante o repertório inteiro. Teste a abertura a frio e, se pretende tocar sem rede, abra tudo offline para verificar samples e licenças.
+7. **Prepare e ensaie o plano B.** Um timbre interno do teclado, módulo ou segundo sistema só é reserva se houver um caminho de áudio pronto. Aprenda a silenciar o sinal com problema e continuar tocando; um backup de arquivos sozinho não substitui um instrumento durante a música.
 
-![AudioBox 22VSL](/blog-images/legacy/2016/12/AudioBox_22VSL-06.png)
+## Antes de sair e na passagem de som
 
-AudioBox 22VSL
+- Faça backup do projeto, presets e mapas MIDI; registre as versões que funcionaram. Confirme que as bibliotecas e autorizações estão disponíveis no computador de reserva, se houver.
+- Feche aplicações desnecessárias, interrompa sincronizações pesadas e programe atualizações fora do horário da apresentação. Evite suspender o computador durante o uso. Desligar a rede é opcional: confira antes se controle remoto ou licenças dependem dela.
+- Leve alimentação e cabos de reserva, identifique conexões e deixe o computador ventilado, protegido de esbarrões. Use sempre o arranjo de hub e discos que foi ensaiado.
+- Com o volume baixo, confira MIDI, áudio, pedais, retorno, troca de timbres e o plano B. Depois teste o patch mais exigente no volume combinado com o técnico.
 
-**Lista de fabricantes famosos de interface de áudio:**
+Se houver problema, siga o caminho do sinal:
 
-* [Avid](http://www.avid.com/products)
-* [Behringer](http://www.music-group.com/Categories/Behringer/Computer-Audio/Audio-Interfaces/c/1234031?group=Audio%20Interfaces&colExpFlag=,Audio%20Interfaces)
-* [Focusrite](https://global.focusrite.com/products)
-* [Line-6](http://line6.com/interfaces/)
-* [M-Audio](http://www.m-audio.com/)
-* [Presonus](http://www.presonus.com/products/Recording-Systems)
-* [Roland](http://roland.com.br/)
-* [Yamaha](http://br.yamaha.com/pt/products/music-production/interfaces/)
+| Sintoma | Primeira verificação |
+| --- | --- |
+| Nenhum som | O host recebe MIDI? O instrumento está carregado, com canal correto? Há sinal no medidor e na saída certa? |
+| Estalos ou cortes | Aumente o buffer para comparar; confira carga de áudio, leitura do SSD, alimentação e conexões. Isole um plugin por vez. |
+| Notas presas | Acione o panic ensaiado e confira sustain, canal e mensagens MIDI. Se necessário, silencie a saída antes de reiniciar o host. |
+| Plugin ausente ou em demo | Confira formato, arquitetura, versão, instalação e licença. Use o timbre de reserva se não houver tempo para resolver. |
 
----
+Para investigar interrupções com mais detalhe, consulte o [guia de estalos e dropouts da Ableton](https://help.ableton.com/hc/en-us/articles/209070329-How-to-avoid-crackles-and-audio-dropouts).
 
-Quero listar aqui algumas vantagens e desvantagens de você utilizar um *setup* de **controlador + laptop + interface de áudio**, ao invés de um teclado convencional.
+## Vale a pena?
 
-## Vantagens
+A grande vantagem continua sendo a liberdade: escolher sons, criar camadas e adaptar o instrumento ao repertório. O custo depende do que você já tem e do que precisa comprar; não existe economia garantida de 50%. A polifonia também tem limites de vozes, processamento, memória e leitura de disco.
 
-![Ilustração do artigo original](/blog-images/legacy/2016/12/vantagens-300x300.png)
+Em troca dessa flexibilidade, você precisa cuidar de montagem, compatibilidade, licenças e recuperação de falhas. Equipamento caro, sozinho, não garante estabilidade.
 
-1. **Custo-benefício**: sem dúvida, pra mim, essa é a maior vantagem de se ter esse tipo de *setup*. Você consegue reproduzir o que se faz com teclados de custo bem superior. É possível economizar pelo menos 50% fazendo um bom *setup,*com resultado igual ou superior a de um teclado convencional top de linha;
-2. **Liberdade:** com esse tipo de *setup* você ganha muita liberdade em diversos aspectos: em timbre, em configuração, em portabilidade e em mobilidade;
-3. **Melhores timbres:**você pode ter timbre de qualquer teclado *top de linha*, e ainda, sons de qualidade muito superior. Hoje, tem muito *sampler* pronto na internet, de diversos teclados e VSTi. Se você “enjoar” do timbre atual, você procura outro, baixa e substitui;
-4. **Polifonia:** nesse *setup* não há limite de polifonia. Na realidade, ele estará limitado ao “quanto o seu computador aguentar”.
-
-## Desvantagens
-
-![Ilustração do artigo original](/blog-images/legacy/2016/12/desvantagens-300x300.png)
-
-1. **Instabilidade:** a maior desvantagem é essa. Imagina a situação: você está tocando e, no meio da apresentação, seu computador simplesmente “trava” – tela azul do Windows. Isso pode acontecer. Já passei por muitas situações como essa. Isso se resolve adquirindo bons equipamentos. Na realidade, uns 90% disso dependerá do seu computador.
-2. **“Parafernalha”:** dependendo do seu *setup* pode ser um pouco chato a parte de “montar” e “desmontar”. Se você tem um bom *staff* a sua disposição, isso não é problema.
-
-## 7 dicas imperdíveis para garantir um bom funcionamento do seu *setup* ao vivo
-
-![Ilustração do artigo original](/blog-images/legacy/2016/12/flat-elements-man-key.png)
-
-1. **Tenha um computador exclusivo para seu *setup*.** Apesar de eu não fazer mais isso, é altamente recomendável se você usa Windows, porque quanto mais programas você tem instalado em seu computador, maiores são as chances de *processos* e *serviços* estarem consumindo processamento, disco e memória. Isso vai prejudicar o desempenho da performance, gerar pequenas interrupções durante a execução dos sons (“pops”, “clicks”).\
-   ![Ilustração do artigo original](/blog-images/legacy/2016/12/3qPLV-300x216.jpg)
-2. **Desligue os dispositivos e processos que você não esteja usando no computador durante a performance.** Por exemplo, desligue sua placa de rede *ethernet* e *sem fio*. Quando esses dispositivos estão ligados, eles geram consumo de energia e processamento, o que pode prejudicar a performance, gerando interrupções durante a execução dos sons (“pops”, “clicks”). Também, verifique se existe algum processo consumindo recursos desnecessários. No caso do Windows, você fazer essa verificação no **“Gerenciador de Tarefas” (CTRL+SHIFT+ESC).**\
-   ![Ilustração do artigo original](/blog-images/legacy/2016/12/memory-tab-300x213.jpg)
-3. **Utilize SSD.** Desde quando instalei um SSD na minha máquina, minhas dores de cabeça com a “demora” de carregamento melhoraram uns 90%! Os SSD’s são um pouco caro, mas vale muito a pena. Veja essa postagem imperdível em que dou dicas sobre SSD. Você deve carregar seus *samplers* a partir do SSD, então.\
-   ![Ilustração do artigo original](/blog-images/legacy/2016/12/slant-300x163.jpg)
-4. **Utilize uma DAW voltada para performance live.** Você pode usar *softwares,*como Cubase, Sonar e Reaper, mas essas DAWs são mais voltadas para **gravação**. O mais recomendado é utilizar DAWs que possuem funcionalidades mais voltadas para serem usadas no palco, por exemplo, gravação de cenas/presets e [mapeamento de *controllers MIDI*](/pt/blog/descomplicando-midi).\
-   ![Ilustração do artigo original](/blog-images/legacy/2016/12/Cantabile3100ScreenShot700-300x212.png)
-5. **Escolha uma interface de áudio com USB 2.0 (ao menos).**Isso também influencia e diminui a chance de você ter “pops” e “clicks” durante sua apresentação. A melhor conexão, na verdade, é a do tipo **Firewire**, entretanto, está cada vez mais raro encontrar *laptops* com essa interface.\
-   ![Ilustração do artigo original](/blog-images/legacy/2016/12/usb2.0-300x236.jpg)
-6. **Evite balançar ou esbarrar nos conectores.**Já tive muito problema com isso. Certifique-se que seu*laptop* estará em um lugar seguro contra “*esbarrões”* e *“balanços”*. Proteja as conexões USB ou Firewire, tanto do seu teclado controlador, como de sua interface de áudio. Essas conexões são sensíveis e podem travar sua DAW, obrigando a você reiniciar seu PC por completo.\
-   ![Ilustração do artigo original](/blog-images/legacy/2016/12/C_WATCH_OUT_logo_01-300x300.jpg)
-7. **Explore e seja criativo.** Um bom *setup* é quando ele é único! Por isso, explore, pesquise e gaste tempo com isso. Certamente, você encontrará o que você precisa!
-
-> Quem procura, encontra!
-
-## O que você achou?
-
-Isso aí, pessoal! Espero que tenha valido a leitura. Tentei resumir ao máximo alguns assuntos sobre esse mundo. Meu objetivo era dar um visão geral. Pretendo em próximas postagens detalhar mais alguns temas.
-
-Se você curtiu a postagem, **deixe um comentário**. Você tem alguma **sugestão** ou dúvida? Será muito bem-vinda. Sobre o que você quer ler em próximas postagens?
-
-Você ajudará bastante se compartilhar essa postagem com seus amigos. Dá um força aí! =D
+Minha sugestão é começar pequeno. Prepare um som, entenda o [MIDI](/pt/blog/descomplicando-midi), faça um ensaio completo e expanda a partir daí. Vale gastar tempo descobrindo timbres; vale tanto quanto aprender a manter a música acontecendo.

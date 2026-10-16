@@ -51,7 +51,9 @@ export default async function Post({ params }: Props) {
                 {postData.legacy ? (
                     <p className="article-archive-note">
                         {params.locale === "pt"
-                            ? "Do arquivo de jonatascastro.com. O texto original em português foi preservado, com notas editoriais. Preços, produtos e referências refletem a época da publicação."
+                            ? postData.revised
+                                ? `Publicado originalmente em jonatascastro.com. Edição em português revisada em ${format(parseISO(postData.revised), "dd MMM yyyy", { locale: ptBR })}. A data de publicação original foi mantida.`
+                                : "Do arquivo de jonatascastro.com. O texto original em português foi preservado, com notas editoriais. Preços, produtos e referências refletem a época da publicação."
                             : `Originally published on jonatascastro.com. English edition translated and revised${postData.revised ? ` ${format(parseISO(postData.revised), "dd MMM yyyy")}` : ""}. Historical examples are identified in the text.`}
                     </p>
                 ) : null}
