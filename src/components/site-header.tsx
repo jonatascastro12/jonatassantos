@@ -1,12 +1,13 @@
 "use client";
 
 import { XLogoIcon } from "@/components/x-logo-icon";
-import { GitHubLogoIcon, GlobeIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { Switch } from "@radix-ui/themes";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
-import { Suspense } from "react";
+import { useEffect, useState } from "react";
 import { localizedPath, messages, withoutLocale, type Locale } from "@/lib/i18n";
 
 const navItems = [
@@ -21,10 +22,12 @@ export function SiteHeader({ locale = "en" }: { locale?: Locale }) {
     const text = messages[locale];
     const targetLocale = locale === "en" ? "pt" : "en";
     const { resolvedTheme, setTheme } = useTheme();
+    const [
+        mounted,
+        setMounted,
+    ] = useState(false);
 
-    const switchTheme = () => {
-        setTheme(resolvedTheme === "dark" ? "light" : "dark");
-    };
+    useEffect(() => setMounted(true), []);
 
     return (
         <>
@@ -51,18 +54,23 @@ export function SiteHeader({ locale = "en" }: { locale?: Locale }) {
                         href={localizedPath(targetLocale, currentPath)}
                         className="language-switch"
                         hrefLang={targetLocale === "pt" ? "pt-BR" : "en"}
-                        aria-label={text.switchLanguage}
+                        aria-label={`${text.language}: ${text.switchLanguage}`}
                     >
-                        <GlobeIcon aria-hidden="true" />
+                        <Image
+                            src={targetLocale === "pt" ? "/flags/br.svg" : "/flags/us.svg"}
+                            width={20}
+                            height={15}
+                            alt=""
+                            aria-hidden="true"
+                            className="language-flag"
+                        />
                         <span lang={targetLocale === "pt" ? "pt-BR" : "en"}>{text.language}</span>
                     </Link>
-                    <Suspense fallback={<Switch checked={resolvedTheme === "dark"} />}>
-                        <Switch
-                            onClick={switchTheme}
-                            checked={resolvedTheme === "dark"}
-                            aria-label={text.darkMode}
-                        />
-                    </Suspense>
+                    <Switch
+                        onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
+                        checked={mounted && resolvedTheme === "dark"}
+                        aria-label={text.darkMode}
+                    />
                     <a className="social-link" href="https://github.com/jonatascastro12" target="_blank" rel="noreferrer" aria-label="GitHub">
                         <GitHubLogoIcon />
                     </a>
