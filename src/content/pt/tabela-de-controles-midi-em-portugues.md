@@ -2,7 +2,7 @@
 title: "Tabela de controles MIDI em português"
 date: "2016-12-20"
 legacy: true
-description: "Artigo do arquivo original: Tabela de controles MIDI em português"
+description: "Consulte a tabela de controles MIDI em português, com números decimais e hexadecimais, funções dos controladores e mensagens de modo de canal."
 category: "music"
 tags: ["midi"]
 ---

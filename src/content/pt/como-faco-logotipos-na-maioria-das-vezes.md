@@ -2,7 +2,7 @@
 title: "Como faço logotipos, na maioria das vezes?"
 date: "2016-05-25"
 legacy: true
-description: "Artigo do arquivo original: Como faço logotipos, na maioria das vezes?"
+description: "Um relato sobre criação de logotipos, referências visuais e uso de modelos prontos, com reflexões sobre o trabalho de designers. Arquivo de 2016."
 category: "marketing"
 tags: ["branding"]
 ---

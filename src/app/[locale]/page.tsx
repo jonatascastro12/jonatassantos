@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import portrait from "../../../public/jonatas.jpg";
 import { localizedPath, messages, type Locale } from "@/lib/i18n";
-import { pageMetadata } from "@/lib/metadata";
+import { pageDescriptions, pageMetadata } from "@/lib/metadata";
 
 const quickLinks = [
     { label: "about", href: "/about", description: "aboutDescription" },
@@ -14,7 +14,7 @@ const quickLinks = [
 ] as const;
 
 export function generateMetadata({ params }: { params: { locale: Locale } }) {
-    return pageMetadata(params.locale, "/", "Jônatas Santos", messages[params.locale].description);
+    return pageMetadata(params.locale, "/", `Jônatas Santos — ${messages[params.locale].engineer}`, pageDescriptions[params.locale].home);
 }
 
 export default function Home({ params }: { params: { locale: Locale } }) {

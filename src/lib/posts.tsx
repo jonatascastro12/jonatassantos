@@ -14,6 +14,17 @@ export type PostSummary = PostTaxonomy & {
   legacy?: boolean;
 };
 
+export type PostData = PostTaxonomy & {
+  slug: string;
+  content: string;
+  date: string;
+  title: string;
+  description: string;
+  legacy?: boolean;
+  revised?: string;
+  image?: string;
+};
+
 const postsDirectory = path.join(process.cwd(), "src/content");
 
 function directoryForLocale(locale: Locale) {
@@ -56,15 +67,18 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(slug: string, locale: Locale = "en") {
+export async function getPostData(slug: string, locale: Locale = "en"): Promise<PostData | null> {
   if (!getAllPostIds().some(({ params }) => params.id === slug)) return null;
   const fullPath = path.join(directoryForLocale(locale), `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
+  // Reuse an actual local article image for previews, never the author's portrait.
+  const image = matterResult.content.match(/!\[[^\]]*\]\((\/[^\s)]+)(?:\s+"[^"]*")?\)/)?.[1];
 
   return {
     slug,
     content: matterResult.content,
-    ...(matterResult.data as PostTaxonomy & { date: string; title: string; description?: string; legacy?: boolean; revised?: string }),
+    image,
+    ...(matterResult.data as Omit<PostData, "slug" | "content" | "image">),
   };
 }

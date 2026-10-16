@@ -2,7 +2,7 @@
 title: "Projeto Maná do Céu – Devocionais Diários"
 date: "2016-05-24"
 legacy: true
-description: "Artigo do arquivo original: Projeto Maná do Céu – Devocionais Diários"
+description: "A história do Maná do Céu, site e podcast criado para compartilhar os devocionais diários do Pr. Eli Vilela. Relato do arquivo de 2016."
 category: "faith"
 tags: ["devotionals", "podcast"]
 ---

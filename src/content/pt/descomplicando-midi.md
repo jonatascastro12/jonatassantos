@@ -2,7 +2,7 @@
 title: "Descomplicando MIDI – interface digital para instrumentos musicais"
 date: "2016-12-21"
 legacy: true
-description: "Artigo do arquivo original: Descomplicando MIDI – interface digital para instrumentos musicais"
+description: "Entenda conexões, mensagens, canais e controles MIDI para configurar teclados, DAWs e instrumentos virtuais. Guia de arquivo com notas editoriais."
 category: "music"
 tags: ["midi", "keyboards"]
 ---

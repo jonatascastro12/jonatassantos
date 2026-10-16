@@ -2,7 +2,7 @@
 title: "[e-book]: 12 escalas maiores: naturalidade ao piano"
 date: "2016-12-12"
 legacy: true
-description: "Artigo do arquivo original: [e-book]: 12 escalas maiores: naturalidade ao piano"
+description: "Pratique as 12 escalas maiores para tocar em diferentes tons no piano. Artigo de arquivo com aulas em vídeo e aviso sobre o PDF indisponível."
 category: "music"
 tags: ["piano"]
 ---

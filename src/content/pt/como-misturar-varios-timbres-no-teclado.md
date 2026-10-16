@@ -2,7 +2,7 @@
 title: "5 maneiras de misturar vários timbres no teclado"
 date: "2016-05-27"
 legacy: true
-description: "Artigo do arquivo original: 5 maneiras de misturar vários timbres no teclado"
+description: "Cinco formas de combinar timbres: dual voice, layers, modos de performance, conexão MIDI e instrumentos virtuais. Guia do arquivo de 2016."
 category: "music"
 tags: ["keyboards", "virtual-instruments"]
 ---
