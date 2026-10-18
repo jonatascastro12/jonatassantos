@@ -19,6 +19,7 @@ test('every page has a translated edition, a matching language switch, and recip
     const response = await fetch(`${base}${publicPath}`);
     assert.equal(response.status, 200, publicPath);
     const html = (await response.text()).replace(/<!--[\s\S]*?-->/g, '');
+    assert.match(html, /<meta name="description" content="[^"]+"\/>/, `Description: ${publicPath}`);
     assert.match(html, new RegExp(`<html[^>]*lang="${locale === 'pt' ? 'pt-BR' : 'en'}"`), publicPath);
     const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
     assert.ok(canonical, `Canonical exists: ${publicPath}`);

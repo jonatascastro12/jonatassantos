@@ -2,7 +2,7 @@
 title: "[e-book]: 7 passos para criar listas de e-mail do zero"
 date: "2016-12-12"
 legacy: true
-description: "Artigo do arquivo original: [e-book]: 7 passos para criar listas de e-mail do zero"
+description: "Uma introdução à criação de listas de e-mail e ao relacionamento com assinantes. Artigo de arquivo; o PDF do e-book ainda não foi recuperado."
 category: "marketing"
 tags: ["email"]
 ---

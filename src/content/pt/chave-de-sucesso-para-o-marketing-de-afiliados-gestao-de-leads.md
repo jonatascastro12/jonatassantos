@@ -2,7 +2,7 @@
 title: "Gestão de leads: a chave de sucesso para o Marketing de Afiliados"
 date: "2016-12-16"
 legacy: true
-description: "Artigo do arquivo original: Gestão de leads: a chave de sucesso para o Marketing de Afiliados"
+description: "Entenda funil de vendas, geração, nutrição, qualificação e pontuação de leads no marketing de afiliados. Artigo do arquivo de 2016."
 category: "marketing"
 tags: ["affiliate-marketing", "lead-management"]
 ---

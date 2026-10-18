@@ -3,26 +3,17 @@ import { GoogleTagManager } from '@/components/google-tag-manager';
 import { Theme } from '@radix-ui/themes';
 import type { Metadata } from 'next'
 import { ThemeProvider } from 'next-themes';
-import { IBM_Plex_Mono, IBM_Plex_Sans, Newsreader } from 'next/font/google'
+import { IBM_Plex_Mono, Manrope } from 'next/font/google'
 import { notFound } from 'next/navigation';
 import { isLocale, locales, messages, type Locale } from '@/lib/i18n';
 import { siteUrl } from '@/lib/metadata';
+import { StructuredData } from '@/components/structured-data';
+import { siteStructuredData } from '@/lib/structured-data';
 import '@radix-ui/themes/styles.css';
 import '../globals.css'
 
-const newsreader = Newsreader({
+const manrope = Manrope({
     subsets: ['latin'],
-    variable: '--font-display',
-    display: 'swap',
-})
-
-const ibmPlexSans = IBM_Plex_Sans({
-    subsets: ['latin'],
-    weight: [
-        '400',
-        '500',
-        '600',
-    ],
     variable: '--font-body',
     display: 'swap',
 })
@@ -63,9 +54,10 @@ export default function RootLayout({
         <html
             lang={params.locale === "pt" ? "pt-BR" : "en"}
             suppressHydrationWarning
-            className={`${newsreader.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
+            className={`${manrope.variable} ${ibmPlexMono.variable}`}
         >
             <body>
+                <StructuredData data={siteStructuredData(params.locale)} />
                 {analyticsEnabled ? (
                     <noscript>
                         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HQWTBB8" height="0" width="0" style={{ display: "none", visibility: "hidden" }} title="Google Tag Manager" />

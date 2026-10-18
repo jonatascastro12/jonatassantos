@@ -9,8 +9,10 @@ import Link from "next/link";
 import { format, parseISO } from "date-fns";
 import { ptBR } from "date-fns/locale/pt-BR";
 import { notFound } from "next/navigation";
-import type { Locale } from "@/lib/i18n";
-import { pageMetadata } from "@/lib/metadata";
+import { localizedPath, type Locale } from "@/lib/i18n";
+import { absoluteUrl, authorName, pageMetadata, siteUrl } from "@/lib/metadata";
+import { StructuredData } from "@/components/structured-data";
+import { articleStructuredData } from "@/lib/structured-data";
 
 type Params = {
     slug: string;
@@ -31,7 +33,25 @@ export async function generateMetadata({ params }: Props) {
     const postData = await getPostData(params.slug, params.locale);
     if (!postData) notFound();
 
-    return pageMetadata(params.locale, `/blog/${params.slug}`, postData.title, postData.description);
+    const metadata = pageMetadata(params.locale, `/blog/${params.slug}`, postData.title, postData.description);
+    const images = postData.image ? [{ url: `${siteUrl}${postData.image}`, alt: postData.title }] : [];
+    return {
+        ...metadata,
+        openGraph: {
+            ...metadata.openGraph,
+            type: "article" as const,
+            publishedTime: postData.date,
+            modifiedTime: postData.revised,
+            authors: [absoluteUrl(params.locale, "/about")],
+            images,
+        },
+        twitter: {
+            card: postData.image ? "summary_large_image" as const : "summary" as const,
+            title: postData.title,
+            description: postData.description,
+            images,
+        },
+    };
 }
 
 export default async function Post({ params }: Props) {
@@ -40,12 +60,25 @@ export default async function Post({ params }: Props) {
 
     return (
         <PageShell narrow locale={params.locale}>
+            <StructuredData data={articleStructuredData(params.locale, postData)} />
             <article className="prose-content animate-fade-up">
                 <h1 className="page-title">{postData.title}</h1>
                 <div className="article-post-meta">
+                    <span className="article-author">
+                        {params.locale === "pt" ? "Por " : "By "}
+                        <Link href={localizedPath(params.locale, "/about")} rel="author">{authorName}</Link>
+                    </span>
                     <time className="blog-item-date" dateTime={postData.date}>
                         {format(parseISO(postData.date), "dd MMM yyyy", { locale: params.locale === "pt" ? ptBR : undefined })}
                     </time>
+                    {postData.revised ? (
+                        <span className="article-revised">
+                            {params.locale === "pt" ? "Atualizado em " : "Updated "}
+                            <time dateTime={postData.revised}>
+                                {format(parseISO(postData.revised), "dd MMM yyyy", { locale: params.locale === "pt" ? ptBR : undefined })}
+                            </time>
+                        </span>
+                    ) : null}
                     <PostBadges category={postData.category} tags={postData.tags} locale={params.locale} />
                 </div>
                 {postData.legacy ? (
@@ -54,7 +87,7 @@ export default async function Post({ params }: Props) {
                             ? postData.revised
                                 ? `Publicado originalmente em jonatascastro.com. Edição em português revisada em ${format(parseISO(postData.revised), "dd MMM yyyy", { locale: ptBR })}. A data de publicação original foi mantida.`
                                 : "Do arquivo de jonatascastro.com. O texto original em português foi preservado, com notas editoriais. Preços, produtos e referências refletem a época da publicação."
-                            : `Originally published on jonatascastro.com. English edition translated and revised${postData.revised ? ` ${format(parseISO(postData.revised), "dd MMM yyyy")}` : ""}. Historical examples are identified in the text.`}
+                            : "Originally published on jonatascastro.com. English edition translated and revised. Historical examples are identified in the text."}
                     </p>
                 ) : null}
                 <Markdown remarkPlugins={[remarkGfm]} components={{

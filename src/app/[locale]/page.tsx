@@ -1,8 +1,10 @@
 import { PageShell } from "@/components/page-shell";
 import MyTypewriter from "@/components/typewriter";
+import { HarmonicSculpture } from "@/components/harmonic-sculpture";
 import Link from "next/link";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { localizedPath, messages, type Locale } from "@/lib/i18n";
-import { pageMetadata } from "@/lib/metadata";
+import { pageDescriptions, pageMetadata } from "@/lib/metadata";
 
 const quickLinks = [
     { label: "about", href: "/about", description: "aboutDescription" },
@@ -11,14 +13,14 @@ const quickLinks = [
 ] as const;
 
 export function generateMetadata({ params }: { params: { locale: Locale } }) {
-    return pageMetadata(params.locale, "/", "Jônatas Santos", messages[params.locale].description);
+    return pageMetadata(params.locale, "/", `Jônatas Santos — ${messages[params.locale].engineer}`, pageDescriptions[params.locale].home);
 }
 
 export default function Home({ params }: { params: { locale: Locale } }) {
     const text = messages[params.locale];
     return (
         <PageShell locale={params.locale}>
-            <section className="hero hero--text animate-fade-up">
+            <section className="hero">
                 <div className="hero-content">
                     <p className="hero-eyebrow">{text.engineer}</p>
                     <h1 className="hero-name">Jônatas Santos</h1>
@@ -33,11 +35,16 @@ export default function Home({ params }: { params: { locale: Locale } }) {
                     </p>
                 </div>
 
+                <HarmonicSculpture />
+
                 <nav className="hero-links" aria-label={text.explore}>
                     {quickLinks.map((link) => (
                         <Link key={link.href} href={localizedPath(params.locale, link.href)} className="hero-link">
-                            <span className="hero-link-label">{text[link.label]}</span>
-                            <span className="hero-link-desc">{text[link.description]}</span>
+                            <span className="hero-link-copy">
+                                <span className="hero-link-label">{text[link.label]}</span>
+                                <span className="hero-link-desc">{text[link.description]}</span>
+                            </span>
+                            <ArrowRightIcon className="hero-link-arrow" aria-hidden="true" />
                         </Link>
                     ))}
                 </nav>

@@ -2,11 +2,11 @@ import { PageShell } from "@/components/page-shell";
 import { BlogCategories } from "@/components/blog-categories";
 import { BlogPostList } from "@/components/blog-post-list";
 import { getSortedPostsData } from "@/lib/posts";
-import { messages, type Locale } from "@/lib/i18n";
-import { pageMetadata } from "@/lib/metadata";
+import { type Locale } from "@/lib/i18n";
+import { pageDescriptions, pageMetadata } from "@/lib/metadata";
 
 export function generateMetadata({ params }: { params: { locale: Locale } }) {
-    return pageMetadata(params.locale, "/blog", "Blog — Jônatas Santos", messages[params.locale].blogDescription);
+    return pageMetadata(params.locale, "/blog", "Blog — Jônatas Santos", pageDescriptions[params.locale].blog);
 }
 
 export default function Page({ params }: { params: { locale: Locale } }) {

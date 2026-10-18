@@ -2,7 +2,7 @@
 title: "Os tipos de teclado musical: controladores, arranjadores, sintetizadores, workstations e pianos digitais."
 date: "2016-12-15"
 legacy: true
-description: "Artigo do arquivo original: Os tipos de teclado musical: controladores, arranjadores, sintetizadores, workstations e pianos digitais."
+description: "Compare teclados arranjadores, controladores, sintetizadores, workstations e pianos digitais. Exemplos de modelos preservados do arquivo de 2016."
 category: "music"
 tags: ["keyboards", "gear"]
 ---
