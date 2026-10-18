@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import { RoundedBoxGeometry } from "three/addons/geometries/RoundedBoxGeometry.js";
+import { createSculptureEnergy } from "./harmonic-sculpture-energy";
 
 export function createSculpture(canvas: HTMLCanvasElement) {
     const context = canvas.getContext("webgl2", { alpha: true, antialias: true, powerPreference: "low-power" });
@@ -120,7 +121,21 @@ export function createSculpture(canvas: HTMLCanvasElement) {
     shadow.position.y = -1.05;
     scene.add(shadow);
 
+    const energy = createSculptureEnergy(scene, camera);
+    let yaw = 0;
+    let pitch = 0;
+
     return {
+        rotate(deltaYaw: number, deltaPitch: number) {
+            yaw = (yaw + deltaYaw) % (Math.PI * 2);
+            pitch = THREE.MathUtils.clamp(pitch + deltaPitch, -0.65, 0.65);
+        },
+        energize: energy.emit,
+        clearEnergy: energy.clear,
+        reset() {
+            yaw = pitch = 0;
+            energy.clear();
+        },
         resize(width: number, height: number) {
             if (!width || !height) return;
             renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5, Math.sqrt(450000 / (width * height))));
@@ -133,17 +148,24 @@ export function createSculpture(canvas: HTMLCanvasElement) {
             silver.color.setHex(dark ? 0xcbd9d3 : 0xb9c5bf);
             wire.color.setHex(dark ? 0x8abda9 : 0x4b8876);
             shadowMaterial.opacity = dark ? 0.3 : 0.65;
+            energy.setTheme(dark);
         },
         render(time: number) {
-            sculpture.rotation.y = -0.2 + Math.sin(time * 0.22) * 0.32;
+            sculpture.rotation.x = 0.08 + pitch;
+            sculpture.rotation.y = -0.2 + yaw + Math.sin(time * 0.22) * 0.32;
             sculpture.rotation.z = -0.13 + Math.sin(time * 0.16) * 0.045;
             sculpture.position.y = Math.sin(time * 0.5) * 0.045;
             core.rotation.z = 0.2 + time * 0.075;
             for (const key of keys) key.mesh.position.y = key.rest + Math.sin(time * 0.85 + key.phase) * 0.045;
             for (const particle of particles) particle.mesh.position.copy(particle.path.getPointAt((time * 0.035 + particle.phase) % 1));
+            const power = energy.update(time);
+            silver.emissive.setHex(0x287a5e);
+            silver.emissiveIntensity = power * 0.3;
+            signal.emissiveIntensity = 0.55 + power * 1.5;
             renderer.render(scene, camera);
         },
         dispose() {
+            energy.dispose();
             const geometries = new Set<THREE.BufferGeometry>();
             const materials = new Set<THREE.Material>();
             scene.traverse((object) => {
