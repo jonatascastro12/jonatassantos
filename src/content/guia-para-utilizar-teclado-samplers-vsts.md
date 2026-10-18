@@ -1,121 +1,249 @@
 ---
 title: "Playing virtual instruments live: a keyboard setup guide"
 date: "2016-12-13"
-description: "Connect a keyboard, computer, and audio interface; understand routing, latency, and performance preparation."
 legacy: true
-revised: "2026-10-01"
+revised: "2026-10-18"
+description: "Build a live keyboard rig with Logic, iPad apps, Sunday Keys, current instruments, diagrams, and show preparation. Updated for 2026."
 category: "music"
 tags: ["live-performance", "virtual-instruments"]
 ---
 
-I started exploring computer-based keyboard sounds around 2009, when I owned a **Roland Fantom FA-76** and was becoming interested in music production. A friend from São Paulo introduced me to virtual instruments and samplers, and I gradually tried taking them onto the stage.
+**For:** keyboard players and pianists who want to take virtual instruments onto the stage.
 
-It took time to build a setup I liked. The appeal was flexibility: use the keyboard as a controller, choose sounds in software, and shape the performance without relying entirely on one instrument's internal sound engine.
+**Revised October 18, 2026.** Originally published in 2016, this guide now includes current hosts, virtual instruments, and options for playing with an iPad, with visual examples to help you build your rig.
 
-## The basic signal path
+I started exploring this around 2009, when I owned a **Roland Fantom FA-76** and was becoming interested in music production. A friend from São Paulo introduced me to virtual instruments and samplers, and I gradually tried taking them onto the stage.
 
-A minimal setup has three parts:
+It took time to find a setup that suited me. Choosing my sounds was exciting, but there was another side to the work: preparing the computer, organizing controls, and learning to solve problems.
 
-1. **Keyboard:** sends MIDI performance information.
-2. **Computer:** runs a host and the virtual instruments.
-3. **Audio interface:** sends the resulting audio to headphones, speakers, or the venue's sound system.
+This guide is still intended as a quickstart. **Begin with one reliable sound, play it, and then add complexity.** A good rig is one you can operate while making music.
 
-![Original controller, computer, and audio-interface diagram](/blog-images/legacy/2016/12/esquema-audio-e1481631692853-1024x678.png)
+## The signal path
 
-*The original diagram is in Portuguese. The keyboard sends MIDI to the computer; the interface carries the audio onward.*
+There are three main elements:
 
-A conventional keyboard contains its own sound-processing hardware and audio outputs. In this setup, you separate those functions across several devices.
+1. **Keyboard:** sends MIDI — notes, velocity, pedal movements, and other commands.
+2. **Computer or iPad:** runs applications, virtual instruments, and effects compatible with the platform.
+3. **Audio interface:** converts digital audio into a signal for headphones, monitors, or the mixing desk.
 
-## Choose a keyboard that suits your hands
+![The keyboard sends MIDI to the computer; the host generates digital audio, which passes through the interface and becomes analog audio for the mixer, PA, and monitors.](/blog-images/legacy/live-keyboard-guide/signal-path.en.svg)
 
-You do not necessarily need a dedicated MIDI controller. Another keyboard can work if it has a compatible MIDI or USB output.
+*Figure 1. A computer-based example. From touch to sound: MIDI commands and audio pass through different stages.*
 
-A USB connection may let you connect directly to the computer. A conventional MIDI output may need a MIDI interface, sometimes built into an audio interface. Some controllers also receive power through USB.
+MIDI is not audio. A USB cable may carry MIDI, audio, or both, depending on the device; a USB port does not mean the keyboard sends its own sound through it. To combine the keyboard's internal sounds with virtual instruments, plan its audio connection as well.
 
-Useful features include:
+A workstation combines several of these functions in one instrument. Here, we distribute them across devices. We gain flexibility and take responsibility for the connections.
 
-- Comfortable, velocity-sensitive keys.
-- Sustain and expression-pedal inputs.
-- Pitch-bend and modulation controls.
-- Knobs or faders for the parameters you need during a performance.
-- Aftertouch if your sounds and playing style make use of it.
+## The keyboard controller
 
-The original article showed M-Audio Oxygen 61 V4, Axiom 61 MKII, Keystation 61 II, and Waldman Krypton 61 controllers. These illustrate the options I was considering in 2016, rather than current purchase recommendations.
+You do not need a dedicated controller if your existing keyboard sends compatible MIDI. USB-MIDI often connects directly; a five-pin MIDI DIN output needs a MIDI input, available on some audio interfaces or a separate MIDI interface.
 
-For a broader comparison, see [the keyboard categories guide](/blog/os-tipos-de-teclado-musical-controladores-arranjadores-sintetizadores-workstations-e-pianos-digitais).
+Choose around your hands and repertoire:
 
-## Choose the computer around the actual project
+- **Keys and range:** comfortable action, velocity response, and enough keys for your splits.
+- **Pedals:** sustain, plus expression if needed. Check compatibility and polarity in the manual.
+- **Controls:** buttons for changing sounds and faders or knobs you will actually use.
+- **Expression:** pitch bend, modulation, and aftertouch matter when your virtual instrument responds to them.
+- **Power and connections:** confirm USB power support and test the hub if you need one.
 
-An expensive computer is not automatically a reliable live instrument. Test the host, plugins, and libraries you intend to use together.
+Try the velocity curve with your virtual piano. A feature-packed controller may be a worse choice than a simpler model with keys that suit your technique.
 
-Pay attention to:
+The models and prices mentioned in 2016 are no longer shopping recommendations: there is no lasting universal budget ceiling. Include pedals, cables, a stand, and transport. For the broader categories, see [the keyboard types guide](/blog/os-tipos-de-teclado-musical-controladores-arranjadores-sintetizadores-workstations-e-pianos-digitais).
 
-- Enough processing capacity for the instruments and effects.
-- Memory for loaded sample libraries.
-- Storage capacity and loading speed.
-- Compatible ports, drivers, and operating-system versions.
-- Stable power and cooling during the performance.
+## Choose the computer around your set
 
-The original minimum suggestion—Core i5, 4 GB RAM, and a 500 GB drive—was a 2016 example. It is not a useful universal requirement for today's software. Check the current requirements of the specific host and instruments, then test a realistic set.
+**It does not have to be a Mac.** It needs headroom for your particular combination of host, plugins, and libraries.
 
-A Mac is not mandatory. What matters is a compatible, stable combination of hardware and software that you have rehearsed with.
+For a purchase, I would prioritize **16 GB of RAM and an SSD** as a starting point, and consider **32 GB or more** for several large libraries loaded together. This is planning advice, not a universal requirement or performance guarantee. A lightweight project may need less; a demanding piano with several layers may need more.
 
-## Understand the software layers
+The old “Core i5 + 4 GB + 500 GB hard drive” recommendation is no longer a useful rule. Check the processor model and generation, library memory requirements, free space, cooling, and ports. The [Live system requirements](https://help.ableton.com/hc/en-us/articles/115001663530-Live-Minimum-System-Requirements), for example, specify compatible processors and instructions: the label “i7” alone is not enough.
 
-### Audio driver
+Allow space for instruments, samples, and backups. If libraries live on an external SSD, that drive and its cable become part of the instrument: they must be connected, with the correct paths available, before opening the show.
 
-The driver lets your software communicate with the audio device. Use the interface manufacturer's supported driver where one is required, and confirm compatibility before changing the operating system.
+### Check compatibility before updating
 
-### Host or DAW
+Check the complete combination: **operating-system version → host → plugin format and architecture → interface driver**. Include installers and license managers.
 
-The host organizes instruments, effects, MIDI routing, and audio outputs. For live work, look for practical ways to switch sounds, arrange a set, map controls, and manage transitions.
+- **Apple Silicon:** favor native or Universal versions. In native Live, VST2/VST3 plugins need Apple Silicon support; AU can behave differently. Rosetta and bridges depend on the host and operating system and do not guarantee that every old plugin will work. See [Ableton's guidance on Mac plugins](https://help.ableton.com/hc/en-us/articles/4410323149074-Plug-ins-on-Mac-in-Live-11-1-and-later).
+- **Windows:** check the computer's architecture. An x64 application, an ARM plugin, and an interface driver are not automatically interchangeable. On a Windows on Arm laptop, obtain compatibility confirmation for every part of the rig.
+- **Supported operating system:** a host accepting Windows 10 does not mean the OS still receives regular support. Standard Windows 10 support ended on October 14, 2025; extended updates and special editions have their own terms. Plan migration around your performance schedule. [Microsoft's support lifecycle](https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/windows-10-support-has-ended-on-october-14-2025).
 
-The original article mentioned Brainspawn Forte, Cantabile, Ableton Live, and MainStage. That list records the tools discussed at the time. Check current support, operating-system compatibility, and plugin formats before choosing a host.
+Back up and leave time to rehearse after an update. The night before a show is a poor time to discover that a library no longer opens.
 
-### Virtual instruments and samplers
+## Hosts, DAWs, and virtual instruments
 
-A virtual instrument generates or plays sound. A sampler uses recorded samples; other instruments use synthesis. The host must support the plugin's format and version.
+A **host** loads plugins and manages MIDI, effects, and outputs. A **DAW** can do this alongside recording, editing, and sequencing. You do not necessarily need a full DAW to play piano and pad.
 
-The original article mentioned Native Instruments, Steinberg, IK Multimedia, Ample Sound, and Cakewalk as examples of software makers. Choose the sound you need and test how it behaves in your host, rather than collecting instruments simply because they are available.
+### Which host should you choose?
 
-## Use a suitable audio interface
+These options serve different needs; this is not a ranking. Check the requirements of the version and features of the edition before purchasing.
 
-The interface converts the computer's digital audio to an analog signal for your listening system or the venue's mixer. Inputs also let you record external sources when required.
+| Host | System and formats |
+| --- | --- |
+| MainStage | macOS; built-in instruments and Audio Units (AU). Does not load VST directly. |
+| Logic Pro (Mac) | macOS; built-in instruments and Audio Units (AU). Does not load VST directly. |
+| Gig Performer | Windows and macOS; VST2/VST3, plus AU on Mac. |
+| Cantabile | Windows; VST2/VST3. |
+| Ableton Live | Windows and macOS; VST2/VST3, plus AU on Mac. |
 
-An external interface is often useful for dependable drivers, suitable outputs, and physical level controls. Built-in audio can work in some setups; it still uses an audio interface inside the computer.
+- **MainStage** — [Official website ↗](https://www.apple.com/mainstage/): for organizing patches, splits, and layers on a Mac, with an included instrument collection.
+- **Logic Pro (Mac)** — [Official website ↗](https://www.apple.com/logic-pro/): for musicians who already produce in Logic and want to play virtual instruments, combine sounds, and use tracks or loops in the same project.
+- **Gig Performer** — [Official website ↗](https://gigperformer.com/): for connecting plugins visually and organizing sounds, songs, and setlists. Check edition differences.
+- **Cantabile** — [Official website ↗](https://www.cantabilesoftware.com/): for a keyboard rig with MIDI routing and controls. Lite is a starting point; Solo adds setlists, while Performer adds states and shared racks. See the [edition comparison](https://www.cantabilesoftware.com/compare).
+- **Ableton Live** — [Official website ↗](https://www.ableton.com/en/live/): for combining clips, scenes, loops, backing tracks, and production in one environment.
 
-The original post showed the Focusrite Scarlett 2i2, Roland Duo-Capture EX, and PreSonus AudioBox 22VSL. They are historical examples, and their compatibility should be checked individually.
+For installation, see [Cantabile's requirements](https://www.cantabilesoftware.com/guides/installation), [Gig Performer downloads](https://gigperformer.com/download), and [Live's supported formats](https://help.ableton.com/hc/en-us/articles/5937501570460-Supported-Plug-in-Formats). Each plugin's requirements also matter.
 
-![Roland Duo-Capture EX from the original article](/blog-images/legacy/2016/12/duo-capture_ex_front_angle_gal.jpg)
+**Check the MainStage edition:** when consulted for this revision, the [separate-purchase listing](https://apps.apple.com/us/app/mainstage/id634159523) requires macOS 15.6 or later. The [MainStage: Perform Live offering in Apple Creator Studio](https://apps.apple.com/us/app/mainstage-perform-live/id6746637089) also requires an Apple M1 chip or later. Check the listing for the edition you intend to install, especially on an Intel Mac; a working older version does not establish compatibility with the current one.
 
-## Balance latency and stability
+**Using Logic Pro live:** the Mac version supports [Audio Units instruments and effects](https://support.apple.com/guide/logicpro/lgcp22a0dab0/mac). For layers, a [summing stack](https://support.apple.com/guide/logicpro/lgcp9bc4b63d/mac) can group instruments you play together. Prepare tracks and controls before rehearsal, and test sound changes while holding notes and sustain. Logic follows a DAW workflow; MainStage offers an organization built around stage patches. Choose according to how you run the show.
 
-**Latency** is the delay between playing a note and hearing the result. Audio buffer size, drivers, processing, and the signal path all contribute to it.
+In Logic, **Low Latency Monitoring Mode** can bypass plugins and sends affecting the monitored signal path to reduce delay. This can change your sound or remove a reverb from monitoring: check the result before performing. Apple explains the behavior in its [Logic latency documentation](https://support.apple.com/guide/logicpro/lgcpe11997ba/mac).
 
-A smaller buffer can reduce delay but gives the computer less time to process audio. If it cannot keep up, you may hear clicks, pops, or dropouts. A larger buffer gives more headroom but increases the delay.
+Brainspawn Forte, mentioned in 2016, remains a historical reference outside this current selection. If another DAW already works well for you, assess what your workflow lacks before switching: sound changes, accessible controls, and quick recovery matter more than the application's category.
 
-Do not chase a fixed number at the expense of a stable performance. The original “below 5 ms” suggestion was a preference, not a guarantee that one reported latency figure describes the entire system.
+### VST3, AU, and Kontakt are different things
 
-Similarly, a higher sample rate is not automatically a better live setup. It can increase the processing load. Choose settings your interface and project support, then test them under realistic conditions.
+**VST2, VST3, and AU are plugin formats.** An instrument may come in several formats. “VSTi” generally refers to an instrument, while other plugins process audio as effects. For a new rig, choose a current format supported by both vendor and host — usually VST3, or AU in MainStage and Logic Pro. Save a project copy before changing formats: do not assume presets and automation will transfer automatically.
 
-## Advantages and tradeoffs
+**Kontakt is a platform for sample-based instruments.** A library is content loaded inside it; installing Kontakt does not install every sound. Kontakt 8 offers VST3, AU on Mac, and AAX, as well as standalone operation; it does not offer VST2. Check [Kontakt's formats and requirements](https://www.native-instruments.com/products/kontakt).
 
-A software setup can offer many sounds, flexible routing, and a good way to reuse equipment you already own. It also brings more connections, startup steps, compatibility concerns, and possible failure points.
+Before buying a library, check whether it supports the **free Kontakt Player** or requires **full Kontakt**, and which minimum version it needs. Instruments requiring the full version may enter a time-limited demo in Player. You need to discover that before reaching the stage. [Official Kontakt Player comparison](https://www.native-instruments.com/products/kontakt-player).
 
-Polyphony is still limited: plugins may impose voice limits, and the computer has finite processing and memory. The original claim of unlimited polyphony needed that qualification.
+Choose a small collection that covers your set. A prepared piano, electric piano, organ, and pad can be more useful than dozens of unfamiliar libraries.
 
-The value depends on your needs. There is no guaranteed percentage saving compared with a hardware keyboard.
+## iPad on stage: Sunday Keys and other options
 
-## Seven ways to prepare for a performance
+An iPad can also be the instrument in your rig, receiving MIDI and generating audio. Its ecosystem is different: look for the instrument's iPad version and the host's **AUv3** support. A Windows or Mac VST3 installer does not become an iPad app, even when the devices use processors from the same family. The [Camelot documentation for iPad](https://kb.audiomodeling.com/support/solutions/articles/206000050981-on-ipad-why-are-some-music-apps-not-displayed-in-the-plugin-list-) explains this format distinction.
 
-1. **Keep the system predictable.** Use a setup you know, and avoid unnecessary changes immediately before an event.
-2. **Reduce competing work.** Close unrelated applications and postpone updates or heavy background tasks that might interrupt the session.
-3. **Organize sample storage.** Fast storage can help loading, but also verify that every library is present and accessible without an unexpected download.
-4. **Rehearse the host workflow.** Test patch changes, layers, splits, pedal mappings, and transitions in the actual set.
-5. **Test the complete audio path.** Use supported connections and drivers; the interface's USB version alone does not establish its latency or reliability.
-6. **Secure cables and power.** Place the computer where it will not be bumped, protect connectors, and check power supplies before playing.
-7. **Make the setup your own—and prepare a fallback.** Learn the controls, know how to stop a stuck note, and decide how you will continue if a component fails.
+| Application | When to try it |
+| --- | --- |
+| [Sunday Keys](https://sundaysounds.com/pages/sunday-keys-app) | Pianos, pads, layers, and setlists prepared for worship music; an app for iPad and Mac. |
+| [Camelot Pro](https://audiomodeling.com/products/camelot/) | Organizing songs and scenes, combining virtual instruments with hardware keyboards, backing tracks, and scores. Also available for Mac and Windows. |
+| [AUM](https://www.kymatica.com/apps/aum) | Building an AUv3 instrument/effect mixer with MIDI routing, buses, and outputs. You assemble your rig's workflow. |
+| [Loopy Pro](https://loopypro.com/) | Playing and recording audio and MIDI loops, launching clips, and building a control surface around your performance. |
 
-Begin with one playable sound and a reliable connection. Add layers and more complex routing after that foundation works in rehearsal.
+**Sunday Keys, by Sunday Sounds**, is worth investigating for worship keys. Its [official 2026 walkthrough](https://sundaysounds.com/blogs/news/the-complete-sunday-keys-app-walkthrough-2026) covers patch creation, Tonic Pad, snapshots, and AI Patch Builder. Snapshots store settings within a patch to prepare different moments in a song; the assisted generator can provide a starting point, but levels, transitions, and controls still need rehearsal. The brand also sells resources for MainStage and Ableton: check the format you are buying.
 
-For the underlying messages and channels, read [MIDI explained](/blog/descomplicando-midi). For sound combinations, see [five ways to layer keyboard sounds](/blog/como-misturar-varios-timbres-no-teclado).
+According to the [current plugin-hosting manual](https://support.sundaysounds.com/article/3193-hosting-auv3-au-instrument-plugins), Sunday Keys hosts **AUv3 instruments on iPad and AU/AUv3 instruments on Mac**, with an active license. This feature does not include hosting third-party audio or MIDI effect plugins. Also check renewal terms and what remains available if the license expires.
+
+![Sunday Keys on Mac and iPad, showing a setlist on the left, instrument channels, effects, faders, and keyboard ranges.](/blog-images/legacy/live-keyboard-guide/sunday-keys.webp)
+
+*Figure 2. Sunday Keys: repertoire, layers, and performance controls on one screen. The colored bars above the keyboard show the instruments' key ranges. Promotional image: [Sunday Sounds](https://sundaysounds.com/pages/sunday-keys-app).*
+
+To choose among the other three, consider your main task. In Camelot, that will often be repertoire organization and scene changes; in AUM, connections and mixing; in Loopy Pro, loops, clips, and custom controls. These are starting points for trying them, not absolute limits. The [Loopy Pro manual](https://loopypro.com/manual/) describes current features, including MIDI clips; older comparisons may refer to an earlier version.
+
+For sounds, [KORG Module](https://www.korg.com/us/products/software/korg_module/) provides keyboard instruments and supports AUv3; check which expansions unlock the features you want, such as layers and splits. [Pianoteq for iOS](https://www.modartt.com/user_manual?product=pianoteq) takes another approach: physically modeled piano, available standalone or as AUv3.
+
+**Assemble and test the complete rig:** iPad, MIDI controller, iPadOS-compatible interface, and a hub/adapter that provides the necessary power. Check battery charging during use, pedal access, PA and monitor outputs, project reopening, and offline operation. A compact device does not remove the need for cables, licenses, or a fallback.
+
+## New tools for production and show preparation
+
+This selection was checked on **October 16, 2026**. It combines developments from 2025–2026 with established tools that remain relevant; it is not a list of this month's releases.
+
+- **[Ableton Live 12.4](https://www.ableton.com/en/blog/live-12-4-is-out-now/):** introduced Link Audio for streaming audio between compatible devices on a local network. It also refined stem separation, available in Live 12 Suite. These features can help prepare rehearsal material and rearrangements; listen to the separation results and export anything necessary before taking the project on stage. Link Audio requires specific compatibility beyond the traditional Link tempo synchronization.
+- **[Bitwig Studio 6](https://www.bitwig.com/stories/on-another-level-bitwig-studio-6-is-out-now-416/):** added automation clips and aliases, allowing material to be reused while retaining a connection to the original. It is an option for electronic production and clip-based performances. Its [plugin formats](https://www.bitwig.com/modern-foundations/) include VST2, VST3, and CLAP on Windows, macOS, and Linux; also check each plugin's version for your operating system.
+- **[Steinberg VST Live 3](https://www.steinberg.net/vst-live/):** extends show organization to instruments, backing tracks, lyrics/chords, video, and lighting. Investigate it when you need to synchronize several elements of a performance. If you only need piano and pad, compare the preparation involved with that of a simpler host.
+
+![Detail of Ableton Live's Session View, showing colored clips in tracks, a mixer, and the MIDI note editor below.](/blog-images/legacy/live-keyboard-guide/ableton-live-session.webp)
+
+*Figure 3. Ableton Live: Session View lets you combine and launch clips during a performance; the editor below shows the selected clip's notes. Official image: [Ableton](https://www.ableton.com/en/live/what-is-live/).*
+
+### Instruments to explore without buying everything
+
+These products generate sounds; they do not, by themselves, replace the host that organizes a show. Choose according to what your repertoire lacks, and test the edition compatible with your system.
+
+- **[Serum 2](https://xferrecords.com/products/serum-2):** expands wavetable synthesis with sample playback, granular, and spectral synthesis. Explore it for designing your own basses, leads, and textures.
+- **[Pigments 7](https://www.arturia.com/products/software-instruments/pigments/update):** updates the performance page, filters, effects, and modulation visualization. Arturia reports CPU optimizations; you still need to measure your patch on your computer.
+- **[Omnisphere 3](https://www.spectrasonics.net/products/omnisphere/overview.php):** combines a large library with synthesis, new global controls, and per-note expression through MPE. Consider it when exploring textures and layered sounds; account for disk space, loading time, and how much editing you want to do.
+- **[Pianoteq 9](https://www.modartt.com/pianoteq_overview):** uses physical modeling instead of a large sample library. Compare its touch response and piano character with sampled alternatives; a small disk footprint does not mean it uses no CPU.
+- **[Surge XT](https://surge-synthesizer.github.io/):** a free, open-source option for learning synthesis and building sounds. It is an established alternative for starting without buying another instrument.
+
+![Omnisphere 3 interface, with a library and patch list on the left and synthesis, modulation, filter, and envelope controls on the right.](/blog-images/legacy/live-keyboard-guide/omnisphere-3.webp)
+
+*Figure 4. Omnisphere 3: choose a patch from the library and adjust its layers in the synthesis panel. Try adapting a preset before building a sound from scratch. Official image: [Spectrasonics](https://www.spectrasonics.net/products/omnisphere/overview.php).*
+
+Before buying, also check the instruments and effects already included in your DAW. In the studio, you can edit and render parts; on stage, a patch must respond within the latency, control, and processing constraints of the show.
+
+## Choose for the way you play
+
+A feature list cannot show how a program will feel in the middle of a song. Before migrating your repertoire, prepare a small set and focus on three things:
+
+- **Controls within reach:** map song changes, volume, and the commands you use while playing. Perform a whole song with your controller and pedals. If you need to hunt for on-screen buttons at every section, simplify the mapping before adding more features.
+- **Presets or sound design:** try to recreate a sound from your repertoire. Would you rather choose a preset and tweak a few controls, or build the sound from its oscillators? Consider preparation time alongside library size and price.
+- **Transitions and recovery:** move between songs, hold notes and sustain through a patch change, and reopen the project. Check levels, effect tails, and loading times. Once the rig works well, save the project and record the versions you used.
+
+My suggestion is to choose **one task** to explore: worship piano and pad in Sunday Keys; repertoire with scenes and hardware in Camelot; routing in AUM; loops in Loopy Pro; or production with clips in Live or Bitwig. Compare only two options at a time, using the same song, controller, and audio output.
+
+## The audio interface
+
+Built-in audio still uses an interface, inside the computer. An external interface often offers connections better suited to stage use, physical controls, and driver and routing options. It cannot fix CPU or plugin problems by itself.
+
+Prioritize:
+
+- Drivers and firmware compatible with your operating system, with manufacturer support.
+- Suitable line outputs for the mixing desk, preferably balanced, and headphone controls.
+- Enough **independent outputs**: stereo for the PA plus a separate click needs at least three output channels; interfaces with four line outputs make this easier. A headphone socket that merely mirrors the main pair will not solve it.
+- Cables, power supplies, and adapters you can set up securely.
+
+On Windows, start with the **manufacturer's ASIO driver**. On macOS, use **Core Audio** and install a driver if the manufacturer requires it. ASIO4ALL can be an alternative for devices without their own ASIO driver; it does not replace physical hardware or guarantee low latency. [Ableton's interface setup guide](https://help.ableton.com/hc/en-us/articles/211476789-Setting-up-an-Audio-Interface).
+
+USB-C describes a connector, not a latency measurement. USB 3 or Thunderbolt does not guarantee faster response than a good USB 2 interface either. The old advice to prioritize FireWire has been removed. Choose based on compatibility and the complete rig's performance.
+
+Agree on outputs, cables, and any DI requirements with the sound engineer. Confirm whether the PA will receive mono or stereo and audition your sounds that way. Keep the click out of the audience outputs.
+
+![Two stereo mixes: instruments and backing tracks use outputs 1/2 for the PA; instruments and click use outputs 3/4 for a headphone amp or in-ear system for the performers.](/blog-images/legacy/live-keyboard-guide/output-routing.en.svg)
+
+*Figure 5. An example with four independent outputs. Build one mix for the audience and another for monitoring in the host, including the instruments performers need to hear. Line outputs feed monitoring equipment; do not connect headphones directly to them.*
+
+## Latency: responsive playing without crackles
+
+Latency is the delay between playing and hearing. The host's number may describe input, output, or audio round-trip latency; it does not necessarily describe the full delay from keypress to monitoring. A MIDI-controlled virtual instrument does not use the same audio-input path as a microphone processed through the computer.
+
+A calculation illustrates the scale: **128 samples ÷ 48,000 samples per second ≈ 2.67 ms per buffer**. That does not mean 2.67 ms total latency: other stages remain. “Below 5 ms” should therefore not be an absolute rule. [How latency works](https://help.ableton.com/hc/en-us/articles/360010545559-How-Latency-Works).
+
+My starting point for testing would be **44.1 or 48 kHz with a 128- or 256-sample buffer**, depending on the hardware. These are initial rehearsal settings, not guaranteed results. Play the busiest passage with sustain, layers, and effects; adjust until the response feels comfortable without interruptions.
+
+Smaller buffers reduce waiting but require more frequent processing. Higher sample rates also increase load and are not automatically the best stage choice. Effects using *lookahead* and other processing can add delay. Avoid Bluetooth in the instrument's monitoring path. [Guidance on reducing latency](https://help.ableton.com/hc/en-us/articles/209072289-How-to-reduce-latency).
+
+The interface's **direct monitoring** routes a physical input to monitoring without passing through the host. It does not eliminate the processing needed for a virtual piano to generate sound. [Direct monitoring and latency](https://help.ableton.com/hc/en-us/articles/360011924559-How-to-reduce-latency-while-monitoring).
+
+## Build your first show in seven steps
+
+![A split places bass on the left and piano on the right. A layer places piano and pad across the same range so they play together.](/blog-images/legacy/live-keyboard-guide/split-layer.en.svg)
+
+*Figure 6. In a split, the key range selects the instrument; in a layer, one note can trigger more than one sound. The ranges are illustrative: adjust them to your set.*
+
+1. **Make one sound work.** Connect the keyboard and interface, select MIDI and audio ports, load a piano, and check MIDI channel, sustain, and output. Save and reopen the project.
+2. **Build the combinations you need.** Try a piano-and-pad layer and a bass-and-piano split. Adjust ranges, octaves, and velocity. Check whether sustain should affect every layer. See [how to layer sounds](/blog/como-misturar-varios-timbres-no-teclado).
+3. **Arrange the set.** Name patches by song and section. Map next, previous, volume, and an emergency command (*panic*, for stuck notes). Test exactly what each command stops.
+4. **Rehearse transitions.** Change patches while holding notes and sustain; listen for cutoffs, reverb tails, and volume jumps. Preloading can help but uses memory. Do not assume seamless transitions just because a host offers the feature.
+5. **Balance levels in context.** Compare piano, organ, synth, and layered patches with the band. Leave headroom before clipping. If using click or backing tracks, test each output's routing separately.
+6. **Rehearse the actual show.** Use the same controller, pedals, interface, cables, and power arrangement for the entire set. Test a cold start and, if you intend to perform without a network, open everything offline to check samples and licenses.
+7. **Prepare and rehearse a fallback.** A keyboard's internal sound, module, or second system only provides backup if its audio path is ready. Learn to mute the faulty signal and continue playing; a file backup alone cannot replace an instrument mid-song.
+
+## Before leaving and at soundcheck
+
+- Back up the project, presets, and MIDI mappings; record the versions that worked. Confirm libraries and authorizations are available on the backup computer, if you have one.
+- Close unnecessary applications, pause heavy synchronization, and schedule updates outside performance hours. Prevent sleep during use. Disconnecting the network is optional: first check whether remote control or licensing depends on it.
+- Carry spare power supplies and cables, label connections, and keep the computer ventilated and protected from knocks. Use the hub and drive arrangement you rehearsed.
+- At low volume, check MIDI, audio, pedals, monitoring, patch changes, and your fallback. Then test the most demanding patch at the level agreed with the engineer.
+
+When something fails, follow the signal path:
+
+| Symptom | First check |
+| --- | --- |
+| No sound | Is MIDI reaching the host? Is the instrument loaded on the correct channel? Is there meter activity and a route to the right output? |
+| Crackles or dropouts | Increase the buffer to compare; check audio load, SSD access, power, and connections. Isolate one plugin at a time. |
+| Stuck notes | Use the panic command you rehearsed and check sustain, channels, and MIDI messages. Mute the output before restarting the host if necessary. |
+| Missing plugin or demo mode | Check format, architecture, version, installation, and licensing. Use your fallback sound if there is no time to fix it. |
+
+For more detailed troubleshooting, see [Ableton's crackles and dropouts guide](https://help.ableton.com/hc/en-us/articles/209070329-How-to-avoid-crackles-and-audio-dropouts).
+
+## Is it worth it?
+
+The main benefit is still flexibility: choosing sounds, creating layers, and adapting the instrument to your set. Cost depends on what you own and need to purchase; there is no guaranteed 50% saving. Polyphony also has limits imposed by voice counts, processing, memory, and disk access.
+
+That flexibility brings responsibility for setup, compatibility, licenses, and recovery. Expensive equipment alone does not guarantee stability.
+
+My suggestion is to start small. Prepare one sound, understand [MIDI](/blog/descomplicando-midi), rehearse a full set, and expand from there. Finding sounds is time well spent; learning to keep the music going matters just as much.
