@@ -2,7 +2,7 @@
 title: "Guia para utilizar teclado, samplers & VSTs no palco: performances ao vivo"
 date: "2016-12-13"
 legacy: true
-revised: "2026-10-16"
+revised: "2026-10-18"
 description: "Monte um setup de teclado ao vivo com Logic, apps de iPad, Sunday Keys, instrumentos atuais, diagramas e preparação do show. Revisão de 2026."
 category: "music"
 tags: ["live-performance", "virtual-instruments"]
@@ -10,7 +10,7 @@ tags: ["live-performance", "virtual-instruments"]
 
 **Indico para:** tecladistas e pianistas que querem levar instrumentos virtuais para o palco.
 
-**Revisado em 16 de outubro de 2026.** A publicação original é de 2016. Esta revisão atualiza as orientações técnicas e as opções de software com base na documentação dos fabricantes e em relatos identificados do Reddit e de fóruns. Não é um teste comparativo dos produtos nem uma pesquisa de participação de mercado.
+**Revisado em 18 de outubro de 2026.** Publicado originalmente em 2016, este guia agora inclui hosts atuais, instrumentos virtuais e opções para tocar com iPad, com exemplos visuais para ajudar a montar seu setup.
 
 Comecei com essa história em meados de 2009. Na época eu possuía um **Roland Fantom FA-76** e tinha um forte interesse em produção musical. Através de um amigo de São Paulo, conheci melhor os instrumentos virtuais e samplers. Aos poucos, fui experimentando maneiras de levar tudo isso para o palco.
 
@@ -127,6 +127,10 @@ O iPad também pode ser o instrumento do setup, recebendo MIDI e gerando áudio.
 
 Segundo o [manual atual de hospedagem de plugins](https://support.sundaysounds.com/article/3193-hosting-auv3-au-instrument-plugins), o Sunday Keys aceita **instrumentos AUv3 no iPad e AU/AUv3 no Mac**, com licença ativa. Essa função não inclui hospedar plugins externos de efeitos de áudio ou MIDI. Confira também as condições de renovação e o que permanece disponível se a licença expirar.
 
+![Sunday Keys no Mac e no iPad, com setlist à esquerda, canais de instrumentos, efeitos, faders e regiões do teclado.](/blog-images/legacy/live-keyboard-guide/sunday-keys.webp)
+
+*Figura 2. Sunday Keys: repertório, camadas e controles de execução na mesma tela. As barras coloridas acima do teclado mostram as regiões dos instrumentos. Imagem de divulgação: [Sunday Sounds](https://sundaysounds.com/pages/sunday-keys-app).*
+
 Para escolher entre os outros três, pense na tarefa principal. No Camelot, ela tende a ser a organização do repertório e a troca de cenas; no AUM, as conexões e a mixagem; no Loopy Pro, loops, clips e controles personalizados. São pontos de partida para experimentar, não limites absolutos. O [manual do Loopy Pro](https://loopypro.com/manual/) descreve os recursos atuais, incluindo clips MIDI; comparações antigas podem se referir a uma versão anterior.
 
 Para os sons, [KORG Module](https://www.korg.com/us/products/software/korg_module/) reúne instrumentos de teclado e suporta AUv3; verifique quais expansões habilitam os recursos desejados, como layers e splits. O [Pianoteq para iOS](https://www.modartt.com/user_manual?product=pianoteq) oferece outra abordagem: piano por modelagem física, em modo independente ou AUv3.
@@ -141,6 +145,10 @@ Este recorte foi consultado em **16 de outubro de 2026**. Ele reúne novidades d
 - **[Bitwig Studio 6](https://www.bitwig.com/stories/on-another-level-bitwig-studio-6-is-out-now-416/):** acrescentou clips de automação e aliases, que permitem reutilizar material mantendo uma ligação com o original. É uma opção para produção eletrônica e performances construídas com clips. Seus [formatos de plugin](https://www.bitwig.com/modern-foundations/) incluem VST2, VST3 e CLAP em Windows, macOS e Linux; confira também a versão do plugin para cada sistema.
 - **[Steinberg VST Live 3](https://www.steinberg.net/vst-live/):** amplia a organização do show para instrumentos, backing tracks, letras/acordes, vídeo e luzes. Faz sentido investigar quando você precisa sincronizar várias partes da apresentação. Se só precisa de piano e pad, compare o trabalho de preparar tudo isso com o de um host mais simples.
 
+![Detalhe da Session View do Ableton Live, com clips coloridos nas pistas, mixer e editor de notas MIDI abaixo.](/blog-images/legacy/live-keyboard-guide/ableton-live-session.webp)
+
+*Figura 3. Ableton Live: a Session View permite combinar e disparar clips durante a execução; o editor abaixo mostra as notas do clip selecionado. Imagem oficial: [Ableton](https://www.ableton.com/en/live/what-is-live/).*
+
 ### Instrumentos para conhecer, sem comprar todos
 
 Esses produtos geram timbres; não substituem, por si só, o host que organiza o show. Escolha pelo som que falta no repertório e teste a edição compatível com seu sistema.
@@ -151,15 +159,19 @@ Esses produtos geram timbres; não substituem, por si só, o host que organiza o
 - **[Pianoteq 9](https://www.modartt.com/pianoteq_overview):** usa modelagem física em vez de uma grande biblioteca de samples. Vale comparar resposta ao toque e caráter do piano com as alternativas sampleadas; ocupar pouco disco não significa não usar CPU.
 - **[Surge XT](https://surge-synthesizer.github.io/):** opção gratuita e de código aberto para aprender síntese e construir sons. É uma alternativa estabelecida para começar sem comprar outro instrumento.
 
+![Interface do Omnisphere 3, com biblioteca e lista de patches à esquerda e controles de síntese, modulação, filtro e envelopes à direita.](/blog-images/legacy/live-keyboard-guide/omnisphere-3.webp)
+
+*Figura 4. Omnisphere 3: escolha um patch na biblioteca e ajuste suas camadas no painel de síntese. Vale experimentar quanto você consegue adaptar um preset antes de começar um som do zero. Imagem oficial: [Spectrasonics](https://www.spectrasonics.net/products/omnisphere/overview.php).*
+
 Antes de comprar, confira também os instrumentos e efeitos que sua DAW já inclui. No estúdio, você pode editar e renderizar partes; ao vivo, o patch precisa responder com a latência, os controles e a carga de processamento que o show permite.
 
-## O que aparece no Reddit e nos fóruns
+## Escolha pelo seu jeito de tocar
 
-A pesquisa incluiu relatos de uso, além das páginas dos fabricantes. Estes tópicos mostram escolhas e dificuldades de setups específicos; não medem participação de mercado nem provam que um produto será estável em qualquer equipamento.
+Uma lista de recursos não mostra como o programa vai funcionar no meio de uma música. Antes de migrar seu repertório, prepare um pequeno set e observe três coisas:
 
-- **Controle do show no iPad:** no [r/ipadmusic, uma discussão de 2026](https://www.reddit.com/r/ipadmusic/comments/1t3fw3r/what_are_people_using_to_control_live_shows_on/) traz exemplos de Loopy Pro mapeado a controladores e de AUM combinado com Loopy Pro. No [fórum Loopy Pro, em outubro de 2025](https://forum.loopypro.com/discussion/66429/daw-i-can-use-for-live-work-with-a-playlist-function), músicos discutem playlists, troca de projetos e o trabalho necessário para aprender o fluxo. A pergunta útil é: consigo passar a música inteira sem procurar um botão na tela?
-- **Criar sons ou partir de presets:** na [comparação entre Serum 2 e Omnisphere 3 no r/musicproduction, de junho de 2026](https://www.reddit.com/r/musicproduction/comments/1ujoa38/if_you_had_to_pick_one_serum_2_or_omnisphere_3/), as preferências variam com edição de timbres, biblioteca, estilo e orçamento. Use isso para escolher o que testar; não há um vencedor universal.
-- **Estabilidade depende do conjunto:** no [fórum da Steinberg, em abril de 2026](https://forums.steinberg.net/t/how-stable-is-vst-live-in-2026-for-real-live-use/1029440), há relatos de apresentações bem-sucedidas com VST Live e também de dificuldades na preparação e nos ensaios. São experiências com versões e equipamentos daquela época, não um diagnóstico de todas as versões atuais. A conclusão prática é ensaiar o set completo e guardar a versão que funcionou.
+- **Controles ao alcance:** mapeie troca de música, volume e os comandos que você usa durante a execução. Toque uma música inteira com o controlador e os pedais. Se precisa procurar botões na tela a cada seção, simplifique o mapa antes de acrescentar mais recursos.
+- **Presets ou criação de timbres:** experimente chegar ao som de uma música do repertório. Você prefere escolher um preset e ajustar poucos controles ou construir o timbre desde os osciladores? Considere o tempo de preparação, além do tamanho da biblioteca e do preço.
+- **Transições e recuperação:** passe de uma música para outra, segure notas e sustain durante a troca e reabra o projeto. Confira volumes, caudas de efeitos e tempo de carregamento. Quando o conjunto funcionar bem, salve o projeto e registre as versões usadas.
 
 Minha sugestão para experimentar é escolher **uma tarefa**: piano e pad de igreja no Sunday Keys; repertório com cenas e hardware no Camelot; roteamento no AUM; loops no Loopy Pro; produção com clips no Live ou Bitwig. Compare apenas duas opções de cada vez, usando a mesma música, controlador e saída de áudio.
 
@@ -182,7 +194,7 @@ Combine com o técnico as saídas, os cabos e a necessidade de DI. Confirme se o
 
 ![Dois mixes estéreo: instrumentos e backing tracks nas saídas 1/2 para o PA; instrumentos e click nas saídas 3/4 para o amplificador de fones ou sistema in-ear dos músicos.](/blog-images/legacy/live-keyboard-guide/output-routing.pt.svg)
 
-*Figura 2. Exemplo com quatro saídas independentes. Crie no host um mix para o público e outro para o retorno, incluindo os instrumentos que os músicos precisam ouvir. Saídas de linha alimentam o equipamento de monitoração; não conecte fones diretamente a elas.*
+*Figura 5. Exemplo com quatro saídas independentes. Crie no host um mix para o público e outro para o retorno, incluindo os instrumentos que os músicos precisam ouvir. Saídas de linha alimentam o equipamento de monitoração; não conecte fones diretamente a elas.*
 
 ## Latência: resposta rápida sem estalos
 
@@ -200,7 +212,7 @@ O **direct monitoring** da interface monitora uma entrada física sem passar pel
 
 ![Split divide o teclado entre baixo à esquerda e piano à direita. Layer sobrepõe piano e pad na mesma região para que soem juntos.](/blog-images/legacy/live-keyboard-guide/split-layer.pt.svg)
 
-*Figura 3. No split, a região da tecla escolhe o instrumento; no layer, uma nota pode acionar mais de um timbre. As regiões são ilustrativas: ajuste-as ao repertório.*
+*Figura 6. No split, a região da tecla escolhe o instrumento; no layer, uma nota pode acionar mais de um timbre. As regiões são ilustrativas: ajuste-as ao repertório.*
 
 1. **Faça um único timbre tocar.** Conecte teclado e interface, selecione as portas de MIDI e áudio, carregue um piano e confirme canal MIDI, sustain e saída. Salve e reabra o projeto.
 2. **Crie as combinações necessárias.** Experimente piano com pad em layer e baixo com piano em split. Ajuste regiões, oitavas e velocidade. Confira se o sustain deve afetar todas as camadas. Veja [como misturar timbres](/pt/blog/como-misturar-varios-timbres-no-teclado).

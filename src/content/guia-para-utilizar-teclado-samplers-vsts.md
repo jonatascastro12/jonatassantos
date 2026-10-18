@@ -2,7 +2,7 @@
 title: "Playing virtual instruments live: a keyboard setup guide"
 date: "2016-12-13"
 legacy: true
-revised: "2026-10-16"
+revised: "2026-10-18"
 description: "Build a live keyboard rig with Logic, iPad apps, Sunday Keys, current instruments, diagrams, and show preparation. Updated for 2026."
 category: "music"
 tags: ["live-performance", "virtual-instruments"]
@@ -10,7 +10,7 @@ tags: ["live-performance", "virtual-instruments"]
 
 **For:** keyboard players and pianists who want to take virtual instruments onto the stage.
 
-**Revised October 16, 2026.** Originally published in 2016. This revision updates the technical guidance and software options using manufacturer documentation and attributed Reddit and forum experiences. It is not a hands-on product comparison or a market-share survey.
+**Revised October 18, 2026.** Originally published in 2016, this guide now includes current hosts, virtual instruments, and options for playing with an iPad, with visual examples to help you build your rig.
 
 I started exploring this around 2009, when I owned a **Roland Fantom FA-76** and was becoming interested in music production. A friend from São Paulo introduced me to virtual instruments and samplers, and I gradually tried taking them onto the stage.
 
@@ -127,6 +127,10 @@ An iPad can also be the instrument in your rig, receiving MIDI and generating au
 
 According to the [current plugin-hosting manual](https://support.sundaysounds.com/article/3193-hosting-auv3-au-instrument-plugins), Sunday Keys hosts **AUv3 instruments on iPad and AU/AUv3 instruments on Mac**, with an active license. This feature does not include hosting third-party audio or MIDI effect plugins. Also check renewal terms and what remains available if the license expires.
 
+![Sunday Keys on Mac and iPad, showing a setlist on the left, instrument channels, effects, faders, and keyboard ranges.](/blog-images/legacy/live-keyboard-guide/sunday-keys.webp)
+
+*Figure 2. Sunday Keys: repertoire, layers, and performance controls on one screen. The colored bars above the keyboard show the instruments' key ranges. Promotional image: [Sunday Sounds](https://sundaysounds.com/pages/sunday-keys-app).*
+
 To choose among the other three, consider your main task. In Camelot, that will often be repertoire organization and scene changes; in AUM, connections and mixing; in Loopy Pro, loops, clips, and custom controls. These are starting points for trying them, not absolute limits. The [Loopy Pro manual](https://loopypro.com/manual/) describes current features, including MIDI clips; older comparisons may refer to an earlier version.
 
 For sounds, [KORG Module](https://www.korg.com/us/products/software/korg_module/) provides keyboard instruments and supports AUv3; check which expansions unlock the features you want, such as layers and splits. [Pianoteq for iOS](https://www.modartt.com/user_manual?product=pianoteq) takes another approach: physically modeled piano, available standalone or as AUv3.
@@ -141,6 +145,10 @@ This selection was checked on **October 16, 2026**. It combines developments fro
 - **[Bitwig Studio 6](https://www.bitwig.com/stories/on-another-level-bitwig-studio-6-is-out-now-416/):** added automation clips and aliases, allowing material to be reused while retaining a connection to the original. It is an option for electronic production and clip-based performances. Its [plugin formats](https://www.bitwig.com/modern-foundations/) include VST2, VST3, and CLAP on Windows, macOS, and Linux; also check each plugin's version for your operating system.
 - **[Steinberg VST Live 3](https://www.steinberg.net/vst-live/):** extends show organization to instruments, backing tracks, lyrics/chords, video, and lighting. Investigate it when you need to synchronize several elements of a performance. If you only need piano and pad, compare the preparation involved with that of a simpler host.
 
+![Detail of Ableton Live's Session View, showing colored clips in tracks, a mixer, and the MIDI note editor below.](/blog-images/legacy/live-keyboard-guide/ableton-live-session.webp)
+
+*Figure 3. Ableton Live: Session View lets you combine and launch clips during a performance; the editor below shows the selected clip's notes. Official image: [Ableton](https://www.ableton.com/en/live/what-is-live/).*
+
 ### Instruments to explore without buying everything
 
 These products generate sounds; they do not, by themselves, replace the host that organizes a show. Choose according to what your repertoire lacks, and test the edition compatible with your system.
@@ -151,15 +159,19 @@ These products generate sounds; they do not, by themselves, replace the host tha
 - **[Pianoteq 9](https://www.modartt.com/pianoteq_overview):** uses physical modeling instead of a large sample library. Compare its touch response and piano character with sampled alternatives; a small disk footprint does not mean it uses no CPU.
 - **[Surge XT](https://surge-synthesizer.github.io/):** a free, open-source option for learning synthesis and building sounds. It is an established alternative for starting without buying another instrument.
 
+![Omnisphere 3 interface, with a library and patch list on the left and synthesis, modulation, filter, and envelope controls on the right.](/blog-images/legacy/live-keyboard-guide/omnisphere-3.webp)
+
+*Figure 4. Omnisphere 3: choose a patch from the library and adjust its layers in the synthesis panel. Try adapting a preset before building a sound from scratch. Official image: [Spectrasonics](https://www.spectrasonics.net/products/omnisphere/overview.php).*
+
 Before buying, also check the instruments and effects already included in your DAW. In the studio, you can edit and render parts; on stage, a patch must respond within the latency, control, and processing constraints of the show.
 
-## What comes up on Reddit and the forums
+## Choose for the way you play
 
-The research included user experiences alongside manufacturer pages. These threads illustrate choices and difficulties in specific rigs; they do not measure market share or prove a product will be stable on every device.
+A feature list cannot show how a program will feel in the middle of a song. Before migrating your repertoire, prepare a small set and focus on three things:
 
-- **Controlling an iPad show:** a [2026 r/ipadmusic discussion](https://www.reddit.com/r/ipadmusic/comments/1t3fw3r/what_are_people_using_to_control_live_shows_on/) includes examples of Loopy Pro mapped to hardware controllers and AUM combined with Loopy Pro. In the [Loopy Pro forum in October 2025](https://forum.loopypro.com/discussion/66429/daw-i-can-use-for-live-work-with-a-playlist-function), musicians discuss playlists, project transitions, and the effort needed to learn the workflow. The useful question is: can I get through a whole song without hunting for an on-screen button?
-- **Designing sounds or starting from presets:** in the [June 2026 Serum 2 versus Omnisphere 3 discussion on r/musicproduction](https://www.reddit.com/r/musicproduction/comments/1ujoa38/if_you_had_to_pick_one_serum_2_or_omnisphere_3/), preferences vary with sound editing, library content, style, and budget. Use this to choose what to audition; there is no universal winner.
-- **Stability depends on the complete rig:** an [April 2026 Steinberg forum thread](https://forums.steinberg.net/t/how-stable-is-vst-live-in-2026-for-real-live-use/1029440) includes successful VST Live performances as well as difficulties during preparation and rehearsal. These experiences concern the versions and equipment used then, not every current release. The practical takeaway is to rehearse the complete set and keep the version that worked.
+- **Controls within reach:** map song changes, volume, and the commands you use while playing. Perform a whole song with your controller and pedals. If you need to hunt for on-screen buttons at every section, simplify the mapping before adding more features.
+- **Presets or sound design:** try to recreate a sound from your repertoire. Would you rather choose a preset and tweak a few controls, or build the sound from its oscillators? Consider preparation time alongside library size and price.
+- **Transitions and recovery:** move between songs, hold notes and sustain through a patch change, and reopen the project. Check levels, effect tails, and loading times. Once the rig works well, save the project and record the versions you used.
 
 My suggestion is to choose **one task** to explore: worship piano and pad in Sunday Keys; repertoire with scenes and hardware in Camelot; routing in AUM; loops in Loopy Pro; or production with clips in Live or Bitwig. Compare only two options at a time, using the same song, controller, and audio output.
 
@@ -182,7 +194,7 @@ Agree on outputs, cables, and any DI requirements with the sound engineer. Confi
 
 ![Two stereo mixes: instruments and backing tracks use outputs 1/2 for the PA; instruments and click use outputs 3/4 for a headphone amp or in-ear system for the performers.](/blog-images/legacy/live-keyboard-guide/output-routing.en.svg)
 
-*Figure 2. An example with four independent outputs. Build one mix for the audience and another for monitoring in the host, including the instruments performers need to hear. Line outputs feed monitoring equipment; do not connect headphones directly to them.*
+*Figure 5. An example with four independent outputs. Build one mix for the audience and another for monitoring in the host, including the instruments performers need to hear. Line outputs feed monitoring equipment; do not connect headphones directly to them.*
 
 ## Latency: responsive playing without crackles
 
@@ -200,7 +212,7 @@ The interface's **direct monitoring** routes a physical input to monitoring with
 
 ![A split places bass on the left and piano on the right. A layer places piano and pad across the same range so they play together.](/blog-images/legacy/live-keyboard-guide/split-layer.en.svg)
 
-*Figure 3. In a split, the key range selects the instrument; in a layer, one note can trigger more than one sound. The ranges are illustrative: adjust them to your set.*
+*Figure 6. In a split, the key range selects the instrument; in a layer, one note can trigger more than one sound. The ranges are illustrative: adjust them to your set.*
 
 1. **Make one sound work.** Connect the keyboard and interface, select MIDI and audio ports, load a piano, and check MIDI channel, sustain, and output. Save and reopen the project.
 2. **Build the combinations you need.** Try a piano-and-pad layer and a bass-and-piano split. Adjust ranges, octaves, and velocity. Check whether sustain should affect every layer. See [how to layer sounds](/blog/como-misturar-varios-timbres-no-teclado).
