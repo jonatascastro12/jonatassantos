@@ -35,7 +35,7 @@ export default function Home({ params }: { params: { locale: Locale } }) {
                     </p>
                 </div>
 
-                <HarmonicSculpture />
+                <HarmonicSculpture locale={params.locale} />
 
                 <nav className="hero-links" aria-label={text.explore}>
                     {quickLinks.map((link) => (
